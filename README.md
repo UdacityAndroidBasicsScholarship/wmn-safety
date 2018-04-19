@@ -1,5 +1,7 @@
 # wmn-safety
 
+[![wmn-safety PRs](https://img.shields.io/github/issues-pr/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/pulls) [![wmn-safety Issues](https://img.shields.io/github/issues/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/issues) [![wmn-safety Contributors](https://img.shields.io/github/contributors/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/graphs/contributors)
+
 ### Introduction
 
 This application is a collaborative project made by the Google Udacity Android Basics Scholars.
@@ -72,6 +74,28 @@ git push origin development
 - It won't be considered if you send it to the `master` branch.
 	
 - Try to avoid using third party libraries. Some of them have issues with Proguard while generating a signed apk.
+
+### Moderators & Co-Moderators
+
+#### Moderators
+
+- [@Kartik Shandilya](https://github.com/kkdroidgit)
+
+- [@tirth](https://github.com/piedcipher)
+
+#### Co-Moderators
+
+- [@Rajani](https://github.com/Rajanimp)
+
+- [@vaishnavi](https://github.com/vaishnavi-janardhan)
+
+- [@Dev](https://github.com/RitikKhare)
+
+- [@Ojasvi Bhargava](https://github.com/OjasviBhargava)
+
+- [@kartik1712](https://github.com/kartikohri1712/)
+
+- [@Apoorva Tiwari](https://github.com/ApoorvaTiwari)
 
 ## Contributing Guidelines
 
