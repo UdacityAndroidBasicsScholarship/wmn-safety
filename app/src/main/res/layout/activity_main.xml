@@ -10,5 +10,4 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:layout_centerInParent="true" />
-
 </RelativeLayout>
