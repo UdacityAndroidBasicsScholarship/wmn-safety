@@ -24,5 +24,4 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
-    // test comment
 }
