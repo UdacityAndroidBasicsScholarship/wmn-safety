@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--Custom Color Resources are defined below-->
+    <color name="colorPinkAA">#AAFF00EE</color>
+    <color name="colorBlackDD">#DD000000</color>
 </resources>

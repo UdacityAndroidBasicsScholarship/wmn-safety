@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="tv_splash_scr_wmn">Securing Women</string>
+    <string name="tv_splash_logo_desc">Nirbheek logo</string>
 </resources>

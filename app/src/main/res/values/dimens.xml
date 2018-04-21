@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="spl_logo_height">260dp</dimen>
+
+    <dimen name="spl_logo_mrgn_start">24dp</dimen>
+    <dimen name="spl_logo_mrgn_end">24dp</dimen>
+    <dimen name="spl_logo_mrgn_top">8dp</dimen>
+    <dimen name="spl_logo_mrgn_bottom">8dp</dimen>
+
+    <dimen name="spl_txt_size_42">42sp</dimen>
+    <dimen name="spl_txt_mrgn_start">8dp</dimen>
+    <dimen name="spl_txt_mrgn_end">8dp</dimen>
+    <dimen name="spl_txt_mrgn_top">8dp</dimen>
+    <dimen name="spl_txt_mrgn_bottom">8dp</dimen>
+</resources>
