@@ -67,7 +67,7 @@ git push origin development
 	
 	- Attach a screenshot or gif of the same.
 
-	- Add you Slack ID (Display Name).	
+	- Add your Slack ID (Display Name).
 
 #### NOTE
 	
