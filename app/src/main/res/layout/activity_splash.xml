@@ -4,6 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/radial_background"
     tools:context=".SplashActivity">
 
+    <TextView
+        android:id="@+id/tv_spl_securing_women"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spl_txt_mrgn_bottom"
+        android:layout_marginEnd="@dimen/spl_txt_mrgn_end"
+        android:layout_marginStart="@dimen/spl_txt_mrgn_start"
+        android:layout_marginTop="@dimen/spl_txt_mrgn_top"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/tv_splash_scr_wmn"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/spl_txt_size_42"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/iv_spl_wmn_sfty_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/spl_logo_height"
+        android:layout_marginBottom="@dimen/spl_logo_mrgn_bottom"
+        android:layout_marginEnd="@dimen/spl_logo_mrgn_end"
+        android:layout_marginStart="@dimen/spl_logo_mrgn_start"
+        android:layout_marginTop="@dimen/spl_logo_mrgn_top"
+        android:contentDescription="@string/tv_splash_logo_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/tv_spl_securing_women"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/wmn_security_bnr" />
 </android.support.constraint.ConstraintLayout>
