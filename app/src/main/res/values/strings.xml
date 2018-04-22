@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="passowrd">passowrd</string>
+    <string name="show_pwd">show_pwd</string>
+    <string name="forgot">forgot</string>
+    <string name="newuser">newUser</string>
 </resources>

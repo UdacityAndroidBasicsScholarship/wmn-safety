@@ -4,17 +4,17 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="#E91E63"
+android:background="@color/colorPrimary"
 tools:context=".SplashActivity">
 
-<ImageView
-    android:id="@+id/imag_view"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:layout_centerVertical="true"
-
-    android:src="@drawable/wmn" />
+    <ImageView
+        android:id="@+id/imag_view"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/wmn" />
 
 <TextView
     android:layout_width="wrap_content"
@@ -22,12 +22,27 @@ tools:context=".SplashActivity">
     android:layout_centerInParent="true"
     android:layout_centerVertical="true"
     android:fontFamily="@font/google_sans_bold_italic"
-    android:text="Nirbheek"
     android:id="@+id/text_View"
+    android:layout_below="@+id/imag_view"
     android:textColor="#FF9800"
-    android:textSize="24sp"
+    android:textSize="45sp"
+    android:text="Nirbheek"
     android:textStyle="italic|bold"
 
     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/google_sans_bold_italic"
+        android:id="@+id/text_View1"
+        android:layout_below="@+id/text_View"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        android:text="Safe World for All"
+        android:textStyle="italic|bold"
+
+        />
 
 </RelativeLayout>
