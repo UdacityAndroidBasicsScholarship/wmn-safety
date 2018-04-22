@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity {
 
     // Animation
     Animation animation, anim,anim2;
-    public final static int TIME_OUT = 5000;
+    public final static int TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
