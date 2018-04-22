@@ -8,13 +8,13 @@ import android.widget.ProgressBar;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private ProgressBar progressBar;
+    private ProgressBar mProgressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        progressBar = findViewById(R.id.progress);
+        mProgressBar = findViewById(R.id.progress);
 
         // go to MainActivity after a delay 2 seconds
         new Handler().postDelayed(new Runnable() {
@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
 
             for (int progress=0; progress<100; progress+=10) {
 
-                progressBar.setProgress(progress);
+                mProgressBar.setProgress(progress);
             }
         }
     }
