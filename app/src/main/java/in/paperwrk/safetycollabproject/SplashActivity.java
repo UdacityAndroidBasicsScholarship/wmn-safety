@@ -9,12 +9,15 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 public class SplashActivity extends AppCompatActivity {
 
     private ImageView ivSplashLogo;
-
-    private int SPLASH_TIME_OUT = 5000;
+    private ProgressBar progressBar;
+    private int progressStatus = 0;
+    private Handler handler = new Handler();
+    private int SPLASH_TIME_OUT = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,10 @@ public class SplashActivity extends AppCompatActivity {
         ivSplashLogo = findViewById(R.id.iv_spl_wmn_sfty_logo);
         ivSplashLogoAnimation();
 
-        // go to MainActivity after a delay 5 seconds
+        progressBar = findViewById(R.id.pb_spl_loading_wait);
+        progressBarStarted();
+
+        // go to MainActivity after a delay 3 seconds
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -53,5 +59,27 @@ public class SplashActivity extends AppCompatActivity {
             }
         });
         mAnimationSet.start();
+    }
+
+    public void progressBarStarted() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (progressStatus < 100) {
+                    progressStatus += 1;
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                    try {
+                        Thread.sleep(SPLASH_TIME_OUT/100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
     }
 }
