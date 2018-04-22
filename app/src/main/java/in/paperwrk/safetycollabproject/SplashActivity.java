@@ -43,11 +43,6 @@ public class SplashActivity extends AppCompatActivity {
         textView1.startAnimation(anim2);
         textView.startAnimation(anim);
 
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 9b6f2a0ee97028e11cbfd28b8fcde92f4c22f596
     }
 
 }
