@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="name">Nirbheek</string>
+    <string name="tagline">Stay Safe , Stay Inspired</string>
 </resources>
