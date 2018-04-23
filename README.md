@@ -1,4 +1,4 @@
-# wmn-safety
+# wmn-safety - Nirbheek
 
 [![wmn-safety PRs](https://img.shields.io/github/issues-pr/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/pulls) [![wmn-safety Issues](https://img.shields.io/github/issues/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/issues) [![wmn-safety Contributors](https://img.shields.io/github/contributors/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/graphs/contributors)
 
@@ -67,7 +67,7 @@ git push origin development
 	
 	- Attach a screenshot or gif of the same.
 
-	- Add you Slack ID (Display Name).	
+	- Add your Slack ID (Display Name).
 
 #### NOTE
 	
