@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
 <style name="Login" parent="AppTheme">
 
     <item name="colorAccent">@color/colorAccent</item>
@@ -15,4 +16,12 @@
 
 
 </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
 </resources>
+
