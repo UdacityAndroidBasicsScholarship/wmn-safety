@@ -15,8 +15,13 @@ public class SplashActivity extends AppCompatActivity {
     ImageView imageView;
 
     // Animation
+<<<<<<< HEAD
     Animation animation, anim, anim2;
     public final static int TIME_OUT = 5000;
+=======
+    Animation animation, anim,anim2;
+    public final static int TIME_OUT = 3000;
+>>>>>>> 4a1af35daa6993234a2807547556de1ee92f3c2a
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,9 @@ public class SplashActivity extends AppCompatActivity {
         imageView.startAnimation(animation);
         textView1.startAnimation(anim2);
         textView.startAnimation(anim);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4a1af35daa6993234a2807547556de1ee92f3c2a
     }
 }
