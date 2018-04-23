@@ -1,10 +1,6 @@
-# wmn-safety - Nirbheek
-
-[![wmn-safety PRs](https://img.shields.io/github/issues-pr/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/pulls) [![wmn-safety Issues](https://img.shields.io/github/issues/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/issues) [![wmn-safety Contributors](https://img.shields.io/github/contributors/UdacityAndroidBasicsScholarship/wmn-safety.svg?style=for-the-badge)](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/graphs/contributors)
-
-### Introduction
-
+# wmn-safety
 This application is a collaborative project made by the Google Udacity Android Basics Scholars.
+
 
 ### How to Setup
 
@@ -100,3 +96,4 @@ git push origin development
 ## Contributing Guidelines
 
 For Contributing please go through - [Contributing Guidelines](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/blob/development/CONTRIBUTING.md)
+

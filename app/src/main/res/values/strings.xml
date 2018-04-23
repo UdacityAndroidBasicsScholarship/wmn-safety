@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="passowrd">passowrd</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="newuser">newUser</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registered! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="gpLogin">G+ Login</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="safe_world_for_all">Safe World for All</string>
+    <string name="nirbheek">Nirbheek</string>
 </resources>
+
+
