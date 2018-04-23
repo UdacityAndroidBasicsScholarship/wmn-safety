@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         // finish splash Activity
         finish();
 
-        
+
     }
 
 }
