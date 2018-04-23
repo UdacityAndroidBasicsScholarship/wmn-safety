@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#000000"
+ >
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_centerInParent="true" />
+        android:src="@drawable/splash_background2"
+        android:id="@+id/girl"
+        android:scaleType="centerCrop"
+        />
 
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:src="@drawable/nirbheek"
+        android:id="@+id/nirbheek"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        />
 </RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE8E8E8"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE8E8E8"
+    >
+
+    <ImageView
+        android:id="@+id/nirbheek_image"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nirbheek" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nirbheek_image"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/email"
+            android:background="@drawable/design"
+            android:layout_height="wrap_content"
+            android:hint="Email Id"
+            />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            android:layout_marginTop="12dp"
+            android:inputType="textPassword"
+            android:background="@drawable/design"
+            android:hint="Password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#FF666C44"
+            android:text="LOGIN"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create A New Account?"
+            android:textColor="#FF666C44"
+            android:layout_marginTop="12dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
