@@ -1,9 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/nirbheek" />
+
+    <TextView
+        android:id="@+id/text_view_nirbheek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/twenty_four_dips"
+        android:fontFamily="monospace"
+        android:text="@string/nirbheek"
+        android:textAllCaps="true"
+        android:textColor="@color/Red"
+        android:textSize="@dimen/forty_eight"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_nirbheek"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="@string/your_safety_is_our_priority"
+        android:textColor="@color/b71c1c"
+        android:textSize="@dimen/sixteen_sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/sixteen_dips"
+        android:indeterminateDrawable="@drawable/progress_drawable" />
+
+</RelativeLayout>
