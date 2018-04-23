@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="nirbheek">Nirbheek</string>
+    <string name="your_safety_is_our_priority"> • Your safety is our priority •</string>
 </resources>

@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="forty_eight_dips">48dp</dimen>
+    <dimen name="twenty_four_dips">24dp</dimen>
+    <dimen name="forty_eight">48sp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="sixteen_dips">16dp</dimen>
+
+</resources>
