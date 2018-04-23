@@ -8,18 +8,20 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class SplashActivity extends AppCompatActivity {
-    TextView textView,textView1;
+    TextView textView, textView1;
     ImageView imageView;
 
     // Animation
-    Animation animation, anim,anim2;
+    Animation animation, anim, anim2;
     public final static int TIME_OUT = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_splash);
 
         new android.os.Handler().postDelayed(new Runnable() {
@@ -31,23 +33,19 @@ public class SplashActivity extends AppCompatActivity {
             }
         }, TIME_OUT);
         textView = (TextView) findViewById(R.id.text_View);
-        textView1=(TextView) findViewById(R.id.text_View1);
+        textView1 = (TextView) findViewById(R.id.text_View1);
         imageView = findViewById(R.id.imag_view);
+
         animation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.rotate);
         anim = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.blink);
         anim2 = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.fade_in);
+
         imageView.startAnimation(animation);
         textView1.startAnimation(anim2);
         textView.startAnimation(anim);
 
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> 9b6f2a0ee97028e11cbfd28b8fcde92f4c22f596
     }
-
 }

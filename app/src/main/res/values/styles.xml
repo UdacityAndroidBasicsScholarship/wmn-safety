@@ -10,7 +10,8 @@
 
 <style name="Login" parent="AppTheme">
 
-    <item name="colorPrimaryDark">@color/colorAccent</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorPrimaryDark">@color/login_screenbg</item>
 
 
 </style>

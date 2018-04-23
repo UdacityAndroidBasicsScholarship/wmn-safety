@@ -26,7 +26,7 @@ tools:context=".SplashActivity">
     android:layout_below="@+id/imag_view"
     android:textColor="#FF9800"
     android:textSize="45sp"
-    android:text="Nirbheek"
+    android:text="@string/nirbheek"
     android:textStyle="italic|bold"
 
     />
@@ -40,7 +40,7 @@ tools:context=".SplashActivity">
         android:layout_below="@+id/text_View"
         android:textColor="#FF9800"
         android:textSize="20sp"
-        android:text="Safe World for All"
+        android:text="@string/safe_world_for_all"
         android:textStyle="italic|bold"
 
         />
