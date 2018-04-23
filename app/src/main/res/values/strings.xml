@@ -2,4 +2,8 @@
     <string name="app_name">SafetyCollabProject</string>
     <string name="name">Nirbheek</string>
     <string name="tagline">Stay Safe , Stay Inspired</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="sign_in_text">Sign In</string>
 </resources>
