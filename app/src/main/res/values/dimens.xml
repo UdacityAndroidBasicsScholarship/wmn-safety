@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="height_splash_art_image_view">149dp</dimen>
+    <dimen name="width_progress_bar">150dp</dimen>
+    <dimen name="margin_progress_bar">20dp</dimen>
+</resources>
