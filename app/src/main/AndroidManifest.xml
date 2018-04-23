@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashActivity" />
         <activity android:name=".accounts.SignupActivity" />
         <activity android:name=".accounts.SigninActivity" />
         <activity android:name=".accounts.ForgotPasswordActivity"></activity>
