@@ -29,7 +29,7 @@
             android:layout_marginTop="15dp"
             android:text="Nirbheek"
             android:textColor="@color/textColor"
-            android:textSize="33sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 
