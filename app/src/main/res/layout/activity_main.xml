@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
- >
+    android:background="@color/black_background">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/splash_background2"
         android:id="@+id/girl"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/girl_image"
         />
 
     <ImageView
-        android:layout_width="240dp"
-        android:layout_height="150dp"
-        android:src="@drawable/nirbheek"
+        android:layout_width="@dimen/nirbheek_logo_width"
+        android:layout_height="@dimen/nirbheek_logo_height"
+        android:src="@drawable/nirbheek_new"
         android:id="@+id/nirbheek"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/nirbheek_logo_bottom_margin"
+        android:contentDescription="@string/nirbheek_logo"
         />
 </RelativeLayout>

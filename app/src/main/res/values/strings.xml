@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Nirbheek</string>
+
+    <!--NIrBHeeK strings activity_main.xml-->
+    <string name="girl_image">This image consist of a girl covering her face and only her eyes are visible.</string>
+    <string name="nirbheek_logo">NIrBHeeK logo</string>
+
+    <!--NIrBHeeK strings login_activity.xml-->
+    <string name="login_button">Login</string>
+    <string name="create_new_account">Create a new Account?</string>
+
+    <!--NIrBHeeK strings register_activity.xml-->
+    <string name="register_name">Full Name</string>
+    <string name="register_phone">Mobile no</string>
+    <string name="register_confirm_pwd">Confirm Password</string>
+    <string name="register_button">register</string>
+
+    <!--NIrBHeeK strings login_activity.xml and register_activity.xml-->
+    <string name="email_hint">Email Id</string>
+    <string name="pwd_hint">Password</string>
 </resources>

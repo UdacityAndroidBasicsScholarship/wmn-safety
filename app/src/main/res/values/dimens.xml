@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--NIrBHeeK logo dimensions in activity_main.xml-->
+    <dimen name="nirbheek_logo_width">240dp</dimen>
+    <dimen name="nirbheek_logo_height">150dp</dimen>
+    <dimen name="nirbheek_logo_bottom_margin">50dp</dimen>
+
+    <!--dimensions in activity_login.xml-->
+    <dimen name="nirbheek_logo_height_login">200dp</dimen>
+    <dimen name="nirbheek_logo_top_margin">50dp</dimen>
+    <dimen name="nirbheek_logo_margin_bottom">16dp</dimen>
+    <dimen name="linear_layout_padding">16dp</dimen>
+    <dimen name="margin_bottom_12">12dp</dimen>
+    <dimen name="margin_bottom_24">24dp</dimen>
+</resources>
