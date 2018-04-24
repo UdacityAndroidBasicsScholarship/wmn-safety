@@ -77,13 +77,11 @@ git push origin development
 
 ### Moderators & Co-Moderators
 
-#### Moderators
-
-- [@Kartik Shandilya](https://github.com/kkdroidgit)
+#### Project Leads
 
 - [@tirth](https://github.com/piedcipher)
 
-#### Co-Moderators
+- [@Kartik Shandilya](https://github.com/kkdroidgit)
 
 - [@Rajani](https://github.com/Rajanimp)
 
@@ -96,6 +94,8 @@ git push origin development
 - [@kartik1712](https://github.com/kartikohri1712/)
 
 - [@Apoorva Tiwari](https://github.com/ApoorvaTiwari)
+
+
 
 ## Contributing Guidelines
 
