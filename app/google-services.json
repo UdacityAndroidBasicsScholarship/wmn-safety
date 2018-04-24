@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "84553234487",
+    "firebase_url": "https://nirbheek-11216.firebaseio.com",
+    "project_id": "nirbheek-11216",
+    "storage_bucket": "nirbheek-11216.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84553234487:android:486053fc1a01c5f6",
+        "android_client_info": {
+          "package_name": "in.paperwrk.safetycollabproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "84553234487-q6opvko69l7ccnsbl1l3cn1gmo9uhe81.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.paperwrk.safetycollabproject",
+            "certificate_hash": "d772f539260ff05e5fcd8acd1262494a7a36e484"
+          }
+        },
+        {
+          "client_id": "84553234487-tlsug5f3i8n7gli7c0rm3ofsil62o9ns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFtK7FxLwQaMT2xnPGfiGIV4sjBmGXFzQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "84553234487-tlsug5f3i8n7gli7c0rm3ofsil62o9ns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,6 +13,12 @@
     <item name="colorPrimaryDark">#F26222</item>
     <item name="colorAccent">@color/colorAccent</item>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
 
 </style>
 </resources>
+
