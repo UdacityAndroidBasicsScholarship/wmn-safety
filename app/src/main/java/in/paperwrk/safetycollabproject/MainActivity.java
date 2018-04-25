@@ -12,47 +12,10 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageViewNirbheekLogo , imageViewGirl;
-    Animation animDownNirbheekLogo , animRightGirl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        int orientation = this.getResources().getConfiguration().orientation;
-        if(orientation == Configuration.ORIENTATION_LANDSCAPE)
-        {
-            imageViewGirl = (ImageView) findViewById(R.id.girl);
-            imageViewGirl.setImageResource(R.drawable.splash_background);
-        }
-
-        animDownNirbheekLogo = AnimationUtils.loadAnimation(getApplicationContext() , R.anim.push_down);
-        imageViewNirbheekLogo = (ImageView) findViewById(R.id.nirbheek);
-
-        animRightGirl = AnimationUtils.loadAnimation(getApplicationContext() , R.anim.push_right);
-        imageViewGirl = (ImageView) findViewById(R.id.girl);
-
-        imageViewNirbheekLogo.setAnimation(animDownNirbheekLogo);
-        imageViewGirl.setAnimation(animRightGirl);
-        Thread t = new Thread(){
-
-
-            @Override
-            public void run() {
-
-                try {
-                    sleep(2500);
-                    Intent i = new Intent(getApplicationContext() , LoginActivity.class);
-                    startActivity(i);
-
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-
-                super.run();
-            }
-        };
-        t.start();
+        Intent toSplashActivity =  new Intent(getApplicationContext() , SplashActivity.class);
+        startActivity(toSplashActivity);
     }
 }
