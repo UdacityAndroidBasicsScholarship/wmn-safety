@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="hint_email">email</string>
+    <string name="hint_password">password</string>
 </resources>
