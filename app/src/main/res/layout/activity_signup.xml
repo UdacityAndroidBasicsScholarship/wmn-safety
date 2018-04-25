@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".accounts.SignupActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color_login">
+
+        <ImageView
+            android:id="@+id/nirbheek_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nirbheek_logo_height_login"
+            android:layout_marginTop="@dimen/nirbheek_logo_top_margin"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/nirbheek_new"
+            android:contentDescription="@string/nirbheek_logo"
+            android:layout_marginBottom="@dimen/nirbheek_logo_margin_bottom"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nirbheek_image"
+            android:orientation="vertical"
+            android:padding="@dimen/linear_layout_padding"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_name"
+                android:background="@drawable/design"
+                android:hint="@string/register_name"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="@dimen/margin_bottom_12"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_email"
+                android:background="@drawable/design"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="@dimen/margin_bottom_12"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone_number"
+                android:background="@drawable/design"
+                android:hint="@string/register_phone"
+                android:inputType="phone"
+                android:layout_marginBottom="@dimen/margin_bottom_12"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_pwd"
+                android:background="@drawable/design"
+                android:hint="@string/pwd_hint"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="@dimen/margin_bottom_12"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_confirm_pwd"
+                android:inputType="textPassword"
+                android:background="@drawable/design"
+                android:hint="@string/register_confirm_pwd"
+                android:layout_marginBottom="@dimen/margin_bottom_24"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/register_button"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/margin_bottom_12"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

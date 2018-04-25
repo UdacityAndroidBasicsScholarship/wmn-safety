@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/black_background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_centerInParent="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_background2"
+        android:id="@+id/girl"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/girl_image"
+        />
 
+    <ImageView
+        android:layout_width="@dimen/nirbheek_logo_width"
+        android:layout_height="@dimen/nirbheek_logo_height"
+        android:src="@drawable/nirbheek_new"
+        android:id="@+id/nirbheek"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/nirbheek_logo_bottom_margin"
+        android:contentDescription="@string/nirbheek_logo"
+        />
 </RelativeLayout>
