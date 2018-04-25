@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     ImageView imageViewNirbheekLogo , imageViewGirl;
@@ -38,7 +40,6 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-
                 try {
                     sleep(2500);
                     Intent i = new Intent(getApplicationContext() , SigninActivity.class);
@@ -49,10 +50,9 @@ public class SplashActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
+    }
 
-                super.run();
-            }
-        };
+            };
         t.start();
     }
 }

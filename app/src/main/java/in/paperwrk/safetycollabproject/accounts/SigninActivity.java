@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.accounts;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import in.paperwrk.safetycollabproject.*;
+
 public class SigninActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signin);
 
         TextView createNewAccTV = (TextView) findViewById(R.id.create_new_acc_tv);
         createNewAccTV.setOnClickListener(new View.OnClickListener() {
@@ -19,7 +21,7 @@ public class SigninActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(SigninActivity.this , SignupActivity.class);
+                Intent i = new Intent(in.paperwrk.safetycollabproject.accounts.SigninActivity.this , in.paperwrk.safetycollabproject.accounts.SignupActivity.class);
                 startActivity(i);
             }
 
