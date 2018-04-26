@@ -4,6 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".SplashActivity"
+    android:background="@drawable/orangegradiant"
+    >
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/nirbheekLogo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nirbheek"
+            />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nirbheekLogo"
+            android:layout_marginTop="20dp"
+            android:text="@string/appName"
+            android:textSize="40sp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextSplashScreen"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/punchLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextSplashScreen"
+            android:text="@string/punchLine"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            />
+
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

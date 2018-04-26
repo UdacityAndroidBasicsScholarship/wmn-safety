@@ -7,11 +7,11 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<style name="AppTheme.Launcher" parent="Theme.AppCompat.DayNight.NoActionBar">
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-    </style>
-
+    <item name="colorPrimary">#F26222</item>
+    <item name="colorPrimaryDark">#F26222</item>
+    <item name="colorAccent">@color/colorAccent</item>
+</style>
 </resources>
 
