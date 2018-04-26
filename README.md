@@ -6,6 +6,8 @@
 
 This application is a collaborative project made by the Google Udacity Android Basics Scholars.
 
+### This aplha branch is specifically for internal testing purposes of features which are likely to appear is distant future in the app. Please do not send any PR to this branch.
+
 ### How to Setup
 
 - Head over to the [Base Repository](https://github.com/UdacityAndroidBasicsScholarship/wmn-safety/) and Fork it.

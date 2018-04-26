@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">SafetyCollabProject</string>
+    <string name="app_name">Nirbheek</string>
+
+    <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
+    <string name="welcome_text_view">Welcome To Nirbheek</string>
+    <string name="sign_in_to_continue_text_view">Sign In To Continue</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password_text_view">Forgot Password?</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="create_account_text_view">Create a new account</string>
+
+    <string name="sign_up_to_continue_text_view">Sign Up To Your Safety</string>
+    <string name="name_hint">Full Name</string>
+    <string name="phone_hint">Phone</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="already_have_account_text_view">Already have an account?</string>
 </resources>
