@@ -38,6 +38,7 @@
                         android:layout_margin="4dp"
                         android:hint="@string/email_hint"
                         android:inputType="textEmailAddress"
+                        android:id="@+id/sign_in_email"
                         android:textColorHint="@color/colorAccent" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -52,6 +53,7 @@
                         android:layout_margin="4dp"
                         android:hint="@string/password_hint"
                         android:inputType="textPassword"
+                        android:id="@+id/sign_in_password_input"
                         android:textColorHint="@color/colorAccent" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -62,6 +64,7 @@
                     android:layout_margin="8dp"
                     android:background="@drawable/round_button"
                     android:text="@string/sign_in_button"
+                    android:id="@+id/sign_in_button"
                     android:textColor="@android:color/white" />
 
                 <TextView
@@ -75,7 +78,7 @@
                     android:textStyle="bold" />
 
                 <com.google.android.gms.common.SignInButton
-                    android:id="@+id/sign_in_button"
+                    android:id="@+id/google_sign_in_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
