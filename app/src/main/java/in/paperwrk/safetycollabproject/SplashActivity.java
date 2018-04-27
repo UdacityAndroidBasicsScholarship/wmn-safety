@@ -9,6 +9,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+import in.paperwrk.safetycollabproject.accounts.SignupActivity;
+
 public class SplashActivity extends AppCompatActivity {
     private TextView tv;
     private ImageView iv;
@@ -24,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.mytransition);
         tv.startAnimation(myanim);
         iv.startAnimation(myanim);
-        final Intent i = new Intent(this,MainActivity.class);
+        final Intent i = new Intent( this,SignupActivity.class);
         Thread timer = new Thread() {
             public void run() {
                 try {
