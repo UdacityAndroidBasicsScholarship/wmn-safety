@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SafetyCollabProject</string>
+    <string name="app_name">Nirbheek</string>
+    <string name="sign_in_email_hint" >Email</string>
+    <string name="sign_in_password_hint">Password</string>
+    <string name="sign_in_forgot_pass_text" >Forgot Password ?</string>
+    <string name="sign_in_button_text">SIGN IN</string>
+    <string name="sign_in_logo_desc">Logo</string>
+    <string name="welcome_to_nirbheek">Welcome to Nirbheek</string>
+    <string name="sign_in_to_continue">Sign In to Continue</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="sign_in_or_text">OR</string>
 </resources>

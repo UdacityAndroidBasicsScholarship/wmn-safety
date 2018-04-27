@@ -4,4 +4,8 @@
     <dimen name="splash_img_height">200dp</dimen>
     <dimen name="splash_progress_bar_width">150dp</dimen>
     <dimen name="splash_progress_bar_height" >15dp</dimen>
+    <dimen name="sign_in_logo_width">80dp</dimen>
+    <dimen name="sign_in_logo_height">80dp</dimen>
+    <dimen name="sign_in_button_height">60dp</dimen>
+    <dimen name="dimen_1dp">1dp</dimen>
 </resources>
