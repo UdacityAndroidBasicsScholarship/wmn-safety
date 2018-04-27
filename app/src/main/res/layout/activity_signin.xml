@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".accounts.SigninActivity">
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="signin"/>
 
 </android.support.constraint.ConstraintLayout>

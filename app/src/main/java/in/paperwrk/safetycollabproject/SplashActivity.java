@@ -9,6 +9,11 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 public class SplashActivity extends Activity {
 
@@ -54,6 +59,13 @@ public class SplashActivity extends Activity {
             public void onAnimationEnd(Animation animation) {
 
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+        // go to MainActivity after a delay 2 seconds
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+                startActivity(intent);
                 finish();
 
             }
