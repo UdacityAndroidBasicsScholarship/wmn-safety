@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
     tools:context=".SplashActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:src="@drawable/splash_bg"
+        android:layout_marginBottom="315dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/splash_women_img1"
+        android:src="@drawable/splash_women"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/splash_women_img2"
+        android:src="@drawable/splash_women2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/splash_women_img3"
+        android:src="@drawable/splash_women3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/final_delay"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        />
+
+
+</RelativeLayout>

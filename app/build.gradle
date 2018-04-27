@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+    dataBinding {
+        enabled true
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "in.paperwrk.safetycollabproject"
