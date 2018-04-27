@@ -13,10 +13,10 @@
 
         <ImageView
             android:id="@+id/sign_in_logo"
-            android:layout_width="@dimen/sign_in_logo_width"
-            android:layout_height="@dimen/sign_in_logo_height"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
             android:layout_marginTop="25dp"
-            android:contentDescription="@string/sign_in_logo_desc"
+            android:contentDescription="@string/logo_desc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -66,7 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/sign_in_email_hint"
+                android:hint="@string/email_hint"
                 android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/sign_in_password_hint"
+                android:hint="@string/password_hint"
                 android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
@@ -108,7 +108,7 @@
         <Button
             android:id="@+id/sign_in_button"
             android:layout_width="0dp"
-            android:layout_height="@dimen/sign_in_button_height"
+            android:layout_height="@dimen/dimen_60dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/sign_in_button_text"

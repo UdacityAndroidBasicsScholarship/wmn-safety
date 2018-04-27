@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="splash_img_width">200dp</dimen>
-    <dimen name="splash_img_height">200dp</dimen>
     <dimen name="splash_progress_bar_width">150dp</dimen>
     <dimen name="splash_progress_bar_height" >15dp</dimen>
-    <dimen name="sign_in_logo_width">80dp</dimen>
-    <dimen name="sign_in_logo_height">80dp</dimen>
-    <dimen name="sign_in_button_height">60dp</dimen>
     <dimen name="dimen_1dp">1dp</dimen>
-    <dimen name="sign_up_logo_width">80dp</dimen>
-    <dimen name="sign_up_logo_height">80dp</dimen>
-    <dimen name="sign_up_button_height">60dp</dimen>
+    <dimen name="dimen_80dp">80dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="dimen_200dp">200dp</dimen>
 </resources>

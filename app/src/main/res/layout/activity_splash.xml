@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/splashImage"
-        android:layout_width="@dimen/splash_img_width"
-        android:layout_height="@dimen/splash_img_height"
+        android:layout_width="@dimen/dimen_200dp"
+        android:layout_height="@dimen/dimen_200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/splash"
