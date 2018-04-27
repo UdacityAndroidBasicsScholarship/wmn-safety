@@ -1,55 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/radial_background"
-    tools:context=".SplashActivity">
-
-    <TextView
-        android:id="@+id/tv_spl_securing_women"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spl_txt_mrgn_bottom"
-        android:layout_marginTop="@dimen/spl_txt_mrgn_top"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/tv_splash_scr_wmn"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large.Inverse"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/spl_txt_size_32"
-        android:textStyle="bold"
-        android:typeface="serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+    tools:context=".SplashActivity"
+    android:background="#000">
 
     <ImageView
-        android:id="@+id/iv_spl_wmn_sfty_logo"
-        android:layout_width="@dimen/spl_logo_width"
-        android:layout_height="@dimen/spl_logo_height"
-        android:layout_marginBottom="@dimen/spl_logo_mrgn_bottom"
-        android:layout_marginTop="@dimen/spl_logo_mrgn_top"
-        android:contentDescription="@string/tv_splash_logo_desc"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/tv_spl_securing_women"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/wmn_security_bnr" />
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:src="@drawable/wmnsafety" />
 
     <ProgressBar
-        android:id="@+id/pb_spl_loading_wait"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="220dp"
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spl_pbr_mrgn_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_spl_securing_women" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp" />
+
+
+</RelativeLayout>
