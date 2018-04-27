@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="appName">Nirbheek</string>
+    <string name="punchLine">Be Safe and Be free   Because You Deserve it</string>
+    <string name="emailHint">Please Enter Your Email</string>
+    <string name="passwordHint">Please Enter Your Password</string>
+    <string name="phoneNumberHint">Please Enter Your Phone Number</string>
+    <string name="fullNameHint">Please Your Full Name</string>
+    <string name="signUpHeading">Sign Up For Your Safety</string>
+    <string name="nirbheekWelcome">Welcome to Nirbheek</string>
+    <string name="signInHeading">Sign In For Your Safety</string>
+    <string name="passwordForget">Forgot Password?</string>
+    <string name="signIn">sign in</string>
+    <string name="or">OR</string>
+    <string name="createAccount">Create a new account</string>
+    <string name="signInWithGoogle">Sign In With Google</string>
+    <string name="signUp">Sign Up</string>
+    <string name="already_have_a_account_sign_in">Already Have A Account? Sign In</string>
+    <string name="forgotPasswordHeading">Forgot Password</string>
+    <string name="forgotPasswordSubHeading">Enter Your Email To Reset Your Password</string>
 </resources>
