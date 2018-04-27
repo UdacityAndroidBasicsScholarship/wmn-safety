@@ -9,4 +9,13 @@
     <string name="sign_in_to_continue">Sign In to Continue</string>
     <string name="create_a_new_account">Create a new account</string>
     <string name="sign_in_or_text">OR</string>
+    <string name="sign_up_logo_desc">logo</string>
+    <string name="sign_up_to_safety">Sign Up to Your Safety</string>
+    <string name="sign_up_email_hint">Email</string>
+    <string name="sign_up_password_hint">Password</string>
+    <string name="sign_up_button_text">SIGN UP</string>
+    <string name="sign_up_name_hint">Full Name</string>
+    <string name="sign_up_phone_hint">Phone</string>
+    <string name="already_have_account">Already have an account ? Sign In</string>
+    <string name="implementation_in_progress">Implementation in Progress</string>
 </resources>

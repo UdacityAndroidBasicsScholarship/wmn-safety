@@ -8,4 +8,7 @@
     <dimen name="sign_in_logo_height">80dp</dimen>
     <dimen name="sign_in_button_height">60dp</dimen>
     <dimen name="dimen_1dp">1dp</dimen>
+    <dimen name="sign_up_logo_width">80dp</dimen>
+    <dimen name="sign_up_logo_height">80dp</dimen>
+    <dimen name="sign_up_button_height">60dp</dimen>
 </resources>
