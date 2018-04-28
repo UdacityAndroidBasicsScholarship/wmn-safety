@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">SafetyCollabProject</string>
+    <string name="app_name"></string>
+    <string name="title">Do Alert, Be safe</string>
+    <string name="description">A tool that can help you to be safed</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="mob_num">Mobile Number</string>
+    <string name="pass_word">Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="other">Already have an account?Sign in</string>
+    <string name="user_name">Username</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="forget">Forgot Password?</string>
+    <string name="signup">New User?Sign Up</string>
 </resources>
