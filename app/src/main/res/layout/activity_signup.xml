@@ -1,11 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".accounts.SignupActivity"
+    android:background="#263238">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/Image_View_logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:src="@drawable/logo"/>
 
+    <TextView
+        android:id="@+id/welcome_text"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="Welcome To Nirbheek"
+        android:layout_below="@id/Image_View_logo"
+        android:textSize="34sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/text_signUp_to_Safety"
+        android:layout_below="@id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:text="Sign Up to Your Safety"/>
+
+    <EditText
+        android:id="@+id/edit_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_signUp_to_Safety"
+        android:hint="Full Name"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"/>
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_full_name"
+        android:hint="Email"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_email"
+        android:hint="Phone"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+    <EditText
+        android:id="@+id/edit_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_phone"
+        android:hint="Password"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/signUp_button"
+        android:layout_below="@id/edit_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up"
+        android:backgroundTint="#37474F"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:layout_below="@id/signUp_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Already have an account? Sign In"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>
+</ScrollView>
