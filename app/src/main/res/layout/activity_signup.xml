@@ -99,6 +99,7 @@
         android:layout_marginLeft="16dp"
         android:textColor="@android:color/white" />
     <TextView
+        android:id="@+id/already_have_acc"
         android:layout_below="@id/signUp_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
