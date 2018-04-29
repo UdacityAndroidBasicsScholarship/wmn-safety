@@ -6,13 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
     <TextView
-        android:gravity="center_horizontal"
-        android:text="PlaceHolder Text"
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
-
-
+        android:layout_height="match_parent"
+        android:text="home Activity"/>
 </RelativeLayout>
