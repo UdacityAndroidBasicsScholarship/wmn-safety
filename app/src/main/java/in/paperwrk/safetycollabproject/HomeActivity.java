@@ -8,9 +8,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
-public class MainActivity extends AppCompatActivity {
-    private FirebaseAuth mFirebaseAuth;
-
+public class HomeActivity extends AppCompatActivity {
+  private FirebaseAuth mFirebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
