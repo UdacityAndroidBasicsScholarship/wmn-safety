@@ -21,7 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import in.paperwrk.safetycollabproject.MainActivity;
+import in.paperwrk.safetycollabproject.HomeActivity;
 import in.paperwrk.safetycollabproject.R;
 
 public class SigninActivity extends AppCompatActivity {
@@ -127,7 +127,7 @@ public class SigninActivity extends AppCompatActivity {
     private void onSignInSuccess() {
         Log.v("Sign In", "User successfully logged in.");
         Toast.makeText(this, "You are successfully signed in.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(SigninActivity.this, MainActivity.class);
+        Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 }
