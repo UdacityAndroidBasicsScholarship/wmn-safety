@@ -7,4 +7,13 @@
     <!--Custom Color Resources are defined below-->
     <color name="colorPinkAA">#AAFF00EE</color>
     <color name="colorBlackDD">#DD000000</color>
+    <color name="colorBackgroundASU">#6C0ECA</color>
+    <color name="colorButtonText">#6C0ECA</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorASULinearLayoutBkg">#33FFFFFF</color>
+    <color name="colorHintASU">#C7C7C7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBackgroundAFP">#0E0E0E</color>
+    <color name="colorFrgtPassText">#003CFF</color>
+    <color name="colorButtonPurple">#7B00FF</color>
 </resources>

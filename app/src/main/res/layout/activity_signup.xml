@@ -1,11 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".accounts.SignupActivity"
-    android:orientation="vertical">
+    android:background="@color/colorBackgroundASU"
+    android:orientation="vertical"
+    tools:context=".accounts.SignUpActivity">
 
+    <ImageView
+        android:id="@+id/img_asu_nirbheek_icon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sign_up_img_hdr_height"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/sign_up_header_image_desc"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wmn_safety_banner" />
 
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_padding_32_com"
+        android:layout_marginEnd="@dimen/margin_padding_32_com"
+        android:layout_marginStart="@dimen/margin_padding_32_com"
+        android:background="@drawable/border_top_bottom"
+        android:text="@string/text_sign_in_nirbheek"
+        android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_already_ac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_sign_in"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_padding_4_com"
+        android:layout_marginEnd="@dimen/margin_padding_32_com"
+        android:layout_marginTop="@dimen/margin_padding_12_com"
+        android:text="@string/text_already_account"
+        android:textColor="@color/colorBlack" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tv_already_ac"
+        android:layout_below="@id/img_asu_nirbheek_icon"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorASULinearLayoutBkg"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_padding_24_com"
+            android:paddingEnd="@dimen/margin_padding_32_com"
+            android:paddingStart="@dimen/margin_padding_32_com"
+            android:paddingTop="@dimen/margin_padding_24_com"
+            android:scrollbars="none">
+
+            <EditText
+                android:id="@+id/edit_text_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/text_enter_full_name"
+                android:textColorHint="@color/colorHintASU"
+                android:textColor="@color/colorWhite"
+                android:inputType="textCapWords"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/edit_text_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/text_enter_email_id"
+                android:textColorHint="@color/colorHintASU"
+                android:textColor="@color/colorWhite"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/edit_text_choose_id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/text_create_slk_id"
+                android:textColorHint="@color/colorHintASU"
+                android:textColor="@color/colorWhite"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_text_new_pass"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/hint_text_enter_new_pass"
+                android:textColorHint="@color/colorHintASU"
+                android:textColor="@color/colorWhite"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edit_text_confirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/hint_text_confirm_pass"
+                android:textColorHint="@color/colorHintASU"
+                android:textColor="@color/colorWhite"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_padding_4_com"
+                android:layout_marginTop="@dimen/margin_padding_24_com"
+                android:gravity="center"
+                android:text="@string/text_by_clicking_register"
+                android:textColor="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_top_bottom"
+                android:text="@string/button_text_register_asu"
+                android:textAllCaps="false"
+                android:textColor="@color/colorButtonText"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
