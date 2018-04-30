@@ -125,9 +125,14 @@ public class SigninActivity extends AppCompatActivity {
     }
 
     private void onSignInSuccess() {
-        Log.v("Sign In", "User successfully logged in.");
-        Toast.makeText(this, "You are successfully signed in.", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
-        startActivity(intent);
+        if (mFirebaseAuth.getCurrentUser() != null) {
+            Log.v("Sign In", "User successfully logged in.");
+            Toast.makeText(this, "You are successfully signed in.", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
+            startActivity(intent);
+        } else {
+            Log.v("Sign In", "User log-in failed.");
+            Toast.makeText(this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
