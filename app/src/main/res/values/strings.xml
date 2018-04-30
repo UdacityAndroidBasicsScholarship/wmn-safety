@@ -42,4 +42,14 @@
     <string name="enter_email_msg">Enter Email Address</string>
     <string name="password_required_msg">Password Required</string>
     <string name="enter_password_msg">Enter Password</string>
+    <string name="name_required_msg">Name Required</string>
+    <string name="enter_name_msg">Enter your Full Name</string>
+    <string name="phone_required_msg">Phone Number Required</string>
+    <string name="enter_phone_msg">Enter Phone Number</string>
+    <string name="valid_phone_required_msg">Valid Phone Number Required</string>
+    <string name="enter_valid_phone_msg">Enter 10 digit Valid Phone Number</string>
+    <string name="error_message">Error Message</string>
+    <string name="creating_account">Creating Account</string>
+    <string name="updating_profile">Updating Profile</string>
+    <string name="account_creation_success">Account Created Successfully</string>
 </resources>

@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 
@@ -78,5 +79,8 @@ public class Helpers {
         return builder.create();
     }
 
+    public void showToast(String message){
+        Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show();
+    }
 
 }
