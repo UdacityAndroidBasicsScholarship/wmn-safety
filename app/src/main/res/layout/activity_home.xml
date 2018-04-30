@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="#EEE2CC">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:src="@drawable/creamcircle" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:text="Welcome to NIRBHEEK"
+        android:textSize="40sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#1A237E" />
 
     <TextView
-        android:gravity="center_horizontal"
-        android:text="PlaceHolder Text"
-        android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
+        android:textColor="#3F51B5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btsignup"
+        android:layout_marginStart="59dp"
+        android:text="New User ?"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-condensed"/>
 
+    <Button
+        android:id="@+id/btsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="250dp"
+        android:layout_marginEnd="73dp"
+        android:text="signup"
+        android:background="@drawable/button"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btsignin"
+        android:layout_marginStart="47dp"
+        android:text="Existing User ?"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#3F51B5"/>
+
+    <Button
+        android:id="@+id/btsignin"
+        android:background="@drawable/button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="73dp"
+        android:layout_marginTop="225dp"
+        android:text="signin"
+        android:textColor="#fff"/>
 
 </RelativeLayout>
