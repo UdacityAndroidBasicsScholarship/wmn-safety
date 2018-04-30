@@ -52,4 +52,6 @@
     <string name="creating_account">Creating Account</string>
     <string name="updating_profile">Updating Profile</string>
     <string name="account_creation_success">Account Created Successfully</string>
+    <string name="processing">Processing</string>
+    <string name="login_success">Login Successful</string>
 </resources>

@@ -131,7 +131,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             mHelpers.showAlertDialog(getString(R.string.password_required_msg),getString(R.string.enter_password_msg)).show();
             return;
         }
-        loginWithfirebaseEmailPassword(email, password);
+        loginWithFirebaseEmailPassword(email, password);
     }
 
     private void navigateToHome() {
@@ -185,7 +185,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 });
     }
 
-    private void loginWithfirebaseEmailPassword(String email, String password){
+    private void loginWithFirebaseEmailPassword(String email, String password){
         mHelpers.showProgressDialog(getString(R.string.loading_msg));
         mFirebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -193,7 +193,8 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         mHelpers.hideProgressDialog();
                         if(task.isSuccessful()){
-                            Log.d(TAG, task.getResult().getUser().getEmail());
+                            mHelpers.showToast(getString(R.string.login_success));
+                            navigateToHome();
                         }else{
                           mHelpers.showAlertDialog(getString(R.string.error_message), task.getException().getMessage()).show();
                         }
