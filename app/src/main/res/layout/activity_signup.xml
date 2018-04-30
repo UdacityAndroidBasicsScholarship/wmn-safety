@@ -52,6 +52,7 @@
                         android:layout_margin="4dp"
                         android:hint="@string/email_hint"
                         android:inputType="textEmailAddress"
+                        android:id="@+id/email_input"
                         android:textColorHint="@color/colorAccent" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -80,6 +81,7 @@
                         android:layout_margin="4dp"
                         android:hint="@string/password_hint"
                         android:inputType="textPassword"
+                        android:id="@+id/password_input"
                         android:textColorHint="@color/colorAccent" />
 
                 </android.support.design.widget.TextInputLayout>
@@ -90,6 +92,7 @@
                     android:layout_margin="8dp"
                     android:background="@drawable/round_button"
                     android:text="@string/sign_up_button"
+                    android:id="@+id/sign_up_button"
                     android:textColor="@android:color/white" />
 
                 <TextView
