@@ -1,7 +1,6 @@
 package in.paperwrk.safetycollabproject.accounts;
 
 import android.content.Intent;
-import android.print.PrinterId;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,8 +17,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.signin.SignIn;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -135,7 +131,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             mHelpers.showAlertDialog(getString(R.string.password_required_msg),getString(R.string.enter_password_msg)).show();
             return;
         }
-        firebaseEmailPassword(email, password);
+        loginWithfirebaseEmailPassword(email, password);
     }
 
     private void navigateToHome() {
@@ -189,7 +185,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 });
     }
 
-    private void firebaseEmailPassword(String email, String password){
+    private void loginWithfirebaseEmailPassword(String email, String password){
         mHelpers.showProgressDialog(getString(R.string.loading_msg));
         mFirebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -199,7 +195,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                         if(task.isSuccessful()){
                             Log.d(TAG, task.getResult().getUser().getEmail());
                         }else{
-                          mHelpers.showAlertDialog("Error Message", task.getException().getMessage()).show();
+                          mHelpers.showAlertDialog(getString(R.string.error_message), task.getException().getMessage()).show();
                         }
                     }
                 });

@@ -143,6 +143,7 @@ public class SignupActivity extends AppCompatActivity implements View.OnClickLis
 
     private void navigateToHome() {
         Intent intent = new Intent(this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
     }
