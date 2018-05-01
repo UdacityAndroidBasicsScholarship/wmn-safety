@@ -1,2 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="spl_logo_width">160dp</dimen>
+    <dimen name="spl_logo_height">160dp</dimen>
+
+    <dimen name="spl_logo_mrgn_start">24dp</dimen>
+    <dimen name="spl_logo_mrgn_end">24dp</dimen>
+    <dimen name="spl_logo_mrgn_top">8dp</dimen>
+    <dimen name="spl_logo_mrgn_bottom">8dp</dimen>
+
+    <dimen name="spl_txt_size_32">32sp</dimen>
+    <dimen name="spl_txt_mrgn_start">8dp</dimen>
+    <dimen name="spl_txt_mrgn_end">8dp</dimen>
+    <dimen name="spl_txt_mrgn_top">8dp</dimen>
+    <dimen name="spl_txt_mrgn_bottom">8dp</dimen>
+
+    <dimen name="spl_pbr_mrgn_top">16dp</dimen>
+    <dimen name="sign_up_img_hdr_height">120dp</dimen>
+    <dimen name="margin_padding_32_com">32dp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="margin_padding_4_com">4dp</dimen>
+    <dimen name="margin_padding_12_com">12dp</dimen>
+    <dimen name="margin_padding_24_com">24dp</dimen>
+    <dimen name="text_size_18_com">18sp</dimen>
+    <dimen name="view_middle_margin_top_afp">16dp</dimen>
+    <dimen name="view_wh_1px">1px</dimen>
+    <dimen name="forget_pass_mrgn_top_asi">16dp</dimen>
+    <dimen name="mrgn_pdng_lrtb_8">8dp</dimen>
+    <dimen name="button_text_padding">18dp</dimen>
+</resources>

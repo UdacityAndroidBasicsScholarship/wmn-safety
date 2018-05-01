@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="tv_splash_scr_wmn">Securing Women</string>
+    <string name="tv_splash_logo_desc">Nirbheek logo</string>
+    <string name="sign_up_header_image_desc">Header image of Nirbheek</string>
+    <string name="text_sign_in_nirbheek">Sign IN to Nirbheek</string>
+    <string name="text_already_account">Already have Nirbheek Account?</string>
+    <string name="text_enter_full_name">Enter your full name</string>
+    <string name="text_enter_email_id">Enter your Email ID</string>
+    <string name="text_create_slk_id">Create new slack ID</string>
+    <string name="hint_text_enter_new_pass">Enter new password</string>
+    <string name="hint_text_confirm_pass">Confirm your password</string>
+    <string name="text_by_clicking_register">By clicking \'Register / Sign up\', you are agree to the Nirbheek TC and the Privary Policy</string>
+    <string name="button_text_register_asu">Register / Sign up</string>
+    <string name="text_reset_nirbheek_afp">Reset your Nirbheek</string>
+    <string name="text_password">Password</string>
+    <string name="hint_text_enter_reg_email_afp">Enter registered email ID</string>
+    <string name="text_send">Send</string>
+    <string name="hint_text_type_nirbheek_id">Type your Nirbheek ID</string>
+    <string name="hint_text_nirbheek_pass_asi">And Nirbheek password</string>
+    <string name="text_forgot_password_asi"><![CDATA[Forgot &password ?]]></string>
+    <string name="button_text_sign_in_asi">Sign in</string>
+    <string name="text_or">OR</string>
+    <string name="button_text_sign_in_google_asi">Sign in with Google</string>
+    <string name="button_text_sign_in_facebook_asi">Sign in with Facebook</string>
+    <string name="text_dont_hv_ac_asi">Don\'t have Nirbheek Account yet?</string>
+    <string name="button_text_create_new_ac_asi">Create New Account</string>
 </resources>

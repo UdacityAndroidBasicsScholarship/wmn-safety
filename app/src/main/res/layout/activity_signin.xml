@@ -4,11 +4,199 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".accounts.SigninActivity">
+    tools:context=".accounts.SignInActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="signin"/>
+    <ImageView
+        android:id="@+id/image_view_header_logo_asi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sign_up_img_hdr_height"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/tv_splash_logo_desc"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wmnsafety" />
 
+    <ScrollView
+        android:id="@+id/scroll_view_wrapper_asi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/sign_up_img_hdr_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_padding_32_com"
+            android:layout_marginLeft="@dimen/margin_padding_32_com"
+            android:layout_marginRight="@dimen/margin_padding_32_com"
+            android:layout_marginStart="@dimen/margin_padding_32_com"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_padding_32_com"
+            android:paddingTop="@dimen/margin_padding_32_com">
+
+            <LinearLayout
+                android:id="@+id/linear_layout_widp_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:background="@color/colorBlack" />
+
+                <EditText
+                    android:id="@+id/edit_text_nirbheek_id_asi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_text_type_nirbheek_id"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/margin_padding_12_com"
+                    android:paddingEnd="@dimen/margin_padding_4_com"
+                    android:paddingLeft="@dimen/margin_padding_4_com"
+                    android:paddingRight="@dimen/margin_padding_4_com"
+                    android:paddingStart="@dimen/margin_padding_4_com"
+                    android:paddingTop="@dimen/margin_padding_12_com" >
+                    <requestFocus/>
+                </EditText>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:background="@color/colorBlack" />
+
+                <EditText
+                    android:id="@+id/edit_text_nirbheek_pass_asi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/hint_text_nirbheek_pass_asi"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/margin_padding_12_com"
+                    android:paddingEnd="@dimen/margin_padding_4_com"
+                    android:paddingLeft="@dimen/margin_padding_4_com"
+                    android:paddingRight="@dimen/margin_padding_4_com"
+                    android:paddingStart="@dimen/margin_padding_4_com"
+                    android:paddingTop="@dimen/margin_padding_12_com" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:background="@color/colorBlack" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_forgot_pass_asi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/forget_pass_mrgn_top_asi"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/text_forgot_password_asi"
+                android:textColor="@color/colorFrgtPassText"
+                android:textSize="@dimen/text_size_18_com" />
+
+            <Button
+                android:id="@+id/button_sign_in_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_4_com"
+                android:background="#7b00ff"
+                android:text="@string/button_text_sign_in_asi"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_wor_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_32_com"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/mrgn_pdng_lrtb_8"
+                    android:paddingStart="@dimen/mrgn_pdng_lrtb_8"
+                    android:text="@string/text_or"
+                    android:textColor="@color/colorBlack" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlack" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_signin_wgoogle_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mrgn_pdng_lrtb_8"
+                android:background="#7b00ff"
+                android:drawableStart="@drawable/common_google_signin_btn_icon_light"
+                android:paddingEnd="@dimen/mrgn_pdng_lrtb_8"
+                android:paddingStart="@dimen/mrgn_pdng_lrtb_8"
+                android:text="@string/button_text_sign_in_google_asi"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/button_signin_wfb_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mrgn_pdng_lrtb_8"
+                android:background="@color/colorButtonPurple"
+                android:drawableStart="@drawable/icons_facebook_50"
+                android:paddingEnd="@dimen/mrgn_pdng_lrtb_8"
+                android:paddingStart="@dimen/mrgn_pdng_lrtb_8"
+                android:text="@string/button_text_sign_in_facebook_asi"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_32_com"
+                android:text="@string/text_dont_hv_ac_asi"
+                android:textColor="@color/colorBlack" />
+
+            <Button
+                android:id="@+id/button_create_ac_asi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mrgn_pdng_lrtb_8"
+                android:background="@color/colorButtonPurple"
+                android:text="@string/button_text_create_new_ac_asi"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

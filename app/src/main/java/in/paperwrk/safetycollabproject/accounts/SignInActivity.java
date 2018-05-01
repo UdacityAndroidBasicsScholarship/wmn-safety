@@ -1,11 +1,13 @@
 package in.paperwrk.safetycollabproject.accounts;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import in.paperwrk.safetycollabproject.R;
 
-public class SigninActivity extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import in.paperwrk.safetycollabproject.R;
 
-public class SignupActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
