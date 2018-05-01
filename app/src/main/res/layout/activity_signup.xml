@@ -14,7 +14,7 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/sign_up_header_image_desc"
         android:scaleType="centerCrop"
-        android:src="@drawable/wmn_safety_banner" />
+        android:src="@drawable/wmnsafety" />
 
     <Button
         android:id="@+id/button_sign_in"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="@dimen/margin_padding_32_com"
         android:layout_marginEnd="@dimen/margin_padding_32_com"
         android:layout_marginStart="@dimen/margin_padding_32_com"
-        android:background="@drawable/border_top_bottom"
+        android:background="@android:color/white"
         android:text="@string/text_sign_in_nirbheek"
         android:textAllCaps="false"
         android:textColor="@color/colorButtonText"
@@ -133,7 +133,7 @@
                 android:id="@+id/button_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_top_bottom"
+                android:background="@android:color/white"
                 android:text="@string/button_text_register_asu"
                 android:textAllCaps="false"
                 android:textColor="@color/colorButtonText"

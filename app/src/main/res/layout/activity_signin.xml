@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/wmn_safety_banner" />
+        app:srcCompat="@drawable/wmnsafety" />
 
     <ScrollView
         android:id="@+id/scroll_view_wrapper_asi"
@@ -49,8 +49,12 @@
                 android:id="@+id/linear_layout_widp_asi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_top_bottom"
                 android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:background="@color/colorBlack" />
 
                 <EditText
                     android:id="@+id/edit_text_nirbheek_id_asi"
@@ -65,7 +69,9 @@
                     android:paddingLeft="@dimen/margin_padding_4_com"
                     android:paddingRight="@dimen/margin_padding_4_com"
                     android:paddingStart="@dimen/margin_padding_4_com"
-                    android:paddingTop="@dimen/margin_padding_12_com" />
+                    android:paddingTop="@dimen/margin_padding_12_com" >
+                    <requestFocus/>
+                </EditText>
 
                 <View
                     android:layout_width="match_parent"
@@ -86,6 +92,11 @@
                     android:paddingRight="@dimen/margin_padding_4_com"
                     android:paddingStart="@dimen/margin_padding_4_com"
                     android:paddingTop="@dimen/margin_padding_12_com" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_wh_1px"
+                    android:background="@color/colorBlack" />
             </LinearLayout>
 
             <TextView
@@ -95,7 +106,6 @@
                 android:layout_marginTop="@dimen/forget_pass_mrgn_top_asi"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="forgotPassword"
                 android:text="@string/text_forgot_password_asi"
                 android:textColor="@color/colorFrgtPassText"
                 android:textSize="@dimen/text_size_18_com" />

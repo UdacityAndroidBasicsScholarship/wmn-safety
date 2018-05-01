@@ -14,7 +14,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="21dp"
-        android:src="@drawable/wmn_safety_banner" />
+        android:src="@drawable/wmnsafety" />
 
     <ProgressBar
         android:id="@+id/progressBar3"
