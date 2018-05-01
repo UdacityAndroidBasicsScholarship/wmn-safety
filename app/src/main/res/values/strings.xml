@@ -8,4 +8,7 @@
     <string name="email_hint">Email</string>
     <string name="confirm_hint">Confirm Password</string>
     <string name="title">Nirbheek</string>
+    <string name="main">splashimage</string>
+    <string name="butterfly1">butterfly1</string>
+    <string name="butterfly2">butterfly2</string>
 </resources>
