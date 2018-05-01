@@ -13,9 +13,29 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import in.paperwrk.safetycollabproject.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
-public class SignupActivity extends AppCompatActivity {
+import in.paperwrk.safetycollabproject.HomeActivity;
+import in.paperwrk.safetycollabproject.R;
+import in.paperwrk.safetycollabproject.utilities.Helpers;
+
+public class SignupActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button mSignUpButton;
+    private TextView mSignInTextView;
+    private TextInputEditText mEmailText;
+    private TextInputEditText mNameText;
+    private TextInputEditText mPhoneText;
+    private TextInputEditText mPasswordText;
+    private Helpers mHelpers;
+    private FirebaseAuth mFirebaseAuth;
+
 
     private ImageView imageViewLogo;
     private EditText nameEditext, emailEditext, mobileEditext, passwordEditext;
