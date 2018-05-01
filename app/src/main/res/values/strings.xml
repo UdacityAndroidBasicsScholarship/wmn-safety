@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
     <string name="app_name_slogan">\"NIRBHEEK\"\nStay Safe\nWe Believe In Keeping You Safe!!!</string>
+    <string name="email_hint_text">Enter Valid Email ID</string>
+    <string name="mobile_no_hint">Enter Valid Mobile Number</string>
+    <string name="pasword_hint">Enter Password</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="register_button_text">Register</string>
+    <string name="login_text">LOGIN</string>
+    <string name="forgote_password_text">FORGOT PASSWORD</string>
+    <string name="reset_password_text">RESET PASSWORD</string>
 </resources>

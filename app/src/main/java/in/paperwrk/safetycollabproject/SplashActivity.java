@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+import in.paperwrk.safetycollabproject.accounts.SignupActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -16,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this, SigninActivity.class);
                 startActivity(intent);
                 finish();
             }
