@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/icon_account"
+            android:title="Account" />
+        <item
+            android:id="@+id/nav_trustedcontacts"
+            android:icon="@drawable/icon_contact"
+            android:title="Trusted contacts" />
+        <item
+            android:id="@+id/nav_fakecalls"
+            android:icon="@drawable/icon_contact"
+            android:title="Fake calls" />
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Explore" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share Location" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send Status" />
+        </menu>
+    </item>
+</menu>
