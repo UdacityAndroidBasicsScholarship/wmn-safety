@@ -12,10 +12,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import in.paperwrk.safetycollabproject.R;
+import in.paperwrk.safetycollabproject.utilities.Helpers;
 
-public class ForgotPasswordActivity extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button mForgotButton;
+    private TextInputEditText mEmailText;
+    private Helpers mHelpers;
+    private FirebaseAuth mFirebaseAuth;
 
     private ImageView imageViewLogo;
     private EditText emailEditext;
