@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+import in.paperwrk.safetycollabproject.accounts.SignupActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override

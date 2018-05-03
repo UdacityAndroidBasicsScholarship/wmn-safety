@@ -1,17 +1,17 @@
 package in.paperwrk.safetycollabproject.accounts;
 
-import android.support.annotation.NonNull;
-import android.support.design.widget.TextInputEditText;
+import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnticipateOvershootInterpolator;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-
 import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.utilities.Helpers;
 
@@ -22,56 +22,77 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
     private Helpers mHelpers;
     private FirebaseAuth mFirebaseAuth;
 
+    private ImageView imageViewLogo;
+    private EditText emailEditext;
+    private Button resetPasswordButton, loginButton, registerButton;
+    private String valid_email;
+    private long duration = 5000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+        imageViewLogo = (ImageView) findViewById(R.id.img_logo);
+        flip_logo();
+        init();
 
-        mHelpers = new Helpers(this);
-        mFirebaseAuth = FirebaseAuth.getInstance();
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForgotPasswordActivity.this, SigninActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-        mEmailText = findViewById(R.id.forgot_email_tv);
-        mForgotButton = findViewById(R.id.forgot_button);
-        mForgotButton.setOnClickListener(this);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ForgotPasswordActivity.this, SignupActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        resetPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (check_validity()) {
+                    Toast.makeText(ForgotPasswordActivity.this, "Check mail !!!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ForgotPasswordActivity.this, SigninActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id) {
-            case R.id.forgot_button:
-                doForgotPassword();
-                break;
+    public void init() {
+        emailEditext = (EditText) findViewById(R.id.email_edittext);
+        loginButton = (Button) findViewById(R.id.login_button);
+        registerButton = (Button) findViewById(R.id.register_button);
+        resetPasswordButton = (Button) findViewById(R.id.reset_password_button);
+    }
+
+    public void flip_logo() {
+        ObjectAnimator flip = ObjectAnimator.ofFloat(imageViewLogo, "rotationY", 0.0f, 360);
+        flip.setDuration(duration);
+        flip.setRepeatCount(Animation.INFINITE);
+        flip.setInterpolator(new AnticipateOvershootInterpolator());
+        flip.start();
+    }
+
+    public boolean check_validity() {
+        valid_email = emailEditext.getText().toString();
+
+        if (valid_email.length() == 0) {
+            emailEditext.setError("Email is Required!!!");
+            return false;
+        } else if (Patterns.EMAIL_ADDRESS.matcher(valid_email).matches() == false) {
+            emailEditext.setError("Valid Email is Required!!!");
+            return false;
         }
-    }
 
-    private void doForgotPassword() {
-
-        String email = mEmailText.getText().toString();
-
-        if (email.isEmpty()) {
-            mHelpers.showAlertDialog(getString(R.string.email_required_msg), getString(R.string.enter_email_msg)).show();
-            return;
-        }
-
-        sendPasswordResetEmail(email);
-
-    }
-
-    private void sendPasswordResetEmail(String email) {
-        mHelpers.showProgressDialog(getString(R.string.processing));
-        mFirebaseAuth.sendPasswordResetEmail(email)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        mHelpers.hideProgressDialog();
-                        if (task.isSuccessful()) {
-                            mHelpers.showToast("Reset Password Email Sent Successfully");
-                            finish();
-                        } else {
-                            mHelpers.showAlertDialog(getString(R.string.error_message), task.getException().getMessage()).show();
-                        }
-                    }
-                });
+        return true;
     }
 }
