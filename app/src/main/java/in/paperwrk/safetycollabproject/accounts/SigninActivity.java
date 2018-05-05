@@ -20,15 +20,19 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import in.paperwrk.safetycollabproject.HomeActivity;
 import in.paperwrk.safetycollabproject.R;
+import in.paperwrk.safetycollabproject.models.UserData;
 
 public class SigninActivity extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth;
     private static final int RC_SIGN_IN = 1712;
     private GoogleSignInClient mGoogleSignInClient;
+    private FirebaseDatabase mFirebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,8 @@ public class SigninActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, mGoogleSignInOptions);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
 
         findViewById(R.id.google_sign_in_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,14 +113,18 @@ public class SigninActivity extends AppCompatActivity {
         }
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
+    private void firebaseAuthWithGoogle(final GoogleSignInAccount account) {
         AuthCredential mCredential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mFirebaseAuth.signInWithCredential(mCredential)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            onSignInSuccess();
+                            String email = account.getEmail();
+                            String name = account.getDisplayName();
+                            String userID = mFirebaseAuth.getCurrentUser().getUid();
+                            boolean newUser = task.getResult().getAdditionalUserInfo().isNewUser();
+                            addNewUser(email, name, "", userID, newUser);
                         } else {
                             Log.w("Sign in failed", task.getException().toString());
                             Toast.makeText(SigninActivity.this, task.getException().toString(), Toast.LENGTH_SHORT)
@@ -133,6 +143,29 @@ public class SigninActivity extends AppCompatActivity {
         } else {
             Log.v("Sign In", "User log-in failed.");
             Toast.makeText(this, "Invalid email or password!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void addNewUser(String email, String name, String number, String userID, boolean newUser) {
+        if (newUser) {
+            UserData user = new UserData(name, email, number);
+            DatabaseReference mDatabaseReference = mFirebaseDatabase.getReference();
+            mDatabaseReference.child("users").child(userID).setValue(user)
+                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.v("Write Data", "New User Data stored successfully");
+                                onSignInSuccess();
+                            } else {
+                                Log.w("FireBase Error", task.getException().toString());
+                                Toast.makeText(SigninActivity.this, task.getException().toString(),
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        } else {
+            onSignInSuccess();
         }
     }
 }
