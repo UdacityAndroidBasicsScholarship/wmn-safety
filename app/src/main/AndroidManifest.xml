@@ -36,5 +36,4 @@ package="in.paperwrk.safetycollabproject">
     <activity android:name=".accounts.SigninActivity" />
     <activity android:name=".accounts.ForgotPasswordActivity"/>
 </application>
-
 </manifest>
