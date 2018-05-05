@@ -19,8 +19,9 @@ import in.paperwrk.safetycollabproject.fragments.HomeFragment;
 import in.paperwrk.safetycollabproject.fragments.SendFeedbackFragment;
 import in.paperwrk.safetycollabproject.fragments.SettingsFragment;
 import in.paperwrk.safetycollabproject.fragments.TrustedContactsFragment;
+import in.paperwrk.safetycollabproject.interfaces.ToolbarTitleChangeListener;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, ToolbarTitleChangeListener {
 
     private DrawerLayout mDrawer;
     private NavigationView mNavigationView;
@@ -44,7 +45,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void setHomeFragment() {
-        setTitle(mNavigationView.getMenu().findItem(R.id.nav_home).getTitle());
+        setTitle(getString(R.string.app_name).toUpperCase());
         mNavigationView.getMenu().findItem(R.id.nav_home).setChecked(true);
         setMyFragment(new HomeFragment());
     }
@@ -65,6 +66,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Fragment fragment = null;
         switch (id) {
             case R.id.nav_home:
+                setTitle(getString(R.string.app_name).toUpperCase());
                 fragment = new HomeFragment();
                 break;
             case R.id.nav_trusted_contacts:
@@ -101,5 +103,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 .beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();
+    }
+
+
+
+    @Override
+    public void changeTitle(String title) {
+        setTitle(title.toUpperCase());
     }
 }
