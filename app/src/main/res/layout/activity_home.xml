@@ -9,7 +9,7 @@
     tools:context=".HomeActivity"
     tools:openDrawer="start">
 
-    <FrameLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -22,14 +22,10 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <include
-            layout="@layout/content_home"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <include layout="@layout/content_home" />
 
 
-
-    </FrameLayout >
+    </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
