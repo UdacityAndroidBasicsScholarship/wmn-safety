@@ -9,7 +9,7 @@
     tools:context=".HomeActivity"
     tools:openDrawer="start">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -27,17 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimary"
-            app:itemIconTint="@android:color/white"
-            app:itemTextColor="@android:color/white"
-            app:menu="@menu/bottom_navigation_menu" />
 
-    </RelativeLayout >
+
+    </FrameLayout >
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
