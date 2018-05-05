@@ -99,7 +99,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private void setMyFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.home_container, fragment)
+                .replace(R.id.container, fragment)
                 .commit();
     }
 }
