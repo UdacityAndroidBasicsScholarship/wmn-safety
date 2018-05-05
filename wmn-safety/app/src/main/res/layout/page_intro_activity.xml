@@ -4,6 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD:wmn-safety/app/src/main/res/layout/page_intro_activity.xml
     tools:context=".PageIntroActivity">
+||||||| merged common ancestors
+    tools:context=".SplashActivity">
+=======
+    android:background="#000000"
+    tools:context=".SplashActivity">
+>>>>>>> 538cfb466ed4b93227f35ee53cbfc25c9a50aac8:app/src/main/res/layout/activity_splash.xml
 
+<<<<<<< HEAD:wmn-safety/app/src/main/res/layout/page_intro_activity.xml
 </android.support.constraint.ConstraintLayout>
+||||||| merged common ancestors
+</android.support.constraint.ConstraintLayout>
+=======
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="347dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wmnsfty" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="serif-monospace"
+        android:text="Nirbheek"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Version 1.0"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
+>>>>>>> 538cfb466ed4b93227f35ee53cbfc25c9a50aac8:app/src/main/res/layout/activity_splash.xml
