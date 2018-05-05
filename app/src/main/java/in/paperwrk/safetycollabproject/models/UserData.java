@@ -1,37 +1,38 @@
 package in.paperwrk.safetycollabproject.models;
 
 public class UserData {
-    private String mName, mEmail, mNumber;
+    private String name, email, number;
 
-    UserData(String name,String email, String number){
-        this.mEmail = email;
-        this.mName = name;
-        this.mNumber = number;
+    public UserData(String name, String email, String number) {
+        this.email = email;
+        this.name = name;
+        this.number = number;
     }
 
-    UserData(){}
-
-    public void setmEmail(String mEmail) {
-        this.mEmail = mEmail;
+    public UserData() {
     }
 
-    public String getmName() {
-        return mName;
+    public String getEmail() {
+        return email;
     }
 
-    public String getmNumber() {
-        return mNumber;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getmEmail() {
-        return mEmail;
+    public String getName() {
+        return name;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setmNumber(String mNumber) {
-        this.mNumber = mNumber;
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 }
