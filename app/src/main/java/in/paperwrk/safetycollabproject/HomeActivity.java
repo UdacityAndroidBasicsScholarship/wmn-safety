@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class HomeActivity extends AppCompatActivity implements  NavigationView.OnNavigationItemSelectedListener {
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawer;
     private NavigationView mNavigationView;
@@ -33,15 +33,34 @@ public class HomeActivity extends AppCompatActivity implements  NavigationView.O
 
     @Override
     public void onBackPressed() {
-        if(mDrawer.isDrawerOpen(GravityCompat.START)){
+        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
             mDrawer.closeDrawer(GravityCompat.START);
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.nav_home:
+                break;
+            case R.id.nav_trusted_contacts:
+                break;
+            case R.id.nav_explore:
+                break;
+            case R.id.nav_fake_call:
+                break;
+            case R.id.nav_account:
+                break;
+            case R.id.nav_settings:
+                break;
+            case R.id.nav_help:
+                break;
+            case R.id.nav_feedback:
+                break;
+        }
+        return true;
     }
 }

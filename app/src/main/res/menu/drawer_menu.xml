@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:icon="@drawable/home"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_trusted_contacts"
+            android:icon="@drawable/trusted_contact"
+            android:title="@string/nav_trusted_contacts" />
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/explore"
+            android:title="@string/nav_explore" />
+        <item
+            android:id="@+id/nav_fake_call"
+            android:icon="@drawable/fake_call"
+            android:title="@string/nav_fake_call" />
+    </group>
+
+    <group
+        android:id="@+id/group_2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/account"
+            android:title="@string/nav_account" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="@string/nav_settings" />
+
+    </group>
+    <group
+        android:id="@+id/group_3"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_help"
+            android:title="@string/nav_help" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="@string/nav_feedback" />
+
+    </group>
+
+</menu>
