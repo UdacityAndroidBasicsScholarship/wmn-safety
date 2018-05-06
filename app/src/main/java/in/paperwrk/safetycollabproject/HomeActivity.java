@@ -27,6 +27,8 @@ public class HomeActivity extends AppCompatActivity{
     FragmentManager mFragmentManager;
     public static boolean isHomeActivityShown;
     public static boolean isFragment1Shown=false ;
+    public boolean isFragment2Shown = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,12 @@ public class HomeActivity extends AppCompatActivity{
                     isHomeActivityShown = false;
                     fragmentTransaction.replace(R.id.content,new TrackUserFragment()).commit();
                     return true;
+                case R.id.action_fake_call:
+                    isFragment2Shown = true;
+                    isFragment1Shown = false;
+                    isHomeActivityShown = false;
+                    fragmentTransaction.replace(R.id.content, new FakeCallFragment()).commit();
+                    return true;
             }
 
             return false;
@@ -101,17 +109,11 @@ public class HomeActivity extends AppCompatActivity{
                 .withSelectedItem(-1)
                 .withHasStableIds(true)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName("Home")
-                                .withIdentifier(0).withIcon(R.drawable.ic_home_black_24dp),
                         new PrimaryDrawerItem().withName("Trusted Contacts")
                                 .withIdentifier(1).withIcon(R.drawable.ic_contact_phone_black_24dp),
                         new PrimaryDrawerItem().withName("Explore")
                                 .withIdentifier(2).withIcon(R.drawable.ic_explore_black_24dp),
-                        new PrimaryDrawerItem().withName("Fake Call")
-                                .withIdentifier(3).withIcon(R.drawable.ic_call_black_24dp),
                         new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName("Account")
-                                .withIdentifier(4).withIcon(R.drawable.ic_person_black_24dp),
                         new PrimaryDrawerItem().withName("Settings")
                                 .withIdentifier(5).withIcon(R.drawable.ic_settings_black_24dp),
                         new SecondaryDrawerItem().withName("Help"),

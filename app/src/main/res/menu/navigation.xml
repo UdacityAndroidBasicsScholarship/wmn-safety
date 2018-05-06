@@ -16,5 +16,12 @@
         app:showAsAction="never" />
 
 
+    <item
+        android:icon="@drawable/ic_call_black_24dp"
+        android:id="@+id/action_fake_call"
+        android:title="Fake Call"
+        app:showAsAction="never" />
+
+
 
 </menu>
