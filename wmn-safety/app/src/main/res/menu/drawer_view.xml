@@ -5,11 +5,11 @@
 
         <item
             android:id="@+id/nav_contacts"
-            android:icon="@drawable/contacts"
+            android:icon="@drawable/ic_perm_contact_calendar_black_24dp"
             android:title="@string/nav_trusted_contacts" />
         <item
             android:id="@+id/nav_explore"
-            android:icon="@drawable/binoculars"
+            android:icon="@drawable/ic_explore_black_24dp"
             android:title="@string/nav_explore" />
 
     </group>
@@ -18,16 +18,16 @@
 
         <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/settings"
+            android:icon="@drawable/ic_settings_black_24dp"
             android:title="@string/nav_settings" />
         <item
             android:id="@+id/nav_help"
-            android:icon="@drawable/help"
+            android:icon="@drawable/ic_help_black_24dp"
             android:title="@string/nav_help" />
 
         <item
             android:id="@+id/nav_feedback"
-            android:icon="@drawable/feedback"
+            android:icon="@drawable/ic_announcement_black_24dp"
             android:title="@string/nav_feedback" />
 
     </group>

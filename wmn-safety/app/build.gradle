@@ -9,7 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.generatedDensities = ['hdpi','xxhdpi']        
+        vectorDrawables.generatedDensities = ['hdpi','xxhdpi']
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
