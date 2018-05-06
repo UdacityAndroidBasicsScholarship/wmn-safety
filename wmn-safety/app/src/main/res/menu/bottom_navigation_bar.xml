@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_songs"
+        android:icon="@drawable/ic_speaker_phone_black_24dp"
+        android:title="SOS"/>
+
+    <item
+        android:id="@+id/navigation_albums"
+        android:icon="@drawable/ic_location_on_black_24dp"
+        android:title="Track Me"/>
+
+    <item
+        android:id="@+id/navigation_artists"
+        android:icon="@drawable/ic_phone_in_talk_black_24dp"
+        android:title="Fake Call"/>
+
+</menu>
