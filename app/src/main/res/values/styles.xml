@@ -12,6 +12,33 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
+    <declare-styleable name="BottomNavigationMenu">
+        <!-- menu default background color -->
+        <attr name="android:background" />
+
+        <!-- default badge color -->
+        <attr name="bbn_badgeColor" format="color" />
+
+        <!-- animation duration for the menu items -->
+        <attr name="bbn_itemAnimationDuration" format="integer" />
+
+        <!-- ripple selector color -->
+        <attr name="bbn_rippleColor" format="color" />
+
+        <!-- menu item active color -->
+        <attr name="bbn_itemColorActive" format="color" />
+
+        <!-- menu item inactive color -->
+        <attr name="bbn_itemColorInactive" format="color" />
+
+        <!-- menu item disabled color -->
+        <attr name="bbn_itemColorDisabled" format="color" />
+
+        <!-- force fixed behavior and always display item labels -->
+        <!-- default implementation is false and the labels are -->
+        <!-- shown only if there are less than 4 items in the menu -->
+        <attr name="bbn_alwaysShowLabels" format="boolean" />
+    </declare-styleable>
 
 </resources>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeActivity">
 
 
@@ -13,6 +13,19 @@
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
         android:layout_height="wrap_content" />
+
+    <it.sephiroth.android.library.bottomnavigation.BottomNavigation
+        android:id="@+id/BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        app:bbn_badgeProvider="@string/bbn_badgeProvider"
+        app:bbn_entries="@menu/bottombar"
+        app:bbn_scrollEnabled="true"
+        app:layout_behavior="@string/bbn_phone_view_behavior" />
+
 
 
 </RelativeLayout>
