@@ -39,7 +39,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     private TextView mSignUpTextView;
     private TextView mForgotPasswordTextView;
     private FirebaseAuth mFirebaseAuth;
-    private GoogleSignInClient mGoogleSigninClient;
+    private GoogleSignInClient mGoogleSignInClient;
     private TextInputEditText mEmailText;
     private TextInputEditText mPasswordText;
     private Helpers mHelpers;
@@ -55,7 +55,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 .requestEmail()
                 .build();
 
-        mGoogleSigninClient = GoogleSignIn.getClient(this, gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         mHelpers = new Helpers(this);
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -114,7 +114,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void doGoogleSignIn() {
-        Intent googleSignInIntent = mGoogleSigninClient.getSignInIntent();
+        Intent googleSignInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(googleSignInIntent, RC_SIGN_IN);
     }
 
