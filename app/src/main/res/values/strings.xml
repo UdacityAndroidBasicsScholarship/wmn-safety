@@ -54,4 +54,9 @@
     <string name="account_creation_success">Account Created Successfully</string>
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
+    <string name="home">Home</string>
+    <string name="resources">Resources</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
 </resources>
