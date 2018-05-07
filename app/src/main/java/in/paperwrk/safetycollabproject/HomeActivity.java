@@ -6,7 +6,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -105,9 +104,9 @@ public class HomeActivity extends AppCompatActivity {
     private void launchFragment(int id, Fragment fragment) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(id, fragment);
-            fragmentTransaction.commit();
+            fragmentManager.beginTransaction()
+                    .replace(id, fragment)
+                    .commit();
         }
     }
 
