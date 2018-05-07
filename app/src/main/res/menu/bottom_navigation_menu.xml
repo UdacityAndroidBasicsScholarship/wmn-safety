@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group_3"  android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bottom_sos"
+            android:checked="true"
+            android:icon="@drawable/sos"
+            android:title="@string/nav_bottom_sos" />
+        <item
+            android:id="@+id/nav_bottom_track_me"
+            android:icon="@drawable/track_me"
+            android:title="@string/nav_bottom_track_me" />
+        <item
+            android:id="@+id/nav_bottom_fake_call"
+            android:icon="@drawable/fake_call"
+            android:title="@string/nav_fake_call" />
+    </group>
+</menu>
