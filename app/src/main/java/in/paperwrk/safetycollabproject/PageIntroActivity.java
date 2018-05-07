@@ -26,140 +26,143 @@ import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 public class PageIntroActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
-    Button next,skip;
+      private ViewPager viewPager;
     private LinearLayout dotsLayout;
     private int[] layouts;
+    private Button btnSkip, btnNext;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-
-        // device check pre Lollipop
-        if(Build.VERSION.SDK_INT>=21){
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE|View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN); //check this
+        // Making notification bar transparent
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
         setContentView(R.layout.page_intro_activity);
 
-        viewPager = findViewById(R.id.view_pager);
-        dotsLayout = findViewById(R.id.layoutDots);
-        skip= findViewById(R.id.btn_skip);
-        next= findViewById(R.id.btn_next);
 
-        layouts = new int[]{R.layout.page_intro_activity1,
-                R.layout.page_intro_activity2,R.layout.page_intro_activity3,R.layout.page_intro_activity4};
+        // init views
+        viewPager =  findViewById(R.id.view_pager);
+        dotsLayout =  findViewById(R.id.layoutDots);
+        btnSkip =  findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
+
+
+        layouts = new int[]{R.layout.page_intro_activity1, R.layout.page_intro_activity2,
+                R.layout.page_intro_activity3, R.layout.page_intro_activity4};
 
         addBottomDots(0);
+
         changeStatusBarColor();
 
-        ViewPageAdapter mPagerAdapter = new ViewPageAdapter();
+        PagerAdapter mPagerAdapter = new PagerAdapter();
         viewPager.setAdapter(mPagerAdapter);
-        viewPager.addOnPageChangeListener(viewListener);
+        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        skip.setOnClickListener(new View.OnClickListener() {
+        btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PageIntroActivity.this,SigninActivity.class);
-                startActivity(i);
-                finish();
+                launchHomeScreen();
             }
         });
 
-        next.setOnClickListener(new View.OnClickListener(){
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View v) {
                 int current = getItem(+1);
-                if(current<layouts.length)
-                {
+                if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
-                }
-                else
-                {
-                    Intent i = new Intent(PageIntroActivity.this,HomeActivity.class);
-                    startActivity(i);
-                    finish();
+                } else {
+                    launchHomeScreen();
                 }
             }
         });
 
     }
 
-    private void addBottomDots(int position){
-
+    private void addBottomDots(int currentPage) {
         TextView[] dots = new TextView[layouts.length];
-        int[] colorActive = getResources().getIntArray(R.array.dot_active);
-        int[] colorInactive = getResources().getIntArray(R.array.dot_inactive);
+
+        int[] colorsActive = getResources().getIntArray(R.array.dot_active);
+        int[] colorsInactive = getResources().getIntArray(R.array.dot_inactive);
+
         dotsLayout.removeAllViews();
-        for(int i = 0; i< dots.length; i++)
-        {
+        for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
-            dots[i].setTextColor(colorInactive[position]);
+            dots[i].setTextColor(colorsInactive[currentPage]);
             dotsLayout.addView(dots[i]);
         }
 
-        if(dots.length>0)
-            dots[position].setTextColor(colorActive[position]);
-
+        if (dots.length > 0)
+            dots[currentPage].setTextColor(colorsActive[currentPage]);
     }
 
-    private int getItem(int i)
-    {
-        return viewPager.getCurrentItem()+1;
+    private int getItem(int i) {
+        return viewPager.getCurrentItem() + i;
     }
 
-    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    private void launchHomeScreen() {
+        //prefManager.setFirstLaunch(false);
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
+    }
 
-        }
+    //	viewpager change listener
+    ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
-        addBottomDots(position);
-        if(position==layouts.length-1){
-            next.setText("PROCEED");
-            skip.setVisibility(View.GONE);
-        }
+            addBottomDots(position);
 
-        else
-        {
-            next.setText("NEXT");
-            skip.setVisibility(View.VISIBLE);
-
-        }
+            if (position == layouts.length - 1) {
+                btnNext.setText("Start");
+                btnSkip.setVisibility(View.GONE);
+            } else {
+                btnNext.setText("Next");
+                btnSkip.setVisibility(View.VISIBLE);
+            }
         }
 
         @Override
-        public void onPageScrollStateChanged(int state) {
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
 
         }
     };
 
-
-    private void changeStatusBarColor(){
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
-        {
+    /**
+     * Making notification bar transparent
+     */
+    private void changeStatusBarColor() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
 
-    public class ViewPageAdapter extends PagerAdapter{
-
+    public class PagerAdapter extends android.support.v4.view.PagerAdapter {
         private LayoutInflater layoutInflater;
 
-        @NonNull
+        PagerAdapter() {
+        }
+
         @Override
-        public Object instantiateItem(@NonNull ViewGroup container, int position) {
-            layoutInflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View v = layoutInflater.inflate(layouts[position], container, false);
-            container.addView(v);
-            return v;
+        public Object instantiateItem(ViewGroup container, int position) {
+            layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            View view = layoutInflater.inflate(layouts[position], container, false);
+            container.addView(view);
+
+            return view;
         }
 
         @Override
@@ -168,15 +171,15 @@ public class PageIntroActivity extends AppCompatActivity {
         }
 
         @Override
-        public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-            return view==object;
+        public boolean isViewFromObject(View view, Object obj) {
+            return view == obj;
         }
 
-        @Override
-        public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-            View v = (View)object;
-            container.removeView(v);
 
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            View view = (View) object;
+            container.removeView(view);
         }
     }
 }
