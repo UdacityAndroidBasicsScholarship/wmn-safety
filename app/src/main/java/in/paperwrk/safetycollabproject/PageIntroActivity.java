@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -26,10 +23,12 @@ import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 public class PageIntroActivity extends AppCompatActivity {
 
-      private ViewPager viewPager;
-    private LinearLayout dotsLayout;
+    //crashed
+    private ViewPager viewPager;
+    private LinearLayout indicatorContainer;
     private int[] layouts;
     private Button btnSkip, btnNext;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class PageIntroActivity extends AppCompatActivity {
 
         // init views
         viewPager =  findViewById(R.id.view_pager);
-        dotsLayout =  findViewById(R.id.layoutDots);
+        indicatorContainer =  findViewById(R.id.layoutDots);
         btnSkip =  findViewById(R.id.btn_skip);
         btnNext = findViewById(R.id.btn_next);
 
@@ -53,7 +52,7 @@ public class PageIntroActivity extends AppCompatActivity {
         layouts = new int[]{R.layout.page_intro_activity1, R.layout.page_intro_activity2,
                 R.layout.page_intro_activity3, R.layout.page_intro_activity4};
 
-        addBottomDots(0);
+        addBottomIndicators(0);
 
         changeStatusBarColor();
 
@@ -64,7 +63,7 @@ public class PageIntroActivity extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                launchHomeScreen();
+                launchAuth();
             }
         });
 
@@ -75,26 +74,26 @@ public class PageIntroActivity extends AppCompatActivity {
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
                 } else {
-                    launchHomeScreen();
+                    launchAuth();
                 }
             }
         });
 
     }
 
-    private void addBottomDots(int currentPage) {
+    private void addBottomIndicators(int currentPage) {
         TextView[] dots = new TextView[layouts.length];
 
         int[] colorsActive = getResources().getIntArray(R.array.dot_active);
         int[] colorsInactive = getResources().getIntArray(R.array.dot_inactive);
 
-        dotsLayout.removeAllViews();
+        indicatorContainer.removeAllViews();
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
             dots[i].setTextSize(35);
             dots[i].setTextColor(colorsInactive[currentPage]);
-            dotsLayout.addView(dots[i]);
+            indicatorContainer.addView(dots[i]);
         }
 
         if (dots.length > 0)
@@ -105,9 +104,8 @@ public class PageIntroActivity extends AppCompatActivity {
         return viewPager.getCurrentItem() + i;
     }
 
-    private void launchHomeScreen() {
-        //prefManager.setFirstLaunch(false);
-        startActivity(new Intent(this, HomeActivity.class));
+    private void launchAuth() {
+        startActivity(new Intent(this, SigninActivity.class));
         finish();
     }
 
@@ -116,7 +114,7 @@ public class PageIntroActivity extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-            addBottomDots(position);
+            addBottomIndicators(position);
 
             if (position == layouts.length - 1) {
                 btnNext.setText("Start");

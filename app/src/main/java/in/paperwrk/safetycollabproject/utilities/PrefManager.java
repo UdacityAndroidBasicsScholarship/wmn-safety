@@ -1,8 +1,5 @@
 package in.paperwrk.safetycollabproject.utilities;
 
-/**
- * Created by Ojasvi on 06-05-2018.
- */
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -20,7 +17,7 @@ public class PrefManager {
     public PrefManager(Context context) {
         int PRIVATE_MODE = 0;
         pref = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
-        editor = pref.edit();
+        editor = pref.edit(); 
     }
 
     public void setFirstLaunch(boolean isFirstTime) {
