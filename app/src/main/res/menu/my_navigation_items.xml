@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sos"
+        android:icon="@drawable/ic_phonelink_ring_white_24dp"
+        android:title="@string/nav_bottom_sos" />
+    <item
+        android:id="@+id/track_me"
+        android:icon="@drawable/ic_place_white_24dp"
+        android:title="@string/nav_bottom_track_me" />
+    <item
+        android:id="@+id/fake_call"
+        android:icon="@drawable/ic_call_white_24dp"
+        android:title="@string/nav_fake_call" />
+</menu>
