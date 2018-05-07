@@ -12,7 +12,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
 import java.util.Objects;
 
@@ -27,10 +26,8 @@ import in.paperwrk.safetycollabproject.fragments.TrustedContactFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
-    DrawerLayout mDrawerLayout;
-    FrameLayout mFrameLayout;
-    Fragment mFragment;
-    BottomNavigationView mBottomNavigationView;
+    private DrawerLayout mDrawerLayout;
+    private Fragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +38,6 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
-        mBottomNavigationView = findViewById(R.id.navigation);
-        mFrameLayout = findViewById(R.id.bnv_content);
 
         ActionBar actionbar = getSupportActionBar();
         Objects.requireNonNull(actionbar).setDisplayHomeAsUpEnabled(true);
@@ -51,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         mFragment = new SosFragment();
         launchFragment(R.id.home_content, mFragment);
 
+        BottomNavigationView mBottomNavigationView = findViewById(R.id.navigation);
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -74,8 +70,8 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(
+        NavigationView mNavigationView = findViewById(R.id.nav_view);
+        mNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
