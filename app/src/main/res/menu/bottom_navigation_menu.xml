@@ -10,5 +10,9 @@
             android:id="@+id/nav_bottom_track_me"
             android:icon="@drawable/track_me"
             android:title="@string/nav_bottom_track_me" />
+        <item
+            android:id="@+id/nav_bottom_fake_call"
+            android:icon="@drawable/fake_call"
+            android:title="@string/nav_fake_call" />
     </group>
 </menu>

@@ -69,6 +69,11 @@ public class HomeFragment extends Fragment {
                 mToolbarTitleChangeListener.changeTitle(item.getTitle().toString());
                 fragment = new TrackMeFragment();
                 break;
+
+            case R.id.nav_bottom_fake_call:
+                mToolbarTitleChangeListener.changeTitle(item.getTitle().toString());
+                fragment = new FakeCallFragment();
+                break;
         }
 
         if (fragment != null) {

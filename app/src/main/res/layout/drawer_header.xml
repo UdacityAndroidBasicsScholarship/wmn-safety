@@ -7,30 +7,47 @@
     android:background="@color/colorPrimary">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/dimen_100dp"
-        android:layout_height="@dimen/dimen_100dp"
-        android:layout_marginTop="32dp"
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_circle_white"
+        android:contentDescription="@string/user_profile_image_desc"
         android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wmn_logo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/profileNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+        tools:text="Profile Name" />
+
+    <TextView
+        android:id="@+id/profileEmailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/app_name"
-        android:textAlignment="textStart"
-        android:textAllCaps="true"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/profileNameTextView"
+        tools:text="Profile Email" />
 </android.support.constraint.ConstraintLayout>

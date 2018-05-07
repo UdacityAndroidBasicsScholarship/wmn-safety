@@ -17,19 +17,12 @@
             android:id="@+id/nav_explore"
             android:icon="@drawable/explore"
             android:title="@string/nav_explore" />
-        <item
-            android:id="@+id/nav_fake_call"
-            android:icon="@drawable/fake_call"
-            android:title="@string/nav_fake_call" />
+
     </group>
 
     <group
         android:id="@+id/group_2"
         android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_account"
-            android:icon="@drawable/account"
-            android:title="@string/nav_account" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/settings"

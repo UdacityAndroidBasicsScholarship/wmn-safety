@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 import in.paperwrk.safetycollabproject.fragments.AccountFragment;
 import in.paperwrk.safetycollabproject.fragments.ExploreFragment;
 import in.paperwrk.safetycollabproject.fragments.FakeCallFragment;
@@ -25,11 +33,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout mDrawer;
     private NavigationView mNavigationView;
+    private FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        if(mFirebaseAuth == null){
+            navigateToLogin();
+        }
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -40,9 +55,23 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mNavigationView = findViewById(R.id.navigation_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 
+        ImageView profileImageView = mNavigationView.getHeaderView(0).findViewById(R.id.profileImageView);
+        TextView profileNameTextView = mNavigationView.getHeaderView(0).findViewById(R.id.profileNameTextView);
+        TextView profileEmailTextView = mNavigationView.getHeaderView(0).findViewById(R.id.profileEmailTextView);
+
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+        if(user != null) {
+            if(user.getPhotoUrl() != null){
+                Glide.with(this).load(user.getPhotoUrl().toString()).into(profileImageView);
+            }
+            profileNameTextView.setText(user.getDisplayName());
+            profileEmailTextView.setText(user.getEmail());
+        }
+
         setHomeFragment();
 
     }
+
 
     private void setHomeFragment() {
         setTitle(getString(R.string.app_name).toUpperCase());
@@ -75,12 +104,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_explore:
                 fragment = new ExploreFragment();
                 break;
-            case R.id.nav_fake_call:
-                fragment = new FakeCallFragment();
-                break;
-            case R.id.nav_account:
-                fragment = new AccountFragment();
-                break;
             case R.id.nav_settings:
                 fragment = new SettingsFragment();
                 break;
@@ -111,4 +134,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public void changeTitle(String title) {
         setTitle(title.toUpperCase());
     }
+
+    private void navigateToLogin() {
+        Intent intent = new Intent(this, SigninActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
