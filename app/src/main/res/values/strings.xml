@@ -54,4 +54,6 @@
     <string name="account_creation_success">Account Created Successfully</string>
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
+    <string name="open_drawer">Drawer open</string>
+    <string name="close_drawer">Drawer close</string>
 </resources>

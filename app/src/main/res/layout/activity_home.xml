@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
-    <TextView
-        android:gravity="center_horizontal"
-        android:text="PlaceHolder Text"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_home" />
 
-</RelativeLayout>
+        <com.mindorks.placeholderview.PlaceHolderView
+            android:id="@+id/galleryView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@android:color/white">
+
+        <com.mindorks.placeholderview.PlaceHolderView
+            android:id="@+id/drawerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </com.mindorks.placeholderview.PlaceHolderView>
+    </FrameLayout>
+
+    <!--<com.skyfishjy.library.RippleBackground-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/content"-->
+    <!--app:rb_color = "#0099cc"-->
+    <!--app:rb_radius = "32dp"-->
+    <!--android:background="#ff91ff"-->
+    <!--app:rb_rippleAmount="6"-->
+    <!--app:rb_duration="3000"-->
+    <!--app:rb_scale="6">-->
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:id="@+id/centertext"-->
+    <!--android:text="SOS"-->
+    <!--android:fontFamily="sans-serif"-->
+    <!--android:typeface="monospace"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textSize="40sp"/>-->
+    <!--</com.skyfishjy.library.RippleBackground>-->
+
+</android.support.v4.widget.DrawerLayout>
