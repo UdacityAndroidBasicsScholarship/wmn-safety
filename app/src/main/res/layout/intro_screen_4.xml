@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_4">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/happy_woman"
+            android:layout_margin="@dimen/dimen_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nirbheek"
+            android:textAllCaps="true"
+            android:textColor="@color/whiteText"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your safety "
+            android:textColor="@color/whiteText"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_marginTop="@dimen/dimen_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In your hands"
+            android:textColor="@color/whiteText"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <Button
+            android:background="@drawable/round_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get started"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:padding="@dimen/dimen_16dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/whiteText" />
+
+    </LinearLayout>
+
+</RelativeLayout>
