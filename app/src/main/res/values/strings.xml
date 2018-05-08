@@ -55,6 +55,7 @@
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">Drawer open</string>
+    <string name="close_drawer">Drawer close</string>
+
 </resources>
