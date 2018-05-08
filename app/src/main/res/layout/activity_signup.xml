@@ -15,6 +15,7 @@
             android:layout_width="@dimen/dimen_80dp"
             android:layout_height="@dimen/dimen_80dp"
             android:layout_marginTop="25dp"
+
             android:contentDescription="@string/logo_desc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,12 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/montserrat"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:text="@string/welcome_to_nirbheek"
             android:textAppearance="@android:style/TextAppearance.Material.Headline"
             android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +46,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/sign_up_to_safety"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,6 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/full_name_hint"
                 android:inputType="textCapWords" />
 
@@ -85,6 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/email_hint"
                 android:inputType="textEmailAddress" />
 
@@ -104,6 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/phone_hint"
                 android:inputType="phone" />
 
@@ -126,6 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword" />
 
@@ -138,6 +145,7 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/sign_up_button_text"
+            android:fontFamily="@font/montserrat"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="@+id/sign_up_password_layout"
             app:layout_constraintStart_toStartOf="@+id/sign_up_password_layout"
@@ -150,6 +158,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat"
             android:layout_marginTop="16dp"
             android:text="@string/already_have_account"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"

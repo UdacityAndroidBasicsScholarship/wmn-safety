@@ -13,11 +13,11 @@
 
         <ProgressBar
             android:id="@+id/progressBar"
-            android:minHeight="2dip"
-            android:maxHeight="2dip"
+            style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@android:style/Widget.ProgressBar.Horizontal" />
+            android:maxHeight="2dip"
+            android:minHeight="2dip" />
 
         <ImageView
             android:id="@+id/sign_in_logo"
@@ -37,10 +37,11 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/welcome_to_nirbheek"
             android:textAppearance="@android:style/TextAppearance.Material.Headline"
             android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +54,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/sign_in_to_continue"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,6 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/email_hint"
                 android:inputType="textEmailAddress" />
 
@@ -97,6 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+
+                android:fontFamily="@font/montserrat"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword" />
 
@@ -107,6 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/sign_in_forgot_pass_text"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textStyle="bold"
@@ -121,6 +127,7 @@
             android:layout_height="@dimen/dimen_60dp"
             android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/montserrat"
             android:text="@string/sign_in_button_text"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="@+id/sign_in_password_layout"
@@ -134,6 +141,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/create_a_new_account"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textStyle="bold"
@@ -149,6 +157,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -162,6 +171,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserrat"
             android:text="@string/sign_in_or_text"
             android:textAlignment="center"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
