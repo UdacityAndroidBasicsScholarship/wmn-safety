@@ -1,6 +1,7 @@
 package in.paperwrk.safetycollabproject;
 
 import android.os.Bundle;
+
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -19,6 +20,7 @@ public class HomeActivity extends AppCompatActivity{
     private DrawerLayout mDrawer;
     private Toolbar mToolbar;
     private PlaceHolderView mGalleryView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class HomeActivity extends AppCompatActivity{
                 .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.HELP))
                 .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.SEND_FEEDBACK));
 
+
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
             @Override
             public void onDrawerOpened(View drawerView) {
@@ -56,6 +59,7 @@ public class HomeActivity extends AppCompatActivity{
 
         mDrawer.addDrawerListener(drawerToggle);
         drawerToggle.syncState();
+
     }
 
 //    public void ripple_Animation()
