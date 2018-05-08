@@ -23,11 +23,7 @@
         tools:ignore="GoogleAppIndexingWarning"           
         android:theme="@style/AppTheme">
         <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".HomeActivity">
             <intent-filter>
@@ -39,7 +35,14 @@
         <activity android:name=".accounts.SigninActivity" />
         <activity android:name=".accounts.ForgotPasswordActivity"/>
         <activity android:name=".PageIntroActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
