@@ -20,14 +20,23 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent intent = new Intent(SplashActivity.this, PageIntroActivity.class);
-                    startActivity(intent);
-                    finish();
+        final Boolean isFirstLaunch = getSharedPreferences("pref",MODE_PRIVATE)
+                .getBoolean("isfirstLaunch",true);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent;
+                if (isFirstLaunch){
+                    intent = new Intent(SplashActivity.this,PageIntroActivity.class);
+                    getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isfirstLaunch",false).apply();
+                } else {
+                    intent = new Intent(SplashActivity.this,HomeActivity.class);
                 }
-            },2000);
+                startActivity(intent);
+            }
+        },2000);
+
 
     }
 
