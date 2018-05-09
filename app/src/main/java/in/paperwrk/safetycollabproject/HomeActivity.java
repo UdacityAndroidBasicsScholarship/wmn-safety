@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity{
         // will update it later using data from Firebase Realtime DB
         final IProfile profile = new ProfileDrawerItem().withName("Nirbheek")
                 .withTextColor(getResources().getColor(android.R.color.black))
-                .withEmail("useremail@gmail.com").withIcon(R.mipmap.ic_launcher)
+                .withEmail("useremail@gmail.com").withIcon(R.mipmap.ic_launcher_round)
                 .withIdentifier(100);
 
         headerResult = new AccountHeaderBuilder()

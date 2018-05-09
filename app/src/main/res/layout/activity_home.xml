@@ -28,9 +28,10 @@
 
             <TextView
                 android:textColor="#fff"
-                android:textSize="24sp"
+                android:textSize="18sp"
+                android:fontFamily="@font/montserrat"
                 android:gravity="center|start"
-                android:text="Nirbheek"
+                android:text="@string/app_name"
                 android:id="@+id/main_toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
