@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="and_many_more">.... And Many more</string>
+    <string name="add_fcm">* Add FCM</string>
+    <string name="alarm">* Alarm</string>
+    <string name="important_contacts">* Important Contacts</string>
+    <string name="help_in_case_of_emergency">* Help in case of Emergency</string>
+    <string name="show_google_maps">* Show google maps</string>
+    <string name="fetch_current_location">* Fetch current location</string>
+    <string name="safety_videos_and_tutorials">* Safety videos and tutorials</string>
 </resources>
