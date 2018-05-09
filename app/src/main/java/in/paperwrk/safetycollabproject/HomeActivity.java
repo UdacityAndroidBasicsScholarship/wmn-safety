@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -18,6 +19,7 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 public class HomeActivity extends AppCompatActivity{
@@ -28,6 +30,10 @@ public class HomeActivity extends AppCompatActivity{
     public static boolean isHomeActivityShown;
     public static boolean isFragment1Shown=false ;
     public boolean isFragment2Shown = false;
+    String user_name = "Nirbheek";
+    String user_email = "useremail@gmail.com";
+    
+    
 
 
     @Override
@@ -44,9 +50,9 @@ public class HomeActivity extends AppCompatActivity{
 
 
         // will update it later using data from Firebase Realtime DB
-        final IProfile profile = new ProfileDrawerItem().withName("Nirbheek")
+        final IProfile profile = new ProfileDrawerItem().withName(user_name)
                 .withTextColor(getResources().getColor(android.R.color.black))
-                .withEmail("useremail@gmail.com").withIcon(R.mipmap.ic_launcher)
+                .withEmail(user_email).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
 
         headerResult = new AccountHeaderBuilder()
@@ -119,6 +125,13 @@ public class HomeActivity extends AppCompatActivity{
                         new SecondaryDrawerItem().withName("Help"),
                         new SecondaryDrawerItem().withName("Send Feedback")
                 )
+                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                     @Override
+                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                         // add click listeners for nav drawer items
+                         return false;
+                     }
+                 })
                 .build();
     }
 
