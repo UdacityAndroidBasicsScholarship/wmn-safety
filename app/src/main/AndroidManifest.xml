@@ -39,7 +39,8 @@
         <activity android:name=".accounts.SigninActivity" />
         <activity android:name=".accounts.ForgotPasswordActivity"/>
         <activity android:name=".PageIntroActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
