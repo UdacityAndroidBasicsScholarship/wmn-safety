@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject;
 
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -30,11 +31,17 @@ public class HomeActivity extends AppCompatActivity{
     public boolean isFragment2Shown = false;
 
 
+
+  private FirebaseAuth mFirebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+// I have comment this code as I have not got that who has worked for this and I am not getting his/her logic.
+// mFirebaseAuth = FirebaseAuth.getInstance();         
+//       if (mFirebaseAuth.getCurrentUser() == null) {             
+//   startActivity(new Intent(HomeActivity.this, SigninActivity.class));         }     }
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -122,4 +129,5 @@ public class HomeActivity extends AppCompatActivity{
                 .build();
     }
 
+       
 }

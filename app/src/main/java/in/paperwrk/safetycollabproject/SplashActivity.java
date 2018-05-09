@@ -16,18 +16,18 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash);\
         // go to MainActivity after a delay 2 seconds
+     
+        // go to HomeActivity after a delay 2 seconds
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, SigninActivity.class);
+                Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+
                 startActivity(intent);
                 finish();
             }
         },2000);
-
-
     }
-
 }

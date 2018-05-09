@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!-- <<<<<<< downloaded_font_PR
     <color name="colorPrimary">#673ab7</color>
     <color name="colorPrimaryDark">#4527A0</color>
     <color name="colorAccent">#ff4081</color>
+</resources>
+======= -->
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#4527A0</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>
