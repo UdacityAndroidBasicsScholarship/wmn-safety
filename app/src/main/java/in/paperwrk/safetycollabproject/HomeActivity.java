@@ -1,13 +1,18 @@
 package in.paperwrk.safetycollabproject;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenu;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.mindorks.placeholderview.PlaceHolderView;
 import com.skyfishjy.library.RippleBackground;
@@ -19,18 +24,40 @@ public class HomeActivity extends AppCompatActivity{
     private DrawerLayout mDrawer;
     private Toolbar mToolbar;
     private PlaceHolderView mGalleryView;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        ripple_Animation();
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawerLayout);
         mDrawerView = (PlaceHolderView) findViewById(R.id.drawerView);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mGalleryView = (PlaceHolderView) findViewById(R.id.galleryView);
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         setupDrawer();
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.sos_activity:
+                        ripple_Animation();
+                        Toast.makeText(HomeActivity.this, "SOS Navigation", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.track_me_activity:
+                        Toast.makeText(HomeActivity.this, "Track Me Activity", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case R.id.fake_call_activity:
+                        Toast.makeText(HomeActivity.this, "Fack Call started", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
     private void setupDrawer() {
@@ -58,11 +85,11 @@ public class HomeActivity extends AppCompatActivity{
         drawerToggle.syncState();
     }
 
-//    public void ripple_Animation()
-//    {
-//        rippleBackground = (RippleBackground)findViewById(R.id.content);
-//        rippleBackground.startRippleAnimation();
-//    }
+
+    public void ripple_Animation() {
+        rippleBackground = (RippleBackground) findViewById(R.id.content);
+        rippleBackground.startRippleAnimation();
+    }
 
 
 }
