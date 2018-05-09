@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.splash_screen);
 
         final Boolean isFirstLaunch = getSharedPreferences("pref",MODE_PRIVATE)
                 .getBoolean("isfirstLaunch",true);

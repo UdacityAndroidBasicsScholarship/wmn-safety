@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -18,6 +19,7 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 public class HomeActivity extends AppCompatActivity{
@@ -123,6 +125,13 @@ public class HomeActivity extends AppCompatActivity{
                         new SecondaryDrawerItem().withName("Help"),
                         new SecondaryDrawerItem().withName("Send Feedback")
                 )
+                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                     @Override
+                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                         // add click listeners for nav drawer items
+                         return false;
+                     }
+                 })
                 .build();
     }
 
