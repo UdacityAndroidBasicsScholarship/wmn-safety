@@ -2,124 +2,94 @@ package in.paperwrk.safetycollabproject;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.internal.BottomNavigationMenu;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.mikepenz.materialdrawer.AccountHeader;
-import com.mikepenz.materialdrawer.AccountHeaderBuilder;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.DividerDrawerItem;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
+import com.mindorks.placeholderview.PlaceHolderView;
+import com.skyfishjy.library.RippleBackground;
 
 public class HomeActivity extends AppCompatActivity{
 
-    Drawer result = null;
-    private AccountHeader headerResult = null;
-    FragmentManager mFragmentManager;
-    public static boolean isHomeActivityShown;
-    public static boolean isFragment1Shown=false ;
-    public boolean isFragment2Shown = false;
-
+    RippleBackground rippleBackground;
+    private PlaceHolderView mDrawerView;
+    private DrawerLayout mDrawer;
+    private Toolbar mToolbar;
+    private PlaceHolderView mGalleryView;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        mDrawer = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mDrawerView = (PlaceHolderView) findViewById(R.id.drawerView);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mGalleryView = (PlaceHolderView) findViewById(R.id.galleryView);
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        setupDrawer();
 
-        Toolbar toolbar =  findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.sos_activity:
+                        ripple_Animation();
+                        Toast.makeText(HomeActivity.this, "SOS Navigation", Toast.LENGTH_SHORT).show();
+                        break;
 
-        BottomNavigationView mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
-        mBottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+                    case R.id.track_me_activity:
+                        Toast.makeText(HomeActivity.this, "Track Me Activity", Toast.LENGTH_SHORT).show();
+                        break;
 
-
-        // will update it later using data from Firebase Realtime DB
-        final IProfile profile = new ProfileDrawerItem().withName("Nirbheek")
-                .withTextColor(getResources().getColor(android.R.color.black))
-                .withEmail("useremail@gmail.com").withIcon(R.mipmap.ic_launcher)
-                .withIdentifier(100);
-
-        headerResult = new AccountHeaderBuilder()
-                .withActivity(this)
-                .withHeaderBackground(R.color.colorPrimary)
-                .withSavedInstance(savedInstanceState)
-                .withTranslucentStatusBar(true)
-                .addProfiles(profile,
-                        new ProfileSettingDrawerItem().withName("Manage Accounts")
-                )
-                .build();
-
-        createNavDrawer(toolbar);
-
-        if(savedInstanceState == null){
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content,new SOSFragment()).commit();
-        }
-
-
+                    case R.id.fake_call_activity:
+                        Toast.makeText(HomeActivity.this, "Fack Call started", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
+    private void setupDrawer() {
+        mDrawerView
+                .addView(new DrawerHeader())
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.TRUSTED_CONTACTS))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.EXPLORE))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.SETTINGS))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.HELP))
+                .addView(new DrawerMenuItem(this.getApplicationContext(), DrawerMenuItem.SEND_FEEDBACK));
 
-    // Map Fragments to BottomNavigationView
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            mFragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-            switch (item.getItemId()) {
-                case R.id.action_sos:
-                    fragmentTransaction.replace(R.id.content,new SOSFragment()).commit();
-                    return true;
-                case R.id.action_track_user:
-                    isFragment1Shown = true;
-                    isHomeActivityShown = false;
-                    fragmentTransaction.replace(R.id.content,new TrackUserFragment()).commit();
-                    return true;
-                case R.id.action_fake_call:
-                    isFragment2Shown = true;
-                    isFragment1Shown = false;
-                    isHomeActivityShown = false;
-                    fragmentTransaction.replace(R.id.content, new FakeCallFragment()).commit();
-                    return true;
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, mDrawer, mToolbar, R.string.open_drawer, R.string.close_drawer) {
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
             }
 
-            return false;
-        }
-    };
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+        };
 
-
-
-
-    private void createNavDrawer(Toolbar toolbar) {
-         result = new DrawerBuilder()
-                .withActivity(this)
-                .withAccountHeader(headerResult)
-                .withToolbar(toolbar)
-                .withSelectedItem(-1)
-                .withHasStableIds(true)
-                .addDrawerItems(
-                        new PrimaryDrawerItem().withName("Trusted Contacts")
-                                .withIdentifier(1).withIcon(R.drawable.ic_contact_phone_black_24dp),
-                        new PrimaryDrawerItem().withName("Explore")
-                                .withIdentifier(2).withIcon(R.drawable.ic_explore_black_24dp),
-                        new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName("Settings")
-                                .withIdentifier(5).withIcon(R.drawable.ic_settings_black_24dp),
-                        new SecondaryDrawerItem().withName("Help"),
-                        new SecondaryDrawerItem().withName("Send Feedback")
-                )
-                .build();
+        mDrawer.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
     }
+
+
+    public void ripple_Animation() {
+        rippleBackground = (RippleBackground) findViewById(R.id.content);
+        rippleBackground.startRippleAnimation();
+    }
+
 
 }
