@@ -45,14 +45,11 @@ public class OnBoardingActivity extends AppCompatActivity {
     private ImageButton mNextBtn;
     private Button mFinishBtn;
     private Button mSkipBtn;
-    private Button mGetStartedBtn;
 
     ImageView zero, one, two, three;
     ImageView[] indicators;
 
     CoordinatorLayout mCoordinator;
-
-    static final String TAG = "OnBoardingActivity";
 
     int page = 0; // to track the page position
 
@@ -243,8 +240,8 @@ public class OnBoardingActivity extends AppCompatActivity {
 
         ImageView img;
 
-        int[] bgs = new int[]{R.drawable.onboarding_image_1, R.drawable.onboarding_image_2,
-                R.drawable.onboarding_image_3, R.drawable.onboarding_image_4};
+        int[] bgs = new int[]{R.drawable.family, R.drawable.sos,
+                R.drawable.location_share, R.drawable.woman};
 
         public PlaceholderFragment() {
         }

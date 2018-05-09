@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    android:gravity="center"
     android:layout_margin="@dimen/dimen_16dp"
     android:orientation="vertical"
     tools:ignore="contentDescription">
@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="64dp"
         android:layout_marginTop="32dp"
-        tools:src="@drawable/onboarding_image_1" />
+        tools:src="@drawable/family" />
 
     <TextView
         android:id="@+id/section_label"
@@ -51,6 +51,6 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
 </LinearLayout>
