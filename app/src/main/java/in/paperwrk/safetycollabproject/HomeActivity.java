@@ -28,6 +28,10 @@ public class HomeActivity extends AppCompatActivity{
     public static boolean isHomeActivityShown;
     public static boolean isFragment1Shown=false ;
     public boolean isFragment2Shown = false;
+    String user_name = "Nirbheek";
+    String user_email = "useremail@gmail.com";
+    
+    
 
 
     @Override
@@ -44,9 +48,9 @@ public class HomeActivity extends AppCompatActivity{
 
 
         // will update it later using data from Firebase Realtime DB
-        final IProfile profile = new ProfileDrawerItem().withName("Nirbheek")
+        final IProfile profile = new ProfileDrawerItem().withName(user_name)
                 .withTextColor(getResources().getColor(android.R.color.black))
-                .withEmail("useremail@gmail.com").withIcon(R.mipmap.ic_launcher)
+                .withEmail(user_email).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
 
         headerResult = new AccountHeaderBuilder()
