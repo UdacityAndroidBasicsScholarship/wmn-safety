@@ -31,14 +31,6 @@
             card_view:cardCornerRadius="24dp"
             card_view:cardElevation="12dp">
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="@android:style/Widget.ProgressBar.Horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="2dip"
-                android:minHeight="2dip" />
-
             <LinearLayout
                 android:id="@+id/sign_in_linear_layout"
                 android:layout_width="match_parent"
