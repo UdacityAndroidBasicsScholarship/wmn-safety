@@ -7,169 +7,137 @@
     android:layout_height="wrap_content"
     tools:context=".accounts.SigninActivity">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:minHeight="2dip"
-            android:maxHeight="2dip"
+        <include layout="@layout/login_header" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="@string/sign_in_to_continue"
+            android:textColor="#757575"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@android:style/Widget.ProgressBar.Horizontal" />
+            android:layout_margin="16dp"
+            card_view:cardCornerRadius="24dp"
+            card_view:cardElevation="12dp">
 
-        <ImageView
-            android:id="@+id/sign_in_logo"
-            android:layout_width="@dimen/dimen_80dp"
-            android:layout_height="@dimen/dimen_80dp"
-            android:layout_marginTop="25dp"
-            android:contentDescription="@string/logo_desc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/wmn_logo" />
-
-        <TextView
-            android:id="@+id/sign_in_welcome_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/welcome_to_nirbheek"
-            android:textAppearance="@android:style/TextAppearance.Material.Headline"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_logo" />
-
-        <TextView
-            android:id="@+id/sign_in_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/sign_in_to_continue"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_welcome_text" />
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/sign_in_email_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_text">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/sign_in_email_tv"
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/email_hint"
-                android:inputType="textEmailAddress" />
+                android:maxHeight="2dip"
+                android:minHeight="2dip" />
 
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/sign_in_password_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/sign_in_email_layout"
-            app:layout_constraintStart_toStartOf="@+id/sign_in_email_layout"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_email_layout"
-            app:passwordToggleDrawable="@drawable/asl_password_visibility"
-            app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/sign_in_password_tv"
+            <LinearLayout
+                android:id="@+id/sign_in_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/password_hint"
-                android:inputType="textPassword" />
+                android:layout_margin="20dp"
+                android:orientation="vertical">
 
-        </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:id="@+id/sign_in_forgot_pass_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/sign_in_forgot_pass_text"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/sign_in_password_layout"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/sign_in_password_layout"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_password_layout" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sign_in_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/sign_in_button"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dimen_60dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="@string/sign_in_button_text"
-            android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="@+id/sign_in_password_layout"
-            app:layout_constraintStart_toStartOf="@+id/sign_in_password_layout"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_forgot_pass_tv" />
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/sign_in_email_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:ems="10"
+                        android:hint="@string/email_hint"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="@color/colorAccent" />
 
-        <TextView
-            android:id="@+id/sign_in_register_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/create_a_new_account"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
-            app:layout_constraintStart_toStartOf="@+id/sign_in_button"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_button" />
+                </android.support.design.widget.TextInputLayout>
 
-        <com.google.android.gms.common.SignInButton
-            android:id="@+id/sign_in_goggle_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_or_tv" />
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sign_in_password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleDrawable="@drawable/asl_password_visibility"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorAccent">
 
-        <TextView
-            android:id="@+id/sign_in_or_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/sign_in_or_text"
-            android:textAlignment="center"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sign_in_register_tv" />
-    </android.support.constraint.ConstraintLayout>
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/sign_in_password_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:ems="10"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        android:textColorHint="@color/colorAccent" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/sign_in_forgot_pass_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="end"
+                    android:text="@string/sign_in_forgot_pass_text"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="#212121"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/round_button"
+                    android:text="@string/sign_in_button_text"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/sign_in_register_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:text="@string/create_a_new_account"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sign_in_or_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/sign_in_or_text"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColor="#757575"
+                    android:textStyle="bold" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_goggle_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 </ScrollView>
