@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="@dimen/dimen_16dp"
+    android:orientation="vertical"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/section_img"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="64dp"
+        android:layout_marginTop="32dp"
+        tools:src="@drawable/family" />
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/section_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/button_get_started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="@drawable/get_started_button_background"
+        android:onClick="getStarted"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/get_started"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+</LinearLayout>

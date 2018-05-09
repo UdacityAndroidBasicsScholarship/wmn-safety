@@ -3,4 +3,15 @@
     <color name="colorPrimary">#673ab7</color>
     <color name="colorPrimaryDark">#4527A0</color>
     <color name="colorAccent">#ff4081</color>
+
+    <!-- colors for on boarding -->
+    <color name="light_blue">#03A9F4</color>
+    <color name="dark_blue">#0288d1</color>
+    <color name="light_amber">#FFC107</color>
+    <color name="dark_amber">#ffa000</color>
+    <color name="light_grey">#90A4AE</color>
+    <color name="dark_grey">#546e7a</color>
+    <color name="light_pink">#E91E63</color>
+    <color name="dark_pink">#c2185b</color>
+    <color name="indicator_unselected">#e0e0e0</color>
 </resources>
