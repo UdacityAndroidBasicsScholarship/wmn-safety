@@ -13,6 +13,10 @@
     <color name="dot_dark_screen2">#607D8B</color>
     <color name="dot_dark_screen3">#C2185B</color>
     <color name="dot_dark_screen4">#FFA000</color>
+    <!--SOS Button Colours-->
+    <color name="button_light">#9575cd</color>
+    <color name="background_light">#dcd2ee</color>
+    <color name="button_text">#f93324</color>
 
     <color name="dot_light_screen1">#4DD0E1</color>
     <color name="dot_light_screen2">#CFD8DC</color>

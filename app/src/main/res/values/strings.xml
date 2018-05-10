@@ -55,8 +55,10 @@
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
 
+    <!--Fake Call Fragment-->
+    <string name="fake_call_label">Tap the button to receive a fake call in 1 min.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pager_next">NEXT</string>
     <string name="pager_skip">SKIP</string>
     <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
