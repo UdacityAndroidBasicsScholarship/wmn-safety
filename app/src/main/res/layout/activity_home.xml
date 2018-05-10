@@ -50,6 +50,9 @@
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
         android:layout_gravity="bottom"
         app:menu="@menu/navigation" />
 
