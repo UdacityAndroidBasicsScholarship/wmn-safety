@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+
 import android.support.v4.view.PagerAdapter;
+
+import android.support.annotation.Nullable;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
@@ -19,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+
 
 public class PageIntroActivity extends AppCompatActivity {
 
@@ -57,18 +62,62 @@ public class PageIntroActivity extends AppCompatActivity {
 
         myViewPagerAdapter = new MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
+
+
+
+public class PageIntroActivity extends AppCompatActivity {
+
+    //crashed
+    private ViewPager viewPager;
+    private LinearLayout indicatorContainer;
+    private int[] layouts;
+    private Button btnSkip, btnNext;
+
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Making notification bar transparent
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+
+        setContentView(R.layout.page_intro_activity);
+
+
+        // init views
+        viewPager =  findViewById(R.id.view_pager);
+        indicatorContainer =  findViewById(R.id.layoutDots);
+        btnSkip =  findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
+
+
+        layouts = new int[]{R.layout.page_intro_activity1, R.layout.page_intro_activity2,
+                R.layout.page_intro_activity3, R.layout.page_intro_activity4};
+
+        addBottomIndicators(0);
+
+        changeStatusBarColor();
+
+        PagerAdapter mPagerAdapter = new PagerAdapter();
+        viewPager.setAdapter(mPagerAdapter);
+
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 launchHomeScreen();
+                launchAuth();
             }
         });
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 // checking for last page
                 // if last page home screen will be launched
                 int current = getItem(+1);
@@ -95,6 +144,30 @@ public class PageIntroActivity extends AppCompatActivity {
             dots[i].setTextSize(25);
             dots[i].setTextColor(colorsInactive[currentPage]);
             dotsLayout.addView(dots[i]);
+                int current = getItem(+1);
+                if (current < layouts.length) {
+                    viewPager.setCurrentItem(current);
+                } else {
+                    launchAuth();
+                }
+            }
+        });
+
+    }
+
+    private void addBottomIndicators(int currentPage) {
+        TextView[] dots = new TextView[layouts.length];
+
+        int[] colorsActive = getResources().getIntArray(R.array.dot_active);
+        int[] colorsInactive = getResources().getIntArray(R.array.dot_inactive);
+
+        indicatorContainer.removeAllViews();
+        for (int i = 0; i < dots.length; i++) {
+            dots[i] = new TextView(this);
+            dots[i].setText(Html.fromHtml("&#8226;"));
+            dots[i].setTextSize(35);
+            dots[i].setTextColor(colorsInactive[currentPage]);
+            indicatorContainer.addView(dots[i]);
         }
 
         if (dots.length > 0)
@@ -105,16 +178,26 @@ public class PageIntroActivity extends AppCompatActivity {
         return viewPager.getCurrentItem() + i;
     }
 
+
     private void launchHomeScreen() {
         startActivity(new Intent(PageIntroActivity.this, SigninActivity.class));
         finish();
     }
 
     //  viewpager change listener
+
+    private void launchAuth() {
+        startActivity(new Intent(this, SigninActivity.class));
+        finish();
+    }
+
+    //	viewpager change listener
+
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
         public void onPageSelected(int position) {
+
             addBottomDots(position);
 
             // changing the next button text 'NEXT' / 'GOT IT'
@@ -125,6 +208,13 @@ public class PageIntroActivity extends AppCompatActivity {
             } else {
                 // still pages are left
                 btnNext.setText(getString(R.string.next));
+            addBottomIndicators(position);
+
+            if (position == layouts.length - 1) {
+                btnNext.setText("Start");
+                btnSkip.setVisibility(View.GONE);
+            } else {
+                btnNext.setText("Next");
                 btnSkip.setVisibility(View.VISIBLE);
             }
         }
@@ -149,7 +239,6 @@ public class PageIntroActivity extends AppCompatActivity {
             window.setStatusBarColor(Color.TRANSPARENT);
         }
     }
-
     /**
      * View pager adapter
      */
@@ -157,6 +246,10 @@ public class PageIntroActivity extends AppCompatActivity {
         private LayoutInflater layoutInflater;
 
         public MyViewPagerAdapter() {
+    public class PagerAdapter extends android.support.v4.view.PagerAdapter {
+        private LayoutInflater layoutInflater;
+
+        PagerAdapter() {
         }
 
         @Override

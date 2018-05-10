@@ -38,6 +38,9 @@
         <activity android:name=".accounts.ForgotPasswordActivity"/>
 
         <activity android:name=".PageIntroActivity"/>
+        <activity android:name=".PageIntroActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

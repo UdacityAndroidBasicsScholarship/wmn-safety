@@ -71,4 +71,9 @@
 
     <string name="slide_4_title">Nirbheek</string>
     <string name="slide_4_desc">Your safety\nIn your hands</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pager_next">NEXT</string>
+    <string name="pager_skip">SKIP</string>
+    <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
+    <string name="welcome_text_view">Welcome to Nirbheek</string>
 </resources>
