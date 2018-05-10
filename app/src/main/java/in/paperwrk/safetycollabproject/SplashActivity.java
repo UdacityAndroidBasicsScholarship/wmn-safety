@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
-
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -29,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(runnable = new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, PageIntroActivity.class);
                 Intent intent;
                 if (isFirstLaunch){
                     intent = new Intent(SplashActivity.this,PageIntroActivity.class);
@@ -42,8 +39,8 @@ public class SplashActivity extends AppCompatActivity {
         },SPLASH_TIME_OUT);
 
     }
-    
-     @Override
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         handler.removeCallbacks(runnable);
