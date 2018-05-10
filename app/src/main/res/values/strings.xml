@@ -61,7 +61,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="pager_next">NEXT</string>
     <string name="pager_skip">SKIP</string>
-    <string name="nirbheek_logo_content_description">Nirbheek</string>
-    <string name="welcome_text_view">Welcome</string>
-    <string name="sign_up_to_continue_text_view">sign_up_to_continue_text_view</string>
+    <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
+    <string name="welcome_text_view">Welcome to Nirbheek</string>
 </resources>

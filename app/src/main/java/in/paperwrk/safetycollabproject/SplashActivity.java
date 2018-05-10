@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+
 public class SplashActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 2000;
@@ -30,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
                     intent = new Intent(SplashActivity.this,PageIntroActivity.class);
                     getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isfirstLaunch",false).apply();
                 } else {
-                    intent = new Intent(SplashActivity.this,HomeActivity.class);
+                    intent = new Intent(SplashActivity.this, SigninActivity.class);
                 }
                 startActivity(intent);
             }
