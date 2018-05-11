@@ -30,7 +30,50 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements AccelerometerListener {
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (AccelerometerManager.isSupported(this)) {
+            AccelerometerManager.startListening(this);
+        }
+    }
+
+    @Override
+    public void onAccelerationChanged(float x, float y, float z) {
+
+    }
+
+    @Override
+    public void onShake(float force) {
+        Toast.makeText(this, "Motion detected", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        //Check device supported Accelerometer senssor or not
+        if (AccelerometerManager.isListening()) {
+
+            //Start Accelerometer Listening
+            AccelerometerManager.stopListening();
+
+            Toast.makeText(this, "onStop Accelerometer Stopped", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (AccelerometerManager.isListening()) {
+            AccelerometerManager.stopListening();
+
+            Toast.makeText(this, "onDestroy Accelerometer Stopped", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     Drawer result = null;
     private AccountHeader headerResult = null;

@@ -8,6 +8,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+
+
+
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         app:contentInsetLeft="0dp"
@@ -25,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
             <TextView
                 android:textColor="#fff"
@@ -44,6 +49,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Shake / Tilt Your Phone To Get Accelerometer Motion Alerts"
+            android:textSize="24sp"/>
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
