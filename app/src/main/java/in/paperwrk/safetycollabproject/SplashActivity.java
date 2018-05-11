@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.splash_screen);
 
         final Boolean isFirstLaunch = getSharedPreferences("pref",MODE_PRIVATE)
-                .getBoolean("isfirstLaunch",true);
+                .getBoolean("isFirstLaunch",true);
 
         handler = new Handler();
 
@@ -30,10 +30,11 @@ public class SplashActivity extends AppCompatActivity {
                 Intent intent;
                 if (isFirstLaunch){
                     intent = new Intent(SplashActivity.this,PageIntroActivity.class);
-                    getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isfirstLaunch",false).apply();
+                    getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isFirstLaunch",false).apply();
                 } else {
                     intent = new Intent(SplashActivity.this, SigninActivity.class);
                 }
+                finish();   // To stop user to get back to splash screen.
                 startActivity(intent);
             }
         },SPLASH_TIME_OUT);
