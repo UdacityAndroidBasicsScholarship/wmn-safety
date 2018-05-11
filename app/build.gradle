@@ -38,6 +38,9 @@ dependencies {
     }
     implementation "com.android.support:recyclerview-v7:27.1.1"
     implementation "com.android.support:support-annotations:27.1.1"
-
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
 }
+
+
 apply plugin: 'com.google.gms.google-services'

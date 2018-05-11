@@ -34,5 +34,4 @@
             android:src="@drawable/ic_call_black_24dp" />
 
     </com.skyfishjy.library.RippleBackground>
-
 </FrameLayout>

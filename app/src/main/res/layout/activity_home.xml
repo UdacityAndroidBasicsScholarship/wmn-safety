@@ -40,7 +40,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
         </com.mindorks.placeholderview.PlaceHolderView>
     </FrameLayout>
 
@@ -63,7 +62,8 @@
             app:itemBackground="@color/colorPrimary"
             app:itemIconTint="@drawable/menu_selector"
             app:itemTextColor="@drawable/menu_selector"
-            app:menu="@menu/bottom_navigation_menu"></android.support.design.widget.BottomNavigationView>
+            app:menu="@menu/bottom_navigation_menu">
+      </android.support.design.widget.BottomNavigationView>
 
     </RelativeLayout>
 

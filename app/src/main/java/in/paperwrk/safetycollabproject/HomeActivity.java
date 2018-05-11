@@ -17,8 +17,9 @@ import android.widget.Toast;
 
 import com.mindorks.placeholderview.PlaceHolderView;
 import com.skyfishjy.library.RippleBackground;
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity {
 
     private PlaceHolderView mDrawerView;
     private DrawerLayout mDrawer;

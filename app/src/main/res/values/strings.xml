@@ -57,6 +57,47 @@
     <string name="open_drawer">Drawer open</string>
     <string name="close_drawer">Drawer close</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Fake Call Fragment-->
+    <string name="fake_call_label">Tap the button to receive a fake call in 1 min.</string>
+
+    <!-- PageIntro Activity -->
+    <string name="pager_next">NEXT</string>
+    <string name="pager_skip">SKIP</string>
+    <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
+    <string name="welcome_text_view">Welcome to Nirbheek</string>
+
+    <!-- Account Activity -->
+    <string name="general_label">General</string>
+    <string name="advance_label">Advance</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="update_button">Update</string>
+    <string name="change_password_button">Change Password</string>
+
+    <!-- Settings Activity -->
+    <string-array name="settings_item_array">
+        <item>Account</item>
+        <item>Trusted Contacts</item>
+        <item>Siren - Sound</item>
+        <item>Gestures</item>
+        <item>Language</item>
+        <item>Help and FAQs</item>
+        <item>About</item>
+    </string-array>
+
+    <!-- About Activity -->
+    <string-array name="about_item_array">
+        <item>App Name</item>
+        <item>Version</item>
+        <item>GitHub</item>
+        <item>License</item>
+        <item>Open source licenses</item>
+    </string-array>
+
+    <string-array name="about_item_secondary_array">
+        <item>Nirbheek</item>
+        <item>0.1.8</item>
+        <item>https://goo.gl/PJ5xCb</item>
+        <item>MIT</item>
+        <item>Open source licenses</item>
+    </string-array>
 </resources>

@@ -55,4 +55,5 @@
     <string name="implementation_in_progress">Implementation in Progress</string>
     <string name="processing">પ્રક્રિયા ચાલુ છે</string>
     <string name="api_not_connected_msg">The client attempted to call a method from an API that failed to connect.</string>
+    <string name="fake_call_label">બટન દબાવ્યાંના ૧ મિનિટમાં બનાવટી કોલ આવશે </string>
 </resources>
