@@ -36,4 +36,7 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
+
+    <color name="settings_text">#212121</color>
+    <color name="settings_text_secondary">#757575</color>
 </resources>
