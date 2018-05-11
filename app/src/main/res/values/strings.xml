@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Nirbheek</string>
-    <string name="sign_in_forgot_pass_text" >Forgot Password ?</string>
+    <string name="sign_in_forgot_pass_text">Forgot Password ?</string>
     <string name="sign_in_button_text">SIGN IN</string>
     <string name="welcome_to_nirbheek">Welcome to Nirbheek</string>
     <string name="sign_in_to_continue">Sign In to Continue</string>
@@ -56,4 +56,7 @@
     <string name="login_success">Login Successful</string>
     <string name="open_drawer">Drawer open</string>
     <string name="close_drawer">Drawer close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

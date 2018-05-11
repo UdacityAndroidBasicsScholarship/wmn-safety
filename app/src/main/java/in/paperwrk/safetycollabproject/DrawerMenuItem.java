@@ -1,7 +1,10 @@
 package in.paperwrk.safetycollabproject;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatImageView;
 import android.widget.ImageView;
+import android.support.v7.widget.AppCompatImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 

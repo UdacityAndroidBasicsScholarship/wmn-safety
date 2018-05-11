@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject;
 
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationMenu;
@@ -19,7 +20,6 @@ import com.skyfishjy.library.RippleBackground;
 
 public class HomeActivity extends AppCompatActivity{
 
-    RippleBackground rippleBackground;
     private PlaceHolderView mDrawerView;
     private DrawerLayout mDrawer;
     private Toolbar mToolbar;
@@ -31,6 +31,8 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        loadFragment(new SosInitFragment());
+
         mDrawer = (DrawerLayout) findViewById(R.id.drawerLayout);
         mDrawerView = (PlaceHolderView) findViewById(R.id.drawerView);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -41,17 +43,23 @@ public class HomeActivity extends AppCompatActivity{
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
                 switch (item.getItemId()) {
                     case R.id.sos_activity:
-                        ripple_Animation();
+                        fragment = new SosInitFragment();
+                        loadFragment(fragment);
                         Toast.makeText(HomeActivity.this, "SOS Navigation", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.track_me_activity:
+                        fragment = new TrackMeFragment();
+                        loadFragment(fragment);
                         Toast.makeText(HomeActivity.this, "Track Me Activity", Toast.LENGTH_SHORT).show();
                         break;
 
                     case R.id.fake_call_activity:
+                        fragment = new FakeCallFragment();
+                        loadFragment(fragment);
                         Toast.makeText(HomeActivity.this, "Fack Call started", Toast.LENGTH_SHORT).show();
                         break;
                 }
@@ -86,10 +94,14 @@ public class HomeActivity extends AppCompatActivity{
     }
 
 
-    public void ripple_Animation() {
-        rippleBackground = (RippleBackground) findViewById(R.id.content);
-        rippleBackground.startRippleAnimation();
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
-
-
 }
