@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,7 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -22,6 +28,8 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+
 public class HomeActivity extends AppCompatActivity{
 
     Drawer result = null;
@@ -30,17 +38,23 @@ public class HomeActivity extends AppCompatActivity{
     public static boolean isHomeActivityShown;
     public static boolean isFragment1Shown=false ;
     public boolean isFragment2Shown = false;
-    String user_name = "Nirbheek";
-    String user_email = "useremail@gmail.com";
-    
-    
 
+    FirebaseDatabase mFirebaseDatabase = null;
+    DatabaseReference mDatabaseReference = null;
+    FirebaseAuth mFirebaseAuth = null;
+    FirebaseUser mFirebaseUser = null;
+
+    String mFullName = null, mEmail = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabase.getReference();
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,11 +62,19 @@ public class HomeActivity extends AppCompatActivity{
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
         mBottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        if(mFirebaseUser != null) {
+            mEmail = mFirebaseUser.getEmail();
+
+            // TODO: Get mFullName From Databse
+
+        } else {
+            navigateToHome();
+        }
 
         // will update it later using data from Firebase Realtime DB
-        final IProfile profile = new ProfileDrawerItem().withName(user_name)
+        final IProfile profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
-                .withEmail(user_email).withIcon(R.mipmap.ic_launcher)
+                .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
 
         headerResult = new AccountHeaderBuilder()
@@ -61,7 +83,16 @@ public class HomeActivity extends AppCompatActivity{
                 .withSavedInstance(savedInstanceState)
                 .withTranslucentStatusBar(true)
                 .addProfiles(profile,
-                        new ProfileSettingDrawerItem().withName("Manage Accounts")
+                        new ProfileSettingDrawerItem().withName("Manage Accounts"),
+                        new ProfileSettingDrawerItem().withName("Logout").withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                            @Override
+                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                if(mFirebaseUser != null)
+                                    mFirebaseAuth.signOut();
+                                navigateToHome();
+                                return true;
+                            }
+                        })
                 )
                 .build();
 
@@ -71,8 +102,6 @@ public class HomeActivity extends AppCompatActivity{
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content,new SOSFragment()).commit();
         }
-
-
     }
 
 
@@ -105,8 +134,6 @@ public class HomeActivity extends AppCompatActivity{
     };
 
 
-
-
     private void createNavDrawer(Toolbar toolbar) {
          result = new DrawerBuilder()
                 .withActivity(this)
@@ -121,18 +148,39 @@ public class HomeActivity extends AppCompatActivity{
                                 .withIdentifier(2).withIcon(R.drawable.ic_explore_black_24dp),
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName("Settings")
-                                .withIdentifier(5).withIcon(R.drawable.ic_settings_black_24dp),
-                        new SecondaryDrawerItem().withName("Help"),
+                                .withIdentifier(3).withIcon(R.drawable.ic_settings_black_24dp),
+                        new SecondaryDrawerItem().withName("Help")
+                                .withIdentifier(4),
                         new SecondaryDrawerItem().withName("Send Feedback")
+                                .withIdentifier(5),
+                        new SecondaryDrawerItem().withName("About")
+                                .withIdentifier(6),
+                        new SecondaryDrawerItem().withName("Rate Us")
+                                .withIdentifier(7)
                 )
-                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                      @Override
                      public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                          // add click listeners for nav drawer items
+                         switch ((int) drawerItem.getIdentifier()) {
+                             case 1:
+                                 startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
+                                 break;
+                             case 3:
+                                 startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                                 break;
+                             case 6:
+                                 startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                                 break;
+                         }
                          return false;
                      }
                  })
                 .build();
     }
 
+    public void navigateToHome() {
+        Toast.makeText(getApplicationContext(), "Please login to continue!", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getApplicationContext(), SigninActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+    }
 }
