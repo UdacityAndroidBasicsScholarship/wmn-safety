@@ -30,13 +30,13 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
-public class HomeActivity extends AppCompatActivity{
+public class HomeActivity extends AppCompatActivity {
 
     Drawer result = null;
     private AccountHeader headerResult = null;
     FragmentManager mFragmentManager;
     public static boolean isHomeActivityShown;
-    public static boolean isFragment1Shown=false ;
+    public static boolean isFragment1Shown = false;
     public boolean isFragment2Shown = false;
 
     FirebaseDatabase mFirebaseDatabase = null;
@@ -56,13 +56,13 @@ public class HomeActivity extends AppCompatActivity{
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
 
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
         mBottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        if(mFirebaseUser != null) {
+        if (mFirebaseUser != null) {
             mEmail = mFirebaseUser.getEmail();
 
             // TODO: Get mFullName From Databse
@@ -87,7 +87,7 @@ public class HomeActivity extends AppCompatActivity{
                         new ProfileSettingDrawerItem().withName("Logout").withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                if(mFirebaseUser != null)
+                                if (mFirebaseUser != null)
                                     mFirebaseAuth.signOut();
                                 navigateToHome();
                                 return true;
@@ -98,9 +98,9 @@ public class HomeActivity extends AppCompatActivity{
 
         createNavDrawer(toolbar);
 
-        if(savedInstanceState == null){
+        if (savedInstanceState == null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content,new SOSFragment()).commit();
+            fragmentManager.beginTransaction().replace(R.id.content, new SOSFragment()).commit();
         }
     }
 
@@ -114,12 +114,12 @@ public class HomeActivity extends AppCompatActivity{
             FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
             switch (item.getItemId()) {
                 case R.id.action_sos:
-                    fragmentTransaction.replace(R.id.content,new SOSFragment()).commit();
+                    fragmentTransaction.replace(R.id.content, new SOSFragment()).commit();
                     return true;
                 case R.id.action_track_user:
                     isFragment1Shown = true;
                     isHomeActivityShown = false;
-                    fragmentTransaction.replace(R.id.content,new TrackUserFragment()).commit();
+                    fragmentTransaction.replace(R.id.content, new TrackUserFragment()).commit();
                     return true;
                 case R.id.action_fake_call:
                     isFragment2Shown = true;
@@ -135,7 +135,7 @@ public class HomeActivity extends AppCompatActivity{
 
 
     private void createNavDrawer(Toolbar toolbar) {
-         result = new DrawerBuilder()
+        result = new DrawerBuilder()
                 .withActivity(this)
                 .withAccountHeader(headerResult)
                 .withToolbar(toolbar)
@@ -159,23 +159,23 @@ public class HomeActivity extends AppCompatActivity{
                                 .withIdentifier(7)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                     @Override
-                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                         // add click listeners for nav drawer items
-                         switch ((int) drawerItem.getIdentifier()) {
-                             case 1:
-                                 startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
-                                 break;
-                             case 3:
-                                 startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
-                                 break;
-                             case 6:
-                                 startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-                                 break;
-                         }
-                         return false;
-                     }
-                 })
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        // add click listeners for nav drawer items
+                        switch ((int) drawerItem.getIdentifier()) {
+                            case 1:
+                                startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
+                                break;
+                            case 3:
+                                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                                break;
+                            case 6:
+                                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                                break;
+                        }
+                        return false;
+                    }
+                })
                 .build();
     }
 
