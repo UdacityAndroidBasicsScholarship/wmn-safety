@@ -6,10 +6,20 @@
     tools:context=".TrackUserFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:textSize="30sp"
+    <FrameLayout
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="TRACK ME" />
+        tools:context=".MapsActivity" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@android:drawable/ic_menu_share"
+        android:layout_margin="16dp" />
+
+
 
 </FrameLayout>

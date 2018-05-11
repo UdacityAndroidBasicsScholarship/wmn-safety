@@ -55,6 +55,8 @@
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
 
+    <string name="fakeCall">Tap the button to receive\n fake call in 1 min(s)</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="next">Next</string>
     <string name="skip">Skip</string>
@@ -76,4 +78,5 @@
     <string name="pager_skip">SKIP</string>
     <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
     <string name="welcome_text_view">Welcome to Nirbheek</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
