@@ -76,7 +76,6 @@ public class HomeActivity extends AppCompatActivity {
         if (mFirebaseUser != null) {
             mEmail = mFirebaseUser.getEmail();
             getUserName(mFirebaseUser.getUid());
-            // TODO: Get mFullName From Database
 
         } else {
             navigateToHome();
