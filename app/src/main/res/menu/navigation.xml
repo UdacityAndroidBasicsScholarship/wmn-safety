@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ic_phonelink_ring_white_24px"
+        android:id="@+id/action_sos"
+        android:title="SOS"
+        app:showAsAction="never" />
+
+
+    <item
+        android:icon="@drawable/ic_location_on_white_24px"
+        android:id="@+id/action_track_user"
+        android:title="Track Me"
+        app:showAsAction="never" />
+
+
+    <item
+        android:icon="@drawable/ic_call_black_24dp"
+        android:id="@+id/action_fake_call"
+        android:title="Fake Call"
+        app:showAsAction="never" />
+
+
+
+</menu>
