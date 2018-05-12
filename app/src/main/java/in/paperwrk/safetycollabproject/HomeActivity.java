@@ -12,10 +12,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -38,18 +44,23 @@ public class HomeActivity extends AppCompatActivity {
     public static boolean isHomeActivityShown;
     public static boolean isFragment1Shown = false;
     public boolean isFragment2Shown = false;
-
+    String mFullName = "", mEmail = null;
     FirebaseDatabase mFirebaseDatabase = null;
     DatabaseReference mDatabaseReference = null;
     FirebaseAuth mFirebaseAuth = null;
     FirebaseUser mFirebaseUser = null;
-
-    String mFullName = null, mEmail = null;
+    private IProfile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        final GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference();
@@ -64,15 +75,14 @@ public class HomeActivity extends AppCompatActivity {
 
         if (mFirebaseUser != null) {
             mEmail = mFirebaseUser.getEmail();
-
-            // TODO: Get mFullName From Databse
+            getUserName(mFirebaseUser.getUid());
 
         } else {
             navigateToHome();
         }
 
         // will update it later using data from Firebase Realtime DB
-        final IProfile profile = new ProfileDrawerItem().withName(mFullName)
+        profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
                 .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
@@ -87,8 +97,10 @@ public class HomeActivity extends AppCompatActivity {
                         new ProfileSettingDrawerItem().withName("Logout").withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                                if (mFirebaseUser != null)
+                                if (mFirebaseUser != null) {
+                                    mGoogleSignInClient.signOut();
                                     mFirebaseAuth.signOut();
+                                }
                                 navigateToHome();
                                 return true;
                             }
@@ -182,5 +194,35 @@ public class HomeActivity extends AppCompatActivity {
     public void navigateToHome() {
         Toast.makeText(getApplicationContext(), "Please login to continue!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(), SigninActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+    }
+
+    public void getUserName(final String UID) {
+        final StringBuffer buffer = new StringBuffer("");
+        ValueEventListener eventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    if (snapshot.getKey().equals("name")) {
+                        buffer.append(snapshot.getValue());
+                    }
+                }
+                mFullName = buffer.toString();
+                updateProfile();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        };
+        mDatabaseReference.child("users").child(UID).addListenerForSingleValueEvent(eventListener);
+
+    }
+
+    public void updateProfile() {
+        IProfile profile = new ProfileDrawerItem().withName(mFullName)
+                .withTextColor(getResources().getColor(android.R.color.black))
+                .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
+                .withIdentifier(100);
+        headerResult.updateProfile(profile);
     }
 }
