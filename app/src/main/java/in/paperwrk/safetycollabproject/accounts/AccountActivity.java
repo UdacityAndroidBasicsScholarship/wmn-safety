@@ -16,6 +16,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import in.paperwrk.safetycollabproject.R;
 
 public class AccountActivity extends AppCompatActivity {
@@ -56,16 +59,19 @@ public class AccountActivity extends AppCompatActivity {
         String email = ((EditText) (findViewById(R.id.account_update_email))).getText().toString();
         String phone = ((EditText) (findViewById(R.id.account_update_phone))).getText().toString();
         String UID = mFirebaseUser.getUid();
+        DatabaseReference reference = mDatabaseReference.child(UID);
+        Map<String, Object> updates = new HashMap<>();
         if (!name.isEmpty()) {
-            mDatabaseReference.child(UID).child("name").setValue(name).addOnCompleteListener(this, listener);
+            updates.put("/name", name);
         }
         if (!email.isEmpty()) {
             mFirebaseUser.updateEmail(email).addOnCompleteListener(this, listener);
-            mDatabaseReference.child(UID).child("email").setValue(email).addOnCompleteListener(this, listener);
+            updates.put("/email", email);
         }
         if (!phone.isEmpty()) {
-            mDatabaseReference.child(UID).child("number").setValue(phone).addOnCompleteListener(this, listener);
+            updates.put("/number", phone);
         }
+        reference.updateChildren(updates).addOnCompleteListener(this, listener);
     }
 
     public void changePassword(View view) {
