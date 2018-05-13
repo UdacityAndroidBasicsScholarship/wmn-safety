@@ -45,6 +45,7 @@
         <activity android:name=".activities.TrustedContactsActivity" />
         <activity android:name=".accounts.AccountActivity" />
         <activity android:name=".activities.SirenSoundActivity" />
+        <activity android:name=".activities.ExploreActivity"></activity>
     </application>
 
 </manifest>
