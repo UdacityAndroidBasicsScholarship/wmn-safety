@@ -17,7 +17,7 @@ public class AboutActivity extends AppCompatActivity {
 
     ListView mAboutListView = null;
     String[] mAboutItemArray = null, mAboutItemSecondaryArray = null;
-
+    Toast toast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,16 +39,25 @@ public class AboutActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int aboutItemIndex, long l) {
                 switch (aboutItemIndex) {
                     case 0:
-                        Toast.makeText(getApplicationContext(), "Nirbheek", Toast.LENGTH_SHORT).show();
+                        if (toast != null)
+                            toast.cancel();
+                        toast = Toast.makeText(getApplicationContext(), "Nirbheek", Toast.LENGTH_SHORT);
+                        toast.show();
                         break;
                     case 1:
-                        Toast.makeText(getApplicationContext(), "0.1.8", Toast.LENGTH_SHORT).show();
+                        if (toast != null)
+                            toast.cancel();
+                        toast = Toast.makeText(getApplicationContext(), "0.1.8", Toast.LENGTH_SHORT);
+                        toast.show();
                         break;
                     case 2:
                         startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/UdacityAndroidBasicsScholarship/wmn-safety")));
                         break;
                     case 3:
-                        Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_SHORT).show();
+                        if (toast != null)
+                            toast.cancel();
+                        toast = Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_SHORT);
+                        toast.show();
                         break;
                     case 4:
                         // TODO: Open a OpenSourceLicenseActivity
