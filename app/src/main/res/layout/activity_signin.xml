@@ -77,15 +77,15 @@
 
                 </android.support.design.widget.TextInputLayout>
 
-                <TextView
+                <in.paperwrk.safetycollabproject.customviews.CustomButton
                     android:id="@+id/sign_in_forgot_pass_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    app:btnTxtColor="#212121"
                     android:gravity="end"
                     android:text="@string/sign_in_forgot_pass_text"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                    android:textColor="#212121"
                     android:textStyle="bold" />
 
                 <Button
@@ -93,11 +93,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
-                    android:background="@drawable/round_button"
+                    android:background="@drawable/selector_btn"
                     android:text="@string/sign_in_button_text"
                     android:textColor="@android:color/white" />
 
-                <TextView
+                <in.paperwrk.safetycollabproject.customviews.CustomButton
                     android:id="@+id/sign_in_register_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                     android:gravity="center"
                     android:text="@string/create_a_new_account"
                     android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                    android:textColor="#212121"
+                    app:btnTxtColor="#212121"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 

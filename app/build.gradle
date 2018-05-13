@@ -9,7 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.generatedDensities = ['hdpi', 'xxhdpi']        
+        vectorDrawables.generatedDensities = ['hdpi', 'xxhdpi']
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -47,6 +48,7 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'com.android.support:multidex:1.0.3'
 }
 
 
