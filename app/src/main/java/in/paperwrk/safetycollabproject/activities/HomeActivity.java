@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +34,11 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+import in.paperwrk.safetycollabproject.fragments.FakeCallFragment;
+import in.paperwrk.safetycollabproject.fragments.SOSFragment;
+import in.paperwrk.safetycollabproject.fragments.TrackUserFragment;
 
 public class HomeActivity extends AppCompatActivity {
 

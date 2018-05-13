@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import in.paperwrk.safetycollabproject.R;
 
 public class AboutActivity extends AppCompatActivity {
 

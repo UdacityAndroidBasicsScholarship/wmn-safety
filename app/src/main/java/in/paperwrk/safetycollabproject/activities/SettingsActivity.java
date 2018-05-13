@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.accounts.AccountActivity;
 
 public class SettingsActivity extends AppCompatActivity {

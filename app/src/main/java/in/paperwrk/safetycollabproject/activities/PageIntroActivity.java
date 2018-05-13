@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 

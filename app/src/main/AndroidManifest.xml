@@ -20,14 +20,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,13 +38,13 @@
         <activity android:name=".accounts.SigninActivity" />
         <activity android:name=".accounts.ForgotPasswordActivity" />
         <activity
-            android:name=".PageIntroActivity"
+            android:name=".activities.PageIntroActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".TrustedContactsActivity" />
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.TrustedContactsActivity" />
         <activity android:name=".accounts.AccountActivity" />
-        <activity android:name=".SirenSoundActivity" />
+        <activity android:name=".activities.SirenSoundActivity" />
     </application>
 
 </manifest>

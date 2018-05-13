@@ -1,10 +1,11 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 public class SplashActivity extends AppCompatActivity {
