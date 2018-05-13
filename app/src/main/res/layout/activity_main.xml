@@ -14,7 +14,7 @@
         android:layout_height="@dimen/ImageHeight"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/ImageMarginBottom"
-        android:src="@drawable/woman_power_emblem"
+        android:src="@drawable/woman_power"
         android:visibility="visible" />
 
     <TextView
@@ -36,6 +36,7 @@
         android:layout_gravity="center_horizontal"
         android:textColor="@color/textColor"
         android:layout_marginBottom="@dimen/textMarginBottom"
+        android:textStyle="bold"
         />
 
     <ProgressBar
@@ -119,6 +120,7 @@
             android:id="@+id/txtSignUp"
             android:textSize="@dimen/TextSize"
             android:textColor="@color/textColor"
+            android:textStyle="bold"
             />
 
     </LinearLayout>

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,6 +22,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+
+import in.paperwrk.safetycollabproject.accounts.ForgotPasswordActivity;
+import in.paperwrk.safetycollabproject.accounts.SignupActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this,ForgotPassword.class);
+                Intent intent = new Intent(MainActivity.this, ForgotPasswordActivity.class);
                 startActivity(intent);
             }
         });
@@ -68,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         txtSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                Log.d("Entering", "I have entered inside this yeah");
+                Intent intent = new Intent(MainActivity.this, SignupActivity.class);
                 startActivity(intent);
             }
         });

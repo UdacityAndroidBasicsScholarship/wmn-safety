@@ -20,4 +20,5 @@
     <dimen name="MarginBottom">16dp</dimen>
     <dimen name="MarginTop">16dp</dimen>
     <dimen name="ForgotPwdMarginTop">64dp</dimen>
+    <dimen name="SignInTop">8dp</dimen>
 </resources>
