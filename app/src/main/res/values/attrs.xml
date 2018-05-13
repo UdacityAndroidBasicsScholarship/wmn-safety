@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomButton">
+        <!--Replace fonts by better font family-->
+        <attr name="typeface" format="enum">
+            <enum name="regular" value="1"/>
+            <enum name="regular_italic" value="2"/>
+            <enum name="light" value="3"/>
+            <enum name="light_italic" value="4"/>
+            <enum name="bold" value="5"/>
+            <enum name="bold_italic" value="6"/>
+            <enum name="bold_heavy" value="7"/>
+        </attr>
+        <attr name="btnTxtColor" format="color"/>
+    </declare-styleable>
+</resources>

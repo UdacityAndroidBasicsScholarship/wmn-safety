@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+
+    <!--Other string resources-->
+    <!--Long placeholder for testing purpose [CHAR LIMIT == NO, Multiple line]-->
+    <string name="label_placeholder_long">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <!--Short placeholder for testing purpose [CHAR LIMIT == 50, Single line]-->
+    <string name="label_placeholder_short">Placeholder</string>
+    <!--A toast message showing storage path of saved file [CHAR LIMIT == 40, Single line]-->
+    <string name="msg_toast_file_saved_to">File saved to: </string>
+    <!--Header of the alert dialog asking or explaining about required permissions [CHAR LIMIT == 40, Single line]-->
+    <string name="label_title_dialog_permission">Requires Permissions</string>
+    <!--Text label of positive button for alert dialog asking or explaining about required permissions [CHAR LIMIT == 10, Single line]-->
+    <string name="label_grant">Grant</string>
+    <!--Text label of negative button for alert dialog asking or explaining about required permissions [CHAR LIMIT == 10, Single line]-->
+    <string name="label_cancel">Cancel</string>
 </resources>
