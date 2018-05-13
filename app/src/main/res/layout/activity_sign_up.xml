@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".SignUpActivity"
     android:orientation="vertical"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:id="@+id/linearlayout">
 
     <ImageView
-        android:layout_marginTop="@dimen/ImageMarginTop"
+        android:layout_marginTop="32dp"
         android:layout_width="@dimen/ImageWidth"
         android:layout_height="@dimen/ImageHeight"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/ImageMarginBottom"
+        android:layout_marginBottom="@dimen/MarginBottom"
         android:src="@drawable/woman_power_emblem"
-        android:visibility="visible" />
+        android:visibility="visible"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,12 +32,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In to Continue"
+        android:text="Sign Up to Continue"
         android:textAllCaps="true"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/textColor"
-        android:layout_marginBottom="@dimen/textMarginBottom"
-        />
+        android:layout_marginBottom="@dimen/MarginBottom"/>
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -47,21 +47,44 @@
         />
 
     <LinearLayout
+        android:id="@+id/jadu_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginBottom="@dimen/LayoutMarginBottom"
-        android:id="@+id/layout"
-
+        android:layout_marginBottom="@dimen/MarginBottom"
         >
-
 
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Full Name "
+            android:id="@+id/edName"
+            android:inputType="textEmailAddress"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/EmailTextSize"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginTop="@dimen/MarginTop"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email Id "
             android:id="@+id/edEmail"
+            android:inputType="textEmailAddress"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/EmailTextSize"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number "
+            android:id="@+id/edPhone"
             android:inputType="textEmailAddress"
             android:fontFamily="sans-serif"
             android:textSize="@dimen/EmailTextSize"
@@ -76,50 +99,41 @@
             app:passwordToggleEnabled="true"
             >
 
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/MarginRight"
-                android:layout_marginLeft="@dimen/MarginLeft"
-                android:inputType="textPassword"
-                android:id="@+id/edPass"
-                />
-
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:inputType="textPassword"
+            android:id="@+id/edPass"
+            android:hint="Password"
+            />
         </android.support.design.widget.TextInputLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forget Password"
-            android:layout_gravity="end"
-            android:id="@+id/txtForgotPwd"
-            android:textSize="@dimen/TextSize"
-            android:layout_marginRight="@dimen/MarginRight"
-            android:textColor="@color/textColor"
-            />
-
         <Button
+            android:id="@+id/BtnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Sign In"
-            android:background="@color/ButtonBackground"
+            android:text="@string/sign_up"
             android:layout_marginBottom="@dimen/MarginBottom"
             android:layout_marginTop="@dimen/MarginTop"
-            android:id="@+id/BtnLogin"
-            android:layout_marginLeft="@dimen/MarginLeft"
             android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:background="@color/ButtonBackground"
             />
 
         <TextView
+            android:id="@+id/TxtLogin1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Create a new Account"
-            android:id="@+id/txtSignUp"
+            android:text="Already Have An Account?Login"
             android:textSize="@dimen/TextSize"
             android:textColor="@color/textColor"
             />
+
+
 
     </LinearLayout>
 

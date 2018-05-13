@@ -6,4 +6,18 @@
     <dimen name="text_size">23sp</dimen>
     <dimen name="layout_width">100dp</dimen>
     <dimen name="layout_height">100dp</dimen>
+    <dimen name="ImageMarginTop">32dp</dimen>
+    <dimen name="ImageWidth">100dp</dimen>
+    <dimen name="ImageHeight">100dp</dimen>
+    <dimen name="ImageMarginBottom">16dp</dimen>
+    <dimen name="TextMarginBottom">8dp</dimen>
+    <dimen name="TextSize">15sp</dimen>
+    <dimen name="textMarginBottom">32dp</dimen>
+    <dimen name="LayoutMarginBottom">16dp</dimen>
+    <dimen name="EmailTextSize">18sp</dimen>
+    <dimen name="MarginRight">16dp</dimen>
+    <dimen name="MarginLeft">16dp</dimen>
+    <dimen name="MarginBottom">16dp</dimen>
+    <dimen name="MarginTop">16dp</dimen>
+    <dimen name="ForgotPwdMarginTop">64dp</dimen>
 </resources>

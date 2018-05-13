@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SafetyCollabProject</string>
+    <string name="welcome_to_nirbheek">Welcome To Nirbheek</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
