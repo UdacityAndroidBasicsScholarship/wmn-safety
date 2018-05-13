@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject.utils;
+package in.paperwrk.safetycollabproject.utilities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -16,10 +16,10 @@ import java.util.List;
 
 import in.paperwrk.safetycollabproject.R;
 
-import static in.paperwrk.safetycollabproject.utils.AppConstantInts.REQUEST_PERMISSION_CALLBACK;
-import static in.paperwrk.safetycollabproject.utils.AppConstantInts.REQUEST_PERMISSION_SETTINGS;
-import static in.paperwrk.safetycollabproject.utils.SharedPrefs.getEditor;
-import static in.paperwrk.safetycollabproject.utils.SharedPrefs.getSharedPref;
+import static in.paperwrk.safetycollabproject.utilities.AppConstantInts.REQUEST_PERMISSION_CALLBACK;
+import static in.paperwrk.safetycollabproject.utilities.AppConstantInts.REQUEST_PERMISSION_SETTINGS;
+import static in.paperwrk.safetycollabproject.utilities.SharedPrefs.getEditor;
+import static in.paperwrk.safetycollabproject.utilities.SharedPrefs.getSharedPref;
 
 
 /**

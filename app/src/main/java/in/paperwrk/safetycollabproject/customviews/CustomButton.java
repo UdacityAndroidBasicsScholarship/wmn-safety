@@ -8,7 +8,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
 import in.paperwrk.safetycollabproject.R;
-import in.paperwrk.safetycollabproject.utils.TypefaceUtils;
+import in.paperwrk.safetycollabproject.utilities.TypefaceUtils;
 
 
 public class CustomButton extends AppCompatTextView {

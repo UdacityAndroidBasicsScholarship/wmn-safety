@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject.utils;
+package in.paperwrk.safetycollabproject.utilities;
 
 /**
  * Created by srdpatel on 3/2/2018.

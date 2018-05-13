@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject.utils;
+package in.paperwrk.safetycollabproject.utilities;
 
 /**
  * Created by srdpatel on 2/25/2018. Contains static final strings of application.

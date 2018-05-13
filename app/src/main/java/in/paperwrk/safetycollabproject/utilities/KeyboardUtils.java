@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject.utils;
+package in.paperwrk.safetycollabproject.utilities;
 
 import android.app.Activity;
 import android.content.Context;
