@@ -120,16 +120,18 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
         String email = mEmailText.getText().toString();
         String password = mPasswordText.getText().toString();
 
-        if (email.isEmpty()) {
-            mHelpers.showAlertDialog(getString(R.string.email_required_msg), getString(R.string.enter_email_msg)).show();
-            return;
-        }
+//        if (email.isEmpty()) {
+//            mHelpers.showAlertDialog(getString(R.string.email_required_msg), getString(R.string.enter_email_msg)).show();
+//            return;
+//        }
+//
+//        if (password.isEmpty()) {
+//            mHelpers.showAlertDialog(getString(R.string.password_required_msg), getString(R.string.enter_password_msg)).show();
+//            return;
+//        }
+//        loginWithFirebaseEmailPassword(email, password);
 
-        if (password.isEmpty()) {
-            mHelpers.showAlertDialog(getString(R.string.password_required_msg), getString(R.string.enter_password_msg)).show();
-            return;
-        }
-        loginWithFirebaseEmailPassword(email, password);
+        navigateToHome();
     }
 
     private void navigateToHome() {

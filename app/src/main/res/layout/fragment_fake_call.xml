@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FakeCallFragment">
+    tools:context=".accounts.ForgotPasswordActivity">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -18,7 +18,7 @@
             android:id="@+id/fakeCallTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fakeCall"
+            android:text="@string/fake_call_label"
             android:textSize="20sp"
             android:textAlignment="center"
             android:layout_centerHorizontal="true"

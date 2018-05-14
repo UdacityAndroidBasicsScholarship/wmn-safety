@@ -102,7 +102,7 @@ public class HomeActivity extends AppCompatActivity {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 if (mFirebaseUser != null) {
-                                    mGoogleSignInClient.signOut();
+                                    mFirebaseAuth.signOut();
                                     mFirebaseAuth.signOut();
                                 }
                                 navigateToHome();

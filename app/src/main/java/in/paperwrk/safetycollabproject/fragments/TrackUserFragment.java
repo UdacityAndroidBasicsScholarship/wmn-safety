@@ -1,4 +1,4 @@
-package in.paperwrk.safetycollabproject;
+package in.paperwrk.safetycollabproject.fragments;
 
 
 import android.Manifest;
@@ -24,6 +24,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+
+import in.paperwrk.safetycollabproject.R;
 
 
 /**
