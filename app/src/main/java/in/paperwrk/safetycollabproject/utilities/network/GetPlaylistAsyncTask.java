@@ -68,7 +68,6 @@ public class GetPlaylistAsyncTask extends AsyncTask<String,Void, Pair<String,Lis
 
         ArrayList<String> videoIds = new ArrayList<>();
 
-        // pull out the video id's from the playlist page
         for (PlaylistItem item : playlistItemListResponse.getItems()) {
             videoIds.add(item.getSnippet().getResourceId().getVideoId());
         }
