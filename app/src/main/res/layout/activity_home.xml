@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
+    tools:context=".activities.HomeActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -30,7 +30,7 @@
                 android:textColor="#fff"
                 android:textSize="24sp"
                 android:gravity="center|start"
-                android:text="Nirbheek"
+                android:text="@string/app_name"
                 android:id="@+id/main_toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -50,6 +50,9 @@
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
         android:layout_gravity="bottom"
         app:menu="@menu/navigation" />
 

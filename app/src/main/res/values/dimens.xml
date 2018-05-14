@@ -13,6 +13,7 @@
     <dimen name="dimen_180dp">180dp</dimen>
     <dimen name="dimen_100dp">100dp</dimen>
     <dimen name="dimen_120dp">120dp</dimen>
+    <dimen name="dimen_4dp">4dp</dimen>
     <dimen name="dimen_8dp">8dp</dimen>
     <dimen name="dimen_16dp">16dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -26,4 +27,6 @@
     <dimen name="desc_padding">40dp</dimen>
     <dimen name="dimen_15dp">15dp</dimen>
 
+    <dimen name="dimen_12sp">12sp</dimen>
+    <dimen name="dimen_16sp">16sp</dimen>
 </resources>

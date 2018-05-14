@@ -55,28 +55,47 @@
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
 
-    <string name="fakeCall">Tap the button to receive\n fake call in 1 min(s)</string>
+    <!--Fake Call Fragment-->
+    <string name="fake_call_label">Tap the button to receive a fake call in 1 min.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="next">Next</string>
-    <string name="skip">Skip</string>
-    <string name="start">Got It</string>
-
-    <string name="slide_1_title">All Rounder</string>
-    <string name="slide_1_desc">Caters to the needs of everyone \nSimple and Easy to use Features</string>
-
-    <string name="slide_2_title">Always There</string>
-    <string name="slide_2_desc">Help is just a tap away!\nRaise an alarm for help</string>
-
-    <string name="slide_3_title">Track and Share</string>
-    <string name="slide_3_desc">Share your current location\nTrusted contacts notified right away</string>
-
-    <string name="slide_4_title">Nirbheek</string>
-    <string name="slide_4_desc">Your safety\nIn your hands</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- PageIntro Activity -->
     <string name="pager_next">NEXT</string>
     <string name="pager_skip">SKIP</string>
     <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
     <string name="welcome_text_view">Welcome to Nirbheek</string>
-    <string name="title_activity_maps">Map</string>
+
+    <!-- Account Activity -->
+    <string name="general_label">General</string>
+    <string name="advance_label">Advance</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="update_button">Update</string>
+    <string name="change_password_button">Change Password</string>
+
+    <!-- Settings Activity -->
+    <string-array name="settings_item_array">
+        <item>Account</item>
+        <item>Trusted Contacts</item>
+        <item>Siren - Sound</item>
+        <item>Gestures</item>
+        <item>Language</item>
+        <item>Help and FAQs</item>
+        <item>About</item>
+    </string-array>
+
+    <!-- About Activity -->
+    <string-array name="about_item_array">
+        <item>App Name</item>
+        <item>Version</item>
+        <item>GitHub</item>
+        <item>License</item>
+        <item>Open source licenses</item>
+    </string-array>
+
+    <string-array name="about_item_secondary_array">
+        <item>Nirbheek</item>
+        <item>0.1.8</item>
+        <item>https://goo.gl/PJ5xCb</item>
+        <item>MIT</item>
+        <item>Open source licenses</item>
+    </string-array>
 </resources>

@@ -25,7 +25,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import in.paperwrk.safetycollabproject.HomeActivity;
+import in.paperwrk.safetycollabproject.activities.HomeActivity;
 import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.models.UserData;
 import in.paperwrk.safetycollabproject.utilities.Helpers;
