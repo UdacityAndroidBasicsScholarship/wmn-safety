@@ -13,7 +13,7 @@
         android:xlargeScreens="true" />
 
     <application
-        android:name=".SafetyApplication"
+        android:name=".SafetyApplication"                 
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,7 +47,6 @@
         <activity android:name=".activities.TrustedContactsActivity" />
         <activity android:name=".accounts.AccountActivity" />
         <activity android:name=".activities.SirenSoundActivity" />
-
         <service android:name=".notification.MyFirbaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -57,8 +57,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-
+        <activity android:name=".activities.ExploreActivity"></activity>
     </application>
 
 </manifest>
