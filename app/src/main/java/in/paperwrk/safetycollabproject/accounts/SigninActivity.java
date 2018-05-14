@@ -148,8 +148,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 Log.w(TAG, e.getMessage());
-                Toast.makeText(this, "Google Sign In failed. Please try again.",
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Google Sign In failed. Please try again.", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -199,6 +198,7 @@ public class SigninActivity extends AppCompatActivity implements View.OnClickLis
             Toast.makeText(this, "You are successfully signed in.", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SigninActivity.this, HomeActivity.class);
             startActivity(intent);
+            finish();
         } else {
             Log.v(TAG, "User log-in failed.");
             Toast.makeText(this, "Invalid email or password!", Toast.LENGTH_SHORT).show();

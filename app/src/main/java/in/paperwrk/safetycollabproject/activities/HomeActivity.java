@@ -198,6 +198,7 @@ public class HomeActivity extends AppCompatActivity {
     public void navigateToHome() {
         Toast.makeText(getApplicationContext(), "Please login to continue!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(getApplicationContext(), SigninActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+        finish();
     }
 
     public void getUserName(final String UID) {
