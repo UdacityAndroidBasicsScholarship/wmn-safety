@@ -43,6 +43,14 @@
         <activity
             android:name=".activities.PageIntroActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.TrustedContactsActivity" />
+        <activity android:name=".accounts.AccountActivity" />
+        <activity android:name=".activities.SirenSoundActivity" />
+        <activity android:name=".activities.ExploreActivity"/>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
