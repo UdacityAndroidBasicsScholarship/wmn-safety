@@ -5,24 +5,46 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import in.paperwrk.safetycollabproject.accounts.SigninActivity;
+
 public class SplashActivity extends AppCompatActivity {
+
+    private static int SPLASH_TIME_OUT = 2000;
+    private Handler handler;
+    private Runnable runnable;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.splash_screen);
 
-        // go to MainActivity after a delay 2 seconds
-        new Handler().postDelayed(new Runnable() {
+        final Boolean isFirstLaunch = getSharedPreferences("pref",MODE_PRIVATE)
+                .getBoolean("isFirstLaunch",true);
+
+        handler = new Handler();
+
+        handler.postDelayed(runnable = new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent;
+                if (isFirstLaunch){
+                    intent = new Intent(SplashActivity.this,PageIntroActivity.class);
+                    getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isFirstLaunch",false).apply();
+                } else {
+                    intent = new Intent(SplashActivity.this, SigninActivity.class);
+                }
+                finish();   // To stop user to get back to splash screen.
                 startActivity(intent);
-                finish();
             }
-        },2000);
+        },SPLASH_TIME_OUT);
 
-
+    }
+    
+     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        handler.removeCallbacks(runnable);
     }
 
 }
