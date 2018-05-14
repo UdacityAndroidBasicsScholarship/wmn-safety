@@ -10,11 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="TRACK ME"
-            android:textSize="30sp" />
+            android:layout_height="match_parent"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fragment_track_share_button"

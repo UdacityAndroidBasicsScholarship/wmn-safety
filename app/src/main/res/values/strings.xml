@@ -54,6 +54,7 @@
     <string name="account_creation_success">Account Created Successfully</string>
     <string name="processing">Processing</string>
     <string name="login_success">Login Successful</string>
+    <style name="google_api_key">AIzaSyDFtK7FxLwQaMT2xnPGfiGIV4sjBmGXFzQ</style>
 
     <!--Fake Call Fragment-->
     <string name="fake_call_label">Tap the button to receive a fake call in 1 min.</string>
