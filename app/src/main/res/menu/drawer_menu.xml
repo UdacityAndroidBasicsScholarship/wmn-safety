@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NavigationDrawer">
+
+
+    <item
+        android:id="@+id/navigation_trusted_contacts"
+        android:icon="@drawable/ic_phone_black_24dp"
+        android:title="@string/trusted_contacts" />
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/explore" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/Help"
+        android:title="@string/help" />
+
+    <item
+        android:id="@+id/Feedback"
+        android:title="@string/feedback" />
+
+
+</menu>

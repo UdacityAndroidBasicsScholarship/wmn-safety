@@ -8,4 +8,7 @@
     <color name="TextColor">#4A148C</color>
     <color name="ButtonBackground">#6A1B9A</color>
     <color name="textColor">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="darkgray">#606060</color>
+
 </resources>

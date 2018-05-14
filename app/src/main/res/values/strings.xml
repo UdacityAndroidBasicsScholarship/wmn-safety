@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">SafetyCollabProject</string>
+    <string name="app_name">Nirbheek</string>
     <string name="welcome_to_nirbheek">Welcome To Nirbheek</string>
     <string name="sign_up">Sign Up</string>
+    <string name="trusted_contacts">Trusted Contacts</string>
+    <string name="explore">Explore</string>
+    <string name="settings">Settings</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="help">Help</string>
+    <string name="feedback">Feedback</string>
 </resources>

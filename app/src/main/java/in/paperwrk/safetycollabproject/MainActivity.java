@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                     //progressBar.setVisibility(View.VISIBLE);
                     Toast toast = Toast.makeText(MainActivity.this, "User login Succesfully", Toast.LENGTH_SHORT);
                     toast.show();
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MainActivity.this, NavigationDrawer.class);
                     startActivity(intent);
 
 

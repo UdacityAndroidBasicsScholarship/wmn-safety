@@ -14,5 +14,9 @@
         <item name="windowActionBar">false</item>
     </style>
 
+    <style name="HeaderBar">
+        <item name="android:background">#9E9E9E</item>
+    </style>
+
 </resources>
 
