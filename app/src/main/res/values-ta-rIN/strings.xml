@@ -55,4 +55,14 @@
     <string name="login_success">உள்நுழைவு வெற்றி கண்டது</string>
     <string name="welcome_to_nirbheek">நிர்பீக் உங்களை வரவேற்கிறது</string>
     <string name="implementation_in_progress">முன்னேற்றம் நடைமுறையில் உள்ளது</string>
+    <string name="fake_call_label">" 1 நிமிடத்தில் போலி அழைப்பைப் பெற பொத்தானைத் தட்டவும்."</string>
+    <string name="pager_next">" அடுத்த"</string>
+    <string name="pager_skip">தவிர்க்க</string>
+    <string name="nirbheek_logo_content_description">Nirbheek லோகோ</string>
+    <string name="welcome_text_view">" Nirbheek க்கு வரவேற்கிறோம்"</string>
+    <string name="general_label">பொது</string>
+    <string name="advance_label">Aṭvāṉs</string>
+    <string name="confirm_password_hint">கடவுச்சொல்லை உறுதிப்படுத்துக</string>
+    <string name="update_button">புதுப்பிக்கப்பட்டது</string>
+    <string name="change_password_button">" கடவுச்சொல்லை மாற்று"</string>
 </resources>
