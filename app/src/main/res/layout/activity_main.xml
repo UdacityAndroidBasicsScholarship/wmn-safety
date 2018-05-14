@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_marginTop="@dimen/ImageMarginTop"
+        android:layout_width="@dimen/ImageWidth"
+        android:layout_height="@dimen/ImageHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/ImageMarginBottom"
+        android:src="@drawable/woman_power"
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:layout_centerInParent="true" />
+        android:text="@string/welcome_to_nirbheek"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/TextColor"
+        android:layout_marginBottom="@dimen/TextMarginBottom"
+        android:textSize="@dimen/TextSize"
+        android:textStyle="bold"/>
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In to Continue"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="@dimen/textMarginBottom"
+        android:textStyle="bold"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/probar"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/LayoutMarginBottom"
+        android:id="@+id/layout"
+
+        >
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/edEmail"
+            android:inputType="textEmailAddress"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/EmailTextSize"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/MarginRight"
+                android:layout_marginLeft="@dimen/MarginLeft"
+                android:inputType="textPassword"
+                android:id="@+id/edPass"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:layout_gravity="end"
+            android:id="@+id/txtForgotPwd"
+            android:textSize="@dimen/TextSize"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:textColor="@color/textColor"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sign In"
+            android:background="@color/ButtonBackground"
+            android:layout_marginBottom="@dimen/MarginBottom"
+            android:layout_marginTop="@dimen/MarginTop"
+            android:id="@+id/BtnLogin"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginRight="@dimen/MarginRight"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Create a new Account"
+            android:id="@+id/txtSignUp"
+            android:textSize="@dimen/TextSize"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,9 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context=".accounts.SignupActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="@dimen/ImageWidth"
+        android:layout_height="@dimen/ImageHeight"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/ImageMarginBottom"
+        android:src="@drawable/woman_power"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/TextMarginBottom"
+        android:text="@string/welcome_to_nirbheek"
+        android:textAllCaps="true"
+        android:textColor="@color/TextColor"
+        android:textSize="@dimen/TextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/textMarginBottom"
+        android:text="Sign Up to Continue"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/probar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/LayoutMarginBottom"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:fontFamily="sans-serif"
+            android:hint="Full Name "
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/EmailTextSize"
+
+            />
+
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Email Id "
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/EmailTextSize" />
+
+        <EditText
+            android:id="@+id/edPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:fontFamily="sans-serif"
+            android:hint="Phone Number " />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/MarginLeft"
+                android:layout_marginRight="@dimen/MarginRight"
+                android:hint="Enter Your Password"
+                android:inputType="textPassword" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        />
+
+        <Button
+            android:id="@+id/BtnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/MarginBottom"
+            android:layout_marginLeft="@dimen/MarginLeft"
+            android:layout_marginRight="@dimen/MarginRight"
+            android:layout_marginTop="@dimen/MarginTop"
+            android:background="@color/ButtonBackground"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/TxtLogin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Already Have An Account?Login"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/TextSize"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
