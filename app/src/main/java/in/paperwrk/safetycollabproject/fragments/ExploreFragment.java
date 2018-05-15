@@ -73,6 +73,7 @@ public class ExploreFragment extends Fragment {
         if (getArguments() != null) {
             mPlaylistIds = getArguments().getStringArray(ARG_YOUTUBE_PLAYLIST_IDS);
         }
+        progressBar.setCanceledOnTouchOutside(false);
         return rootView;
     }
 

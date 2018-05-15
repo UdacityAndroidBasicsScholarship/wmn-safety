@@ -35,6 +35,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import in.paperwrk.safetycollabproject.R;
+import in.paperwrk.safetycollabproject.accounts.ManageAccountActivity;
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 import in.paperwrk.safetycollabproject.fragments.FakeCallFragment;
 import in.paperwrk.safetycollabproject.fragments.SOSFragment;
@@ -53,7 +54,6 @@ public class HomeActivity extends AppCompatActivity {
     DatabaseReference mDatabaseReference = null;
     FirebaseAuth mFirebaseAuth = null;
     FirebaseUser mFirebaseUser = null;
-    private IProfile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,8 +85,7 @@ public class HomeActivity extends AppCompatActivity {
             navigateToHome();
         }
 
-        // will update it later using data from Firebase Realtime DB
-        profile = new ProfileDrawerItem().withName(mFullName)
+        IProfile profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
                 .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
@@ -97,8 +96,18 @@ public class HomeActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .withTranslucentStatusBar(true)
                 .addProfiles(profile,
-                        new ProfileSettingDrawerItem().withName("Manage Accounts"),
-                        new ProfileSettingDrawerItem().withName("Logout").withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                        new ProfileSettingDrawerItem().withName("Manage Account")
+                                .withIcon(R.drawable.ic_settings_black_24dp)
+                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                            @Override
+                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                startActivity(new Intent(getApplicationContext(), ManageAccountActivity.class));
+                                return true;
+                            }
+                        }),
+                        new ProfileSettingDrawerItem().withName("Logout")
+                                .withIcon(R.drawable.ic_logout_24dp)
+                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 if (mFirebaseUser != null) {
@@ -166,12 +175,16 @@ public class HomeActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName("Settings")
                                 .withIdentifier(3).withIcon(R.drawable.ic_settings_black_24dp),
                         new SecondaryDrawerItem().withName("Help")
+                                .withIcon(R.drawable.ic_help_black_24dp)
                                 .withIdentifier(4),
                         new SecondaryDrawerItem().withName("Send Feedback")
+                                .withIcon(R.drawable.ic_feedback_black_24dp)
                                 .withIdentifier(5),
                         new SecondaryDrawerItem().withName("About")
+                                .withIcon(R.drawable.ic_info_outline_black_24dp)
                                 .withIdentifier(6),
                         new SecondaryDrawerItem().withName("Rate Us")
+                                .withIcon(R.drawable.ic_star_black_24dp)
                                 .withIdentifier(7)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -183,7 +196,7 @@ public class HomeActivity extends AppCompatActivity {
                                 startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
                                 break;
                             case 2:
-                                startActivity(new Intent(getApplicationContext(), ExploreActivity.class));
+                                startActivity(new Intent(getApplicationContext(),ExploreActivity.class));
                                 break;
                             case 3:
                                 startActivity(new Intent(getApplicationContext(), SettingsActivity.class));

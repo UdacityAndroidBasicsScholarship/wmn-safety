@@ -70,6 +70,7 @@
     <string name="confirm_password_hint">Confirm Password</string>
     <string name="update_button">Update</string>
     <string name="change_password_button">Change Password</string>
+    <string name="loading">Loading....</string>
 
     <!-- Settings Activity -->
     <string-array name="settings_item_array">
