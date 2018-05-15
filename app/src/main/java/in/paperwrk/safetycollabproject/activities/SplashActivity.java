@@ -10,42 +10,31 @@ import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 2000;
-    private Handler handler;
-    private Runnable runnable;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_screen);
 
         final Boolean isFirstLaunch = getSharedPreferences("pref",MODE_PRIVATE)
-                .getBoolean("isFirstLaunch",true);
+                .getBoolean("isfirstLaunch",true);
 
-        handler = new Handler();
 
-        handler.postDelayed(runnable = new Runnable() {
-            @Override
-            public void run() {
-                Intent intent;
-                if (isFirstLaunch){
-                    intent = new Intent(SplashActivity.this,PageIntroActivity.class);
-                    getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isFirstLaunch",false).apply();
-                } else {
-                    intent = new Intent(SplashActivity.this, SigninActivity.class);
-                }
-                finish();   // To stop user to get back to splash screen.
-                startActivity(intent);
-            }
-        },SPLASH_TIME_OUT);
+        Intent intent;
+        if (isFirstLaunch){
+            intent = new Intent(SplashActivity.this,PageIntroActivity.class);
+            getSharedPreferences("pref",MODE_PRIVATE).edit().putBoolean("isfirstLaunch",false).apply();
+        } else {
+            intent = new Intent(SplashActivity.this, SigninActivity.class);
+        }
+        startActivity(intent);
 
+        finish();
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        handler.removeCallbacks(runnable);
+        finish();
     }
 
 }

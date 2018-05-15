@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import in.paperwrk.safetycollabproject.R;
-import in.paperwrk.safetycollabproject.accounts.AccountActivity;
+import in.paperwrk.safetycollabproject.accounts.ManageAccountActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -37,7 +37,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int settingsItemIndex, long l) {
                 switch (settingsItemIndex) {
                     case 0:
-                        startActivity(new Intent(getApplicationContext(), AccountActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ManageAccountActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));

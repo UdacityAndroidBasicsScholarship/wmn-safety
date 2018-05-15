@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <supports-screens
         android:largeScreens="true"
@@ -29,7 +31,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,7 +50,7 @@
         <activity android:name=".activities.AboutActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.TrustedContactsActivity" />
-        <activity android:name=".accounts.AccountActivity" />
+        <activity android:name=".accounts.ManageAccountActivity" />
         <activity android:name=".activities.SirenSoundActivity" />
         <activity android:name=".activities.ExploreActivity"/>
 
@@ -62,6 +65,24 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <service android:name=".notification.MyFirbaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity android:name=".activities.ExploreActivity"/>
+
+        <activity android:name=".activities.PlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     </application>
 
 </manifest>

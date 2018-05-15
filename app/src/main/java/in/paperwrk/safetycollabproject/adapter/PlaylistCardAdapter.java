@@ -15,7 +15,7 @@ import com.google.api.services.youtube.model.VideoSnippet;
 import com.squareup.picasso.Picasso;
 
 import in.paperwrk.safetycollabproject.R;
-import in.paperwrk.safetycollabproject.activities.HomeActivity;
+import in.paperwrk.safetycollabproject.activities.PlayerActivity;
 import in.paperwrk.safetycollabproject.fragments.ExploreFragment;
 import in.paperwrk.safetycollabproject.models.PlaylistVideos;
 
@@ -74,8 +74,7 @@ public class PlaylistCardAdapter extends
         holder.mThumbnailImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO
-                Intent intent = new Intent(view.getContext(),HomeActivity.class);
+                Intent intent = new Intent(view.getContext(),PlayerActivity.class);
                 intent.putExtra("videoID",video.getId());
                 holder.mContext.startActivity(intent);
             }

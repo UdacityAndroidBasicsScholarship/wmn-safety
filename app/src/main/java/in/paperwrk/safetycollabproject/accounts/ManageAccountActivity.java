@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject.accounts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
@@ -26,7 +27,7 @@ import java.util.Map;
 import in.paperwrk.safetycollabproject.R;
 import in.paperwrk.safetycollabproject.models.UserData;
 
-public class AccountActivity extends AppCompatActivity {
+public class ManageAccountActivity extends AppCompatActivity {
 
     TextInputEditText mNameInputEditText = null,
             mEmailInputEditText = null,
@@ -102,6 +103,11 @@ public class AccountActivity extends AppCompatActivity {
             updates.put("/number", phone);
         }
         reference.updateChildren(updates).addOnCompleteListener(this, listener);
+        Intent intent = this.getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        if (intent != null) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        }
+        startActivity(intent);
     }
 
     public void changePassword(View view) {
