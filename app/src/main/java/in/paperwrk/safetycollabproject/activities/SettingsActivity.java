@@ -51,12 +51,6 @@ public class SettingsActivity extends AppCompatActivity {
                     case 4:
                         // TODO: Settings - Language
                         break;
-                    case 5:
-                        // TODO: Settings - Help and FAQs
-                        break;
-                    case 6:
-                        startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-                        break;
                 }
             }
         });
