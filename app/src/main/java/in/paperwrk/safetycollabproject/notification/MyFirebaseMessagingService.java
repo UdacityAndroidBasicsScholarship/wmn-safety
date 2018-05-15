@@ -2,7 +2,6 @@ package in.paperwrk.safetycollabproject.notification;
 
 import android.content.Intent;
 
-import com.google.firebase.iid.FirebaseInstanceIdService;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
