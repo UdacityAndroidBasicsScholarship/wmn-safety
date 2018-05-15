@@ -47,6 +47,16 @@
         <activity android:name=".activities.TrustedContactsActivity" />
         <activity android:name=".accounts.AccountActivity" />
         <activity android:name=".activities.SirenSoundActivity" />
+        <service android:name=".notification.MyFirbaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
         <activity android:name=".activities.ExploreActivity"></activity>
     </application>
 
