@@ -174,12 +174,16 @@ public class HomeActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName("Settings")
                                 .withIdentifier(3).withIcon(R.drawable.ic_settings_black_24dp),
                         new SecondaryDrawerItem().withName("Help")
+                                .withIcon(R.drawable.ic_help_black_24dp)
                                 .withIdentifier(4),
                         new SecondaryDrawerItem().withName("Send Feedback")
+                                .withIcon(R.drawable.ic_feedback_black_24dp)
                                 .withIdentifier(5),
                         new SecondaryDrawerItem().withName("About")
+                                .withIcon(R.drawable.ic_info_outline_black_24dp)
                                 .withIdentifier(6),
                         new SecondaryDrawerItem().withName("Rate Us")
+                                .withIcon(R.drawable.ic_star_black_24dp)
                                 .withIdentifier(7)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
