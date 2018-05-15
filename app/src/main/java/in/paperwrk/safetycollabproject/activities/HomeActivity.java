@@ -85,7 +85,6 @@ public class HomeActivity extends AppCompatActivity {
             navigateToHome();
         }
 
-        // will update it later using data from Firebase Realtime DB
         IProfile profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
                 .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
@@ -97,7 +96,8 @@ public class HomeActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .withTranslucentStatusBar(true)
                 .addProfiles(profile,
-                        new ProfileSettingDrawerItem().withName("Manage Accounts")
+                        new ProfileSettingDrawerItem().withName("Manage Account")
+                                .withIcon(R.drawable.ic_settings_black_24dp)
                                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
@@ -106,6 +106,7 @@ public class HomeActivity extends AppCompatActivity {
                             }
                         }),
                         new ProfileSettingDrawerItem().withName("Logout")
+                                .withIcon(R.drawable.ic_logout_24dp)
                                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
