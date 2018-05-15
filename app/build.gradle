@@ -3,7 +3,7 @@ apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 27
-    configurations.all{
+    configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
         exclude group: "org.apache.httpcomponents", module: "httpclient"
     }
@@ -58,4 +58,3 @@ dependencies {
 
 
 apply plugin: 'com.google.gms.google-services'
-

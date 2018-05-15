@@ -25,6 +25,8 @@ public class AboutActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setTitle("About");
 
         mAboutListView = findViewById(R.id.about_list);
@@ -48,13 +50,16 @@ public class AboutActivity extends AppCompatActivity {
                         startActivity(new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://github.com/UdacityAndroidBasicsScholarship/wmn-safety")));
                         break;
                     case 3:
-                        Toast.makeText(getApplicationContext(), "MIT", Toast.LENGTH_SHORT).show();
-                        break;
-                    case 4:
-                        // TODO: Open a OpenSourceLicenseActivity
+                        startActivity(new Intent(getApplicationContext(),LicenseActivity.class));
                         break;
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }
