@@ -182,6 +182,9 @@ public class HomeActivity extends AppCompatActivity {
                             case 1:
                                 startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
                                 break;
+                            case 2:
+                                startActivity(new Intent(getApplicationContext(),ExploreActivity.class));
+                                break;
                             case 3:
                                 startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                                 break;
