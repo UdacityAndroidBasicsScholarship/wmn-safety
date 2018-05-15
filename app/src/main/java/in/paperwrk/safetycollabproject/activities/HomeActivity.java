@@ -35,6 +35,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 import in.paperwrk.safetycollabproject.R;
+import in.paperwrk.safetycollabproject.accounts.ManageAccountActivity;
 import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 import in.paperwrk.safetycollabproject.fragments.FakeCallFragment;
 import in.paperwrk.safetycollabproject.fragments.SOSFragment;
@@ -53,7 +54,6 @@ public class HomeActivity extends AppCompatActivity {
     DatabaseReference mDatabaseReference = null;
     FirebaseAuth mFirebaseAuth = null;
     FirebaseUser mFirebaseUser = null;
-    private IProfile profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         // will update it later using data from Firebase Realtime DB
-        profile = new ProfileDrawerItem().withName(mFullName)
+        IProfile profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
                 .withEmail(mEmail).withIcon(R.mipmap.ic_launcher)
                 .withIdentifier(100);
@@ -97,8 +97,16 @@ public class HomeActivity extends AppCompatActivity {
                 .withSavedInstance(savedInstanceState)
                 .withTranslucentStatusBar(true)
                 .addProfiles(profile,
-                        new ProfileSettingDrawerItem().withName("Manage Accounts"),
-                        new ProfileSettingDrawerItem().withName("Logout").withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                        new ProfileSettingDrawerItem().withName("Manage Accounts")
+                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                            @Override
+                            public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                startActivity(new Intent(getApplicationContext(), ManageAccountActivity.class));
+                                return true;
+                            }
+                        }),
+                        new ProfileSettingDrawerItem().withName("Logout")
+                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 if (mFirebaseUser != null) {

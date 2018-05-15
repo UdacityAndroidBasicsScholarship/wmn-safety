@@ -47,7 +47,7 @@
         <activity android:name=".activities.AboutActivity" />
         <activity android:name=".activities.SettingsActivity" />
         <activity android:name=".activities.TrustedContactsActivity" />
-        <activity android:name=".accounts.AccountActivity" />
+        <activity android:name=".accounts.ManageAccountActivity" />
         <activity android:name=".activities.SirenSoundActivity" />
         <service android:name=".notification.MyFirbaseInstanceIDService"
             android:exported="false">
