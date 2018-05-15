@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.generatedDensities = ['hdpi', 'xxhdpi']        
+        vectorDrawables.generatedDensities = ['hdpi', 'xxhdpi']
     }
     buildTypes {
         release {
@@ -54,8 +54,8 @@ dependencies {
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     implementation 'com.google.firebase:firebase-messaging:15.0.2'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation "com.google.android.gms:play-services-location:15.0.1"
 }
-
-
 apply plugin: 'com.google.gms.google-services'
-
+apply plugin: 'com.google.gms.google-services'

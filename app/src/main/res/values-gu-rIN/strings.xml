@@ -56,4 +56,13 @@
     <string name="processing">પ્રક્રિયા ચાલુ છે</string>
     <string name="api_not_connected_msg">The client attempted to call a method from an API that failed to connect.</string>
     <string name="fake_call_label">બટન દબાવ્યાંના ૧ મિનિટમાં બનાવટી કોલ આવશે </string>
+    <string name="pager_next">આગામી</string>
+    <string name="pager_skip">છોડો</string>
+    <string name="nirbheek_logo_content_description">નિરબઇક લોગો</string>
+    <string name="welcome_text_view">" નિરબીકમાં આપનું સ્વાગત છે"</string>
+    <string name="general_label">જનરલ</string>
+    <string name="advance_label">એડવાન્સ</string>
+    <string name="confirm_password_hint">" પાસવર્ડની પુષ્ટિ કરો"</string>
+    <string name="update_button">અપડેટ કરો</string>
+    <string name="change_password_button">" પાસવર્ડ બદલો"</string>
 </resources>

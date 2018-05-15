@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
@@ -11,40 +11,56 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:id="@+id/layoutDots"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:alpha=".5"
-        android:layout_above="@id/layoutDots"
-        android:background="@android:color/white" />
-
-    <Button
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:background="@null"
-        android:text="@string/pager_next"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:id="@+id/btn_skip"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@null"
-        android:text="@string/pager_skip"
-        android:textColor="@android:color/white" />
+        android:orientation="horizontal"
+        android:background="#66000000"
+        >
 
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/pager_skip"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/pager_next"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textAlignment="viewEnd"
+            android:layout_weight="1"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
