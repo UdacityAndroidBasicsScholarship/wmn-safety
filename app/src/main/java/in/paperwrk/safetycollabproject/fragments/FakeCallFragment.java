@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import in.paperwrk.safetycollabproject.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FakeCallFragment extends Fragment {
 
 
