@@ -62,8 +62,12 @@
             </intent-filter>
         </service>
         <activity android:name=".activities.ExploreActivity"/>
+
         <activity android:name=".activities.PlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
     </application>
 
 </manifest>
