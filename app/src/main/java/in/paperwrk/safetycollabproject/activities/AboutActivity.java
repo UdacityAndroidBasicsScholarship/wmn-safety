@@ -28,8 +28,6 @@ public class AboutActivity extends AppCompatActivity {
 
         appBarLayout = findViewById(R.id.appBarAnim);
 
-
-
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
                 .setImage(R.mipmap.ic_launcher)

@@ -1,5 +1,6 @@
 package in.paperwrk.safetycollabproject.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -30,7 +31,6 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
@@ -54,6 +54,7 @@ public class HomeActivity extends AppCompatActivity {
     DatabaseReference mDatabaseReference = null;
     FirebaseAuth mFirebaseAuth = null;
     FirebaseUser mFirebaseUser = null;
+    private Context mContext = getApplicationContext();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,16 +175,13 @@ public class HomeActivity extends AppCompatActivity {
                         new DividerDrawerItem(),
                         new PrimaryDrawerItem().withName("Settings")
                                 .withIdentifier(3).withIcon(R.drawable.ic_settings_black_24dp),
-                        new SecondaryDrawerItem().withName("Help")
-                                .withIcon(R.drawable.ic_help_black_24dp)
-                                .withIdentifier(4),
-                        new SecondaryDrawerItem().withName("Send Feedback")
+                        new PrimaryDrawerItem().withName("Help & Feedback")
                                 .withIcon(R.drawable.ic_feedback_black_24dp)
                                 .withIdentifier(5),
-                        new SecondaryDrawerItem().withName("About")
+                        new PrimaryDrawerItem().withName("About")
                                 .withIcon(R.drawable.ic_info_outline_black_24dp)
                                 .withIdentifier(6),
-                        new SecondaryDrawerItem().withName("Rate Us")
+                        new PrimaryDrawerItem().withName("Rate Us")
                                 .withIcon(R.drawable.ic_star_black_24dp)
                                 .withIdentifier(7)
                 )
@@ -193,17 +191,19 @@ public class HomeActivity extends AppCompatActivity {
                         // add click listeners for nav drawer items
                         switch ((int) drawerItem.getIdentifier()) {
                             case 1:
-                                startActivity(new Intent(getApplicationContext(), TrustedContactsActivity.class));
+                                startActivity(new Intent(mContext, TrustedContactsActivity.class));
                                 break;
                             case 2:
-                                startActivity(new Intent(getApplicationContext(),ExploreActivity.class));
+                                startActivity(new Intent(mContext,ExploreActivity.class));
                                 break;
                             case 3:
-                                startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+                                startActivity(new Intent(mContext, SettingsActivity.class));
                                 break;
                             case 6:
-                                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                                startActivity(new Intent(mContext, AboutActivity.class));
                                 break;
+                            case 7:
+                                Toast.makeText(mContext,"Coming soon on Play Store",Toast.LENGTH_SHORT).show();
                         }
                         return false;
                     }
