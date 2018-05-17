@@ -71,7 +71,11 @@
     <string name="update_button">Update</string>
     <string name="change_password_button">Change Password</string>
     <string name="loading">Loading....</string>
-    <string name="about_us_description">Sample Text for About US</string>
+    <string name="about_us_description">Hi! We are a dedicated team of 8 people, with a passion for development — development makes us happy. We truly believe in the transformative power of coding and programming and its
+        ability to simplify communications, elevate experiences, engage and inspire people everywhere.
+        Good apps come from collaboration. Nirbheek - is a collaborative project made by us in our Udacity
+        Android Basics Course, aimed at providing safety controls in the hands of user himself.
+        Motivation makes us happy. Rate us 5 :star: to keep motivating us. Be safe, be Nirbheek !!</string>
 
     <!-- Settings Activity -->
     <string-array name="settings_item_array">
