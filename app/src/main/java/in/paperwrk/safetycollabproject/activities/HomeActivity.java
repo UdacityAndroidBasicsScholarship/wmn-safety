@@ -1,7 +1,9 @@
 package in.paperwrk.safetycollabproject.activities;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -40,6 +42,7 @@ import in.paperwrk.safetycollabproject.accounts.SigninActivity;
 import in.paperwrk.safetycollabproject.fragments.FakeCallFragment;
 import in.paperwrk.safetycollabproject.fragments.SOSFragment;
 import in.paperwrk.safetycollabproject.fragments.TrackUserFragment;
+import in.paperwrk.safetycollabproject.utilities.PermissionUtils;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -54,7 +57,9 @@ public class HomeActivity extends AppCompatActivity {
     DatabaseReference mDatabaseReference = null;
     FirebaseAuth mFirebaseAuth = null;
     FirebaseUser mFirebaseUser = null;
-    private Context mContext = getApplicationContext();
+    private Context mContext = HomeActivity.this;
+    private final int READ_EXTERNAL_STORAGE_ID = 12;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +90,13 @@ public class HomeActivity extends AppCompatActivity {
         } else {
             navigateToHome();
         }
+
+
+        if (!PermissionUtils.isDeviceInfoGranted(this)){
+            String[] permissions = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE};
+            PermissionUtils.requestPermissions(this, READ_EXTERNAL_STORAGE_ID, permissions);
+        }
+
 
         IProfile profile = new ProfileDrawerItem().withName(mFullName)
                 .withTextColor(getResources().getColor(android.R.color.black))
@@ -245,6 +257,21 @@ public class HomeActivity extends AppCompatActivity {
                 .withIdentifier(100);
         headerResult.updateProfile(profile);
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode){
+            case READ_EXTERNAL_STORAGE_ID:
+                boolean granted = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                if (!granted)
+                    Toast.makeText(this,"Permission denied",Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show();
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
 
     @Override
     protected void onPause() {
