@@ -245,4 +245,14 @@ public class HomeActivity extends AppCompatActivity {
                 .withIdentifier(100);
         headerResult.updateProfile(profile);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

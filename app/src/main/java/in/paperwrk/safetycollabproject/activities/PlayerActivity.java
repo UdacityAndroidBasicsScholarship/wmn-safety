@@ -52,4 +52,14 @@ public class PlayerActivity extends YouTubeBaseActivity implements YouTubePlayer
     public YouTubePlayer.Provider getYouTubePlayerProvider() {
         return youTubePlayerView;
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
