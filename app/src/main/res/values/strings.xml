@@ -1,3 +1,91 @@
 <resources>
-    <string name="app_name">SafetyCollabProject</string>
+    <string name="app_name">Nirbheek</string>
+    <string name="sign_in_forgot_pass_text">Forgot Password ?</string>
+    <string name="sign_in_button_text">SIGN IN</string>
+    <string name="welcome_to_nirbheek">Welcome to Nirbheek</string>
+    <string name="sign_in_to_continue">Sign In to Continue</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="sign_in_or_text">OR</string>
+    <string name="sign_up_to_safety">Sign Up to Your Safety</string>
+    <string name="sign_up_button_text">SIGN UP</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="phone_hint">Phone</string>
+    <string name="already_have_account">Already have an account ? Sign In</string>
+    <string name="implementation_in_progress">Implementation in Progress</string>
+    <string name="logo_desc">logo</string>
+    <string name="forgot_pass_text">Forgot Password</string>
+    <string name="forgot_reset_pass_text">Enter your email to reset password</string>
+    <string name="email_hint">Email</string>
+    <string name="forgot_button_text">Submit</string>
+    <string name="password_hint">Password</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_trusted_contacts">Trusted Contacts</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_fake_call">Fake Call</string>
+    <string name="nav_account">Account</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_bottom_sos">SOS</string>
+    <string name="nav_bottom_track_me">Track Me</string>
+    <string name="nav_help">Help</string>
+    <string name="nav_feedback">Send Feedback</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="developer_error_msg">The application is misconfigured.</string>
+    <string name="api_not_connected_msg">The client attempted to call a method from an API that failed to connect.</string>
+    <string name="error_msg">The operation failed with no more detailed information.</string>
+    <string name="internal_error_msg">An internal error occurred.</string>
+    <string name="invalid_account_msg">Invalid account name specified.</string>
+    <string name="sign_in_required_msg">Please Sign In to continue.</string>
+    <string name="OK">OK</string>
+    <string name="loading_msg">Loading</string>
+    <string name="email_required_msg">Email Required</string>
+    <string name="enter_email_msg">Enter Email Address</string>
+    <string name="password_required_msg">Password Required</string>
+    <string name="enter_password_msg">Enter Password</string>
+    <string name="name_required_msg">Name Required</string>
+    <string name="enter_name_msg">Enter your Full Name</string>
+    <string name="phone_required_msg">Phone Number Required</string>
+    <string name="enter_phone_msg">Enter Phone Number</string>
+    <string name="valid_phone_required_msg">Valid Phone Number Required</string>
+    <string name="enter_valid_phone_msg">Enter 10 digit Valid Phone Number</string>
+    <string name="error_message">Error Message</string>
+    <string name="creating_account">Creating Account</string>
+    <string name="updating_profile">Updating Profile</string>
+    <string name="account_creation_success">Account Created Successfully</string>
+    <string name="processing">Processing</string>
+    <string name="login_success">Login Successful</string>
+
+    <!--Fake Call Fragment-->
+    <string name="fake_call_label">Tap the button to receive a fake call in 1 min.</string>
+
+    <!-- PageIntro Activity -->
+    <string name="pager_next">NEXT</string>
+    <string name="pager_skip">SKIP</string>
+    <string name="nirbheek_logo_content_description">Nirbheek Logo</string>
+    <string name="welcome_text_view">Welcome to Nirbheek</string>
+
+    <!-- Account Activity -->
+    <string name="general_label">General</string>
+    <string name="advance_label">Advance</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="update_button">Update</string>
+    <string name="change_password_button">Change Password</string>
+    <string name="loading">Loading....</string>
+    <string name="about_us_description">Hi! We are a dedicated team of 8 people, with a passion for development — development makes us happy. We truly believe in the transformative power of coding and programming and its
+        ability to simplify communications, elevate experiences, engage and inspire people everywhere.
+        Good apps come from collaboration. Nirbheek - is a collaborative project made by us in our Udacity
+        Android Basics Course, aimed at providing safety controls in the hands of user himself.
+        Motivation makes us happy. Rate us 5 :star: to keep motivating us. Be safe, be Nirbheek !!</string>
+
+    <!-- Settings Activity -->
+    <string-array name="settings_item_array">
+    <item>Account</item>
+    <item>Trusted Contacts</item>
+    <item>Siren - Sound</item>
+    <item>Gestures</item>
+    <item>Language</item>
+    </string-array>
+
+
+
 </resources>
